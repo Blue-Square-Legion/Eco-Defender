@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_WhiteNoiseTest" ID="{9AE6D86F-0F42-4AEE-B546-F68554EAF461}">
+					<ChildrenList>
+						<Action Name="" ID="{67B9EDC7-7F2A-4E70-9507-50FA6E639F04}" ShortID="176793370">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WhiteNoiseTest" ID="{8258E9B2-F30C-44C8-A63A-11ADD7B5BDEA}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2997592729	Play_WhiteNoiseTest			\Default Work Unit\Play_WhiteNoiseTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	344732107	WhiteNoiseTest	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\WhiteNoiseTest_74020D43.wem		\Actor-Mixer Hierarchy\Default Work Unit\WhiteNoiseTest		324168
+
