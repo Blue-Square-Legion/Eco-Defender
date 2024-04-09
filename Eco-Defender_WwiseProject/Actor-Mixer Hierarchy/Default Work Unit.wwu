@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="WhiteNoiseTest" ID="{8258E9B2-F30C-44C8-A63A-11ADD7B5BDEA}" ShortID="441886228">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WhiteNoiseTest" ID="{B8542AB1-4D9E-41BF-B307-6578DBC97E7C}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.22884919632234"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.68762677484787"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>WhiteNoiseTest.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="344732107"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="WhiteNoiseTest" ID="{B8542AB1-4D9E-41BF-B307-6578DBC97E7C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
