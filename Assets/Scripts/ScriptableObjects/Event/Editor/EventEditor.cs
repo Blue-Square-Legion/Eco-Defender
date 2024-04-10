@@ -19,18 +19,4 @@ namespace EventSO
                 e.Invoke();
         }
     }
-
-    public abstract class GenericEventEditor<T> : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-
-            GUI.enabled = Application.isPlaying;
-
-            GenericEventChannelSO<T> e = target as GenericEventChannelSO<T>;
-            if (GUILayout.Button("Raise"))
-                e.Invoke(e._testData);
-        }
-    }
 }
