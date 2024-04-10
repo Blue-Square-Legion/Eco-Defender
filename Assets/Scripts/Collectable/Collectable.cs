@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
 using EventSO;
 
@@ -10,6 +11,7 @@ public interface ICollectable
 }
 
 
+[RequireComponent(typeof(XRGrabInteractable))]
 public class Collectable : MonoBehaviour
 {
     public ItemSO Tag;
