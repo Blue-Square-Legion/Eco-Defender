@@ -236,7 +236,8 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   spawnPoint: {fileID: 8831905963079483865}
-  projectile: {fileID: 0}
+  projectile: {fileID: 4742469898609196209, guid: 850cfb6c4fdf35947af8ec41aa8827de,
+    type: 3}
 --- !u!1 &8831905964172486039
 GameObject:
   m_ObjectHideFlags: 0
