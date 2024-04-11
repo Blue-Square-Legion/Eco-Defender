@@ -21,12 +21,18 @@ public class SeedCollision : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("Wow");
-        SpawnFlower();
+        // Assumes first contact is where to place item
+        var point = collision.GetContact(0).point;
+        SpawnFlower(point);
         Destroy(this.gameObject);
     }
 
-    private void SpawnFlower()
+    /// <summary>
+    /// Spawns flower where seed contacts the ground
+    /// </summary>
+    /// <param name="position">Position of where the flower should be, i.e., contact point</param>
+    private void SpawnFlower(Vector3 position)
     {
-        Instantiate(flowerCube, transform.position, transform.rotation);
+        Instantiate(flowerCube, position, Quaternion.identity);
     }
 }
