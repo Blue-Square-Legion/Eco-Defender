@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6868316918368187661}
   - component: {fileID: 8266708727423472484}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb85af20a03de740bfbf5c5931aa336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  time: 1.5
 --- !u!54 &8266708727423472484
 Rigidbody:
   m_ObjectHideFlags: 0
