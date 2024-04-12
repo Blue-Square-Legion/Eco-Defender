@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2901137828">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2641024368" Language="SFX" Hash="1412527589">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
+			<ShortName>SFX_SoundBank</ShortName>
+			<Path>SFX_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2997592729" Name="Play_WhiteNoiseTest" ObjectPath="\Events\Default Work Unit\Play_WhiteNoiseTest" DurationType="OneShot" DurationMin="1.687627" DurationMax="1.687627">
+					<IncludedMemoryFiles>
+						<File Id="344732107" Language="SFX">
+							<ShortName>WhiteNoiseTest.wav</ShortName>
+							<Path>SFX\WhiteNoiseTest_74020D43.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
