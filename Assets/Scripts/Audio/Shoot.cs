@@ -10,6 +10,11 @@ namespace AudioScript
         {
             print("Shoot");
         }
+
+        public void OnEmpty()
+        {
+            //TODO Implementation for empty shot
+        }
     }
 }
 
