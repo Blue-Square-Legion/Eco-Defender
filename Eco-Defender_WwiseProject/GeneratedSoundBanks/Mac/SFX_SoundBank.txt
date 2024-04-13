@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2997592729	Play_WhiteNoiseTest			\Default Work Unit\Play_WhiteNoiseTest	
+	4286830491	Play_PlantBombOneShot			\Default Work Unit\Play_PlantBombOneShot	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	344732107	WhiteNoiseTest	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\WhiteNoiseTest_74020D43.wem		\Actor-Mixer Hierarchy\Default Work Unit\WhiteNoiseTest		324168
+	11402219	EcoDef_Bomb_Fire_04	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\EcoDef_Bomb_Fire_04_16A194A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_04		72732
+	118355174	EcoDef_Bomb_Fire_03	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\EcoDef_Bomb_Fire_03_A2E10A33.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_03		65064
+	344732107	WhiteNoiseTest	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\WhiteNoiseTest_0B57F0DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\WhiteNoiseTest		324168
+	716825240	EcoDef_Bomb_Fire_01	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\EcoDef_Bomb_Fire_01_0B727C4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_01		78744
+	725385265	EcoDef_Bomb_Fire_05	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\EcoDef_Bomb_Fire_05_B65ED867.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_05		79616
+	781484774	EcoDef_Bomb_Fire_02	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Mac\SFX\EcoDef_Bomb_Fire_02_D40055DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_02		88088
 

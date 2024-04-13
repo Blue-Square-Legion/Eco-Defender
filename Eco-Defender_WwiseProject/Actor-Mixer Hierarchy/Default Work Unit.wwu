@@ -38,6 +38,159 @@
 						<ActiveSource Name="WhiteNoiseTest" ID="{B8542AB1-4D9E-41BF-B307-6578DBC97E7C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="PlantBombOneShot" ID="{5CF80C9F-42D5-4FB1-8E7D-6E0D275FDD13}" ShortID="992803037">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="EcoDef_Bomb_Fire_01" ID="{C1807A1D-ECE5-41A2-97DC-E69F6FE32E00}" ShortID="519667731">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Bomb_Fire_01" ID="{75E12838-F43F-4649-92B3-D945F69C054D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.446034873719603"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.446034873719603"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Bomb_Fire_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="716825240"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Bomb_Fire_01" ID="{75E12838-F43F-4649-92B3-D945F69C054D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Bomb_Fire_02" ID="{5A1F825E-71A5-48F2-97F9-05814C6791BA}" ShortID="681419434">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Bomb_Fire_02" ID="{B18324C5-CCCC-4A72-B516-F6D388581F95}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.408982006595741"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.498997185080929"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Bomb_Fire_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="781484774"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Bomb_Fire_02" ID="{B18324C5-CCCC-4A72-B516-F6D388581F95}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Bomb_Fire_03" ID="{5FFB526A-009C-4F88-85A0-5027A65A552C}" ShortID="296956803">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Bomb_Fire_03" ID="{F1F5E475-7A6B-4873-A2F6-49910F40FC1D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.368488452852406"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.368488452852406"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Bomb_Fire_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="118355174"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Bomb_Fire_03" ID="{F1F5E475-7A6B-4873-A2F6-49910F40FC1D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Bomb_Fire_04" ID="{9A529BA0-0973-4387-B070-C1B810F2A89C}" ShortID="446352328">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Bomb_Fire_04" ID="{7DF92641-B553-4D1E-BAA1-200144A22272}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.373046850924278"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.411942731115435"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Bomb_Fire_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="11402219"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Bomb_Fire_04" ID="{7DF92641-B553-4D1E-BAA1-200144A22272}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Bomb_Fire_05" ID="{879834BA-7D13-4DD5-AEE7-D1A01081E30E}" ShortID="207909618">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Bomb_Fire_05" ID="{CC8E0090-04EF-4627-BD91-F03955A54803}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.450979748221127"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.450979748221127"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Bomb_Fire_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="725385265"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Bomb_Fire_05" ID="{CC8E0090-04EF-4627-BD91-F03955A54803}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
