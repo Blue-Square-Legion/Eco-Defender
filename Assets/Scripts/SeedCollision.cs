@@ -5,26 +5,20 @@ using UnityEngine;
 
 public class SeedCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject flowerCube;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField, Tooltip("Layer Item will Spawn")] private LayerMask _hitMask;
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Wow");
-        // Assumes first contact is where to place item
-        var point = collision.GetContact(0).point;
-        SpawnFlower(point);
-        Destroy(this.gameObject);
+        //Layer comparison using bitwise comparion
+        if((_hitMask & (1 << collision.gameObject.layer)) != 0)
+        {
+            //Debug.Log("Wow");
+            // Assumes first contact is where to place item
+            var point = collision.GetContact(0).point;
+            SpawnFlower(point);
+            Destroy(this.gameObject);
+        }       
     }
 
     /// <summary>
