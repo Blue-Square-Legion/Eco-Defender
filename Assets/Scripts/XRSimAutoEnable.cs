@@ -9,10 +9,17 @@ public class XRSimAutoEnable : MonoBehaviour
     {
         // TODO: See if we can pickup the device from editor/build 
         //       and automatically figure out if need to activate.
+        if(_xrSim)
+        {
 #if UNITY_EDITOR
         _xrSim.SetActive(!_overrideActive);
 #else
         _xrSim.SetActive(_overrideActive);
 #endif
+        }
+        else 
+        {
+            Debug.LogWarning("No XR Sim assigned!");
+        }
     }
 }
