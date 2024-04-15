@@ -52,6 +52,11 @@ jobs:
     name: Publish to Itch.io
     needs: build
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Build for both Windows and Android
+        platform: [StandaloneWindows64, Android]
     
     steps:
       # Download
