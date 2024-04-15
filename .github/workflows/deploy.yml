@@ -7,9 +7,9 @@ on:
     branches: [deploy]
 
 jobs:
-  build:
-    name: Deploy for ${{ matrix.platform }}
-    runs-on: ubuntu-latest
+ build:
+    name: Build for ${{ matrix.platform }}
+    runs-on: windows-latest
     
     strategy:
       matrix:
@@ -47,7 +47,20 @@ jobs:
         with:
           name: Build
           path: build/${{ matrix.platform }}
-          
+
+ publish:
+    name: Publish to Itch.io
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Download
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: Build
+          path: build
+
       # Publish
       - uses: manleydev/butler-publish-itchio-action@master
         env:
