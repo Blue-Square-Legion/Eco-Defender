@@ -13,7 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_GRAB_PLASTIC = 176757445U;
+        static const AkUniqueID PLAY_GUN_EMPTY = 1633093614U;
         static const AkUniqueID PLAY_PLANTBOMBONESHOT = 4286830491U;
+        static const AkUniqueID PLAY_PLANTGROWTH = 1087491060U;
         static const AkUniqueID PLAY_WHITENOISETEST = 2997592729U;
     } // namespace EVENTS
 

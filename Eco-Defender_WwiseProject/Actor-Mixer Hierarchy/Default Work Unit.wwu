@@ -39,7 +39,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="PlantBombOneShot" ID="{5CF80C9F-42D5-4FB1-8E7D-6E0D275FDD13}" ShortID="992803037">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 						</Reference>
@@ -191,6 +197,128 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<Sound Name="Gun_Empty" ID="{0E9143D6-D4EC-4C83-B098-25F2D70B14CF}" ShortID="24904155">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{647556C3-3BD3-481B-9808-3AE9AE3E2E23}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDefender_EmptyGun" ID="{125A166B-190C-4019-A3ED-8CE0937B4BF9}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDefender_EmptyGun.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="662235655"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDefender_EmptyGun" ID="{125A166B-190C-4019-A3ED-8CE0937B4BF9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Grab_Plastic" ID="{4001B067-7E3D-4FFE-9137-909F6C520783}" ShortID="717939216">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C8A08D1B-4BEA-4AE5-A573-CA0668896BCF}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDefender_GrabPlastic" ID="{27540182-CA58-436B-ADFD-41AFF64F9BD9}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDefender_GrabPlastic.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="219172893"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDefender_GrabPlastic" ID="{27540182-CA58-436B-ADFD-41AFF64F9BD9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="PlantGrowth" ID="{4F2A5D4A-8270-4408-B89E-8DBC06A52839}" ShortID="141177300">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{84C8F94B-3C07-427B-B5DA-40C14A57623D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDefender_PlantGrowth" ID="{A3CE321E-D0A9-488E-AF8F-C488E95FE205}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDefender_PlantGrowth.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="513510797"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDefender_PlantGrowth" ID="{A3CE321E-D0A9-488E-AF8F-C488E95FE205}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

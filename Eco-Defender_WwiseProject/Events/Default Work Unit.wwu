@@ -25,6 +25,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Gun_Empty" ID="{C28A10DD-EE46-4C67-A560-58209EBADC23}">
+					<ChildrenList>
+						<Action Name="" ID="{8B61DEA2-E7AA-4369-9E1A-E18700F8B31D}" ShortID="678184649">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gun_Empty" ID="{0E9143D6-D4EC-4C83-B098-25F2D70B14CF}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Grab_Plastic" ID="{796DDA8C-DB37-49D3-A8A2-4076E06A94F0}">
+					<ChildrenList>
+						<Action Name="" ID="{0CDA87AB-28D9-47A9-A022-BC36247C01FF}" ShortID="402721978">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grab_Plastic" ID="{4001B067-7E3D-4FFE-9137-909F6C520783}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlantGrowth" ID="{88CD3857-B832-4735-A159-8987E88F887C}">
+					<ChildrenList>
+						<Action Name="" ID="{1C4D1F8B-E620-4A6C-85E6-74399AF22328}" ShortID="766381424">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlantGrowth" ID="{4F2A5D4A-8270-4408-B89E-8DBC06A52839}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
