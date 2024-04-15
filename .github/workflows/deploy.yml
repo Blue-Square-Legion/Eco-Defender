@@ -45,7 +45,7 @@ jobs:
       # Output
       - uses: actions/upload-artifact@v3
         with:
-          name: Build
+          name: Build-${{ matrix.platform }}
           path: build/${{ matrix.platform }}
 
  publish:
@@ -58,8 +58,8 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: Build
-          path: build
+          name: Build-${{ matrix.platform }}
+          path: build/${{ matrix.platform }}
 
       # Publish
       - uses: manleydev/butler-publish-itchio-action@master
