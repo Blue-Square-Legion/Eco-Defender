@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4005,7 +4005,7 @@ GameObject:
   - component: {fileID: 1631252359}
   - component: {fileID: 1631252358}
   - component: {fileID: 1631252357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4635,6 +4635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _overrideActive: 0
   _xrSim: {fileID: 645878648}
+  _editorOverride: 2
 --- !u!1 &1793832396
 GameObject:
   m_ObjectHideFlags: 0

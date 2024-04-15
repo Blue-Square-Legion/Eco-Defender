@@ -146,3 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerCube: {fileID: 8982355172018065996, guid: 0dd4301975f214c149dcc8795795adf1,
     type: 3}
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 64
