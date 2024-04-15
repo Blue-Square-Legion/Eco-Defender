@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Deploy for ${{ matrix.platform }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     strategy:
       matrix:
