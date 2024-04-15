@@ -1,0 +1,57 @@
+name: Deploy Game
+
+on:
+  push:
+    # TODO: Determine best branch for deploying, currently
+    #       will manually merge in changes to "deploy"
+    branches: [deploy]
+
+jobs:
+  build:
+    name: Deploy for ${{ matrix.platform }}
+    runs-on: windows-latest
+    
+    strategy:
+      matrix:
+        # Build for both Windows and Android
+        platform: [StandaloneWindows64, Android]
+    
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: ${{ matrix.platform }}
+
+      # Output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build/${{ matrix.platform }}
+          
+      # Publish
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: ${{ matrix.platform == 'Windows' && 'win' || 'android' }}
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: build/${{ matrix.platform }}
