@@ -11,25 +11,78 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2901137828">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1928472659">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="1412527589">
+		<SoundBank Id="2641024368" Language="SFX" Hash="1696140048">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" DurationType="OneShot" DurationMin="0.066545" DurationMax="0.083841">
+					<IncludedMemoryFiles>
+						<File Id="219172893" Language="SFX">
+							<ShortName>EcoDefender_GrabPlastic.wav</ShortName>
+							<Path>SFX\EcoDefender_GrabPlastic_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1633093614" Name="Play_Gun_Empty" ObjectPath="\Events\Default Work Unit\Play_Gun_Empty" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.09408" DurationMax="0.118533">
+					<IncludedMemoryFiles>
+						<File Id="662235655" Language="SFX">
+							<ShortName>EcoDefender_EmptyGun.wav</ShortName>
+							<Path>SFX\EcoDefender_EmptyGun_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4286830491" Name="Play_PlantBombOneShot" ObjectPath="\Events\Default Work Unit\Play_PlantBombOneShot" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.368488" DurationMax="0.498997">
+					<IncludedMemoryFiles>
+						<File Id="11402219" Language="SFX">
+							<ShortName>EcoDef_Bomb_Fire_04.wav</ShortName>
+							<Path>SFX\EcoDef_Bomb_Fire_04_16A194A2.wem</Path>
+						</File>
+						<File Id="118355174" Language="SFX">
+							<ShortName>EcoDef_Bomb_Fire_03.wav</ShortName>
+							<Path>SFX\EcoDef_Bomb_Fire_03_A2E10A33.wem</Path>
+						</File>
+						<File Id="716825240" Language="SFX">
+							<ShortName>EcoDef_Bomb_Fire_01.wav</ShortName>
+							<Path>SFX\EcoDef_Bomb_Fire_01_0B727C4F.wem</Path>
+						</File>
+						<File Id="725385265" Language="SFX">
+							<ShortName>EcoDef_Bomb_Fire_05.wav</ShortName>
+							<Path>SFX\EcoDef_Bomb_Fire_05_B65ED867.wem</Path>
+						</File>
+						<File Id="781484774" Language="SFX">
+							<ShortName>EcoDef_Bomb_Fire_02.wav</ShortName>
+							<Path>SFX\EcoDef_Bomb_Fire_02_D40055DB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1087491060" Name="Play_PlantGrowth" ObjectPath="\Events\Default Work Unit\Play_PlantGrowth" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.183614" DurationMax="0.231339">
+					<IncludedMemoryFiles>
+						<File Id="513510797" Language="SFX">
+							<ShortName>EcoDefender_PlantGrowth.wav</ShortName>
+							<Path>SFX\EcoDefender_PlantGrowth_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2997592729" Name="Play_WhiteNoiseTest" ObjectPath="\Events\Default Work Unit\Play_WhiteNoiseTest" DurationType="OneShot" DurationMin="1.687627" DurationMax="1.687627">
 					<IncludedMemoryFiles>
 						<File Id="344732107" Language="SFX">
 							<ShortName>WhiteNoiseTest.wav</ShortName>
-							<Path>SFX\WhiteNoiseTest_74020D43.wem</Path>
+							<Path>SFX\WhiteNoiseTest_0B57F0DD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3589812408" Language="SFX" Hash="808684632">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
+			<ShortName>Music_SoundBank</ShortName>
+			<Path>Music_SoundBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
