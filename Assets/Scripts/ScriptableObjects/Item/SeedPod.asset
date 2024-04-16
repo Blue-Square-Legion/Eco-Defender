@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SeedPod
   m_EditorClassIdentifier: 
   Type: 1
+  Prefab: {fileID: 5242463975776401472, guid: 95af4706f610a478f958c8606da9c98c, type: 3}
