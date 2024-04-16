@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0f6ef3bcbd0de4f835e2ad4b2d7042, type: 3}
-  m_Name: Ferilizer
+  m_Script: {fileID: 11500000, guid: ef9e2d8f7d5f7984ba45806571edb479, type: 3}
+  m_Name: ItemCraftFailed
   m_EditorClassIdentifier: 
-  Type: 0
-  Prefab: {fileID: 2802101084306878966, guid: 0ab646e789d50a649bb2e69540e7cbb9, type: 3}
