@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747362526260069568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.105, z: 0.386}
+  m_LocalPosition: {x: 0, y: -0.081, z: 0.412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1119,13 +1119,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831905963079483865}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.83, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.18, z: 0.416}
+  m_LocalScale: {x: 0.1, y: 0.10000003, z: 0.36270005}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8831905964860894781}
-  m_RootOrder: 0
+  m_Father: {fileID: 8831905963338036778}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &8831905963338036789
 GameObject:
@@ -1160,6 +1160,7 @@ Transform:
   m_Children:
   - {fileID: 1401798543722667642}
   - {fileID: 8831905964172486036}
+  - {fileID: 8831905963079483870}
   - {fileID: 8831905964860894781}
   - {fileID: 8831905964907499966}
   m_Father: {fileID: 0}
@@ -1374,7 +1375,7 @@ GameObject:
   m_Layer: 0
   m_Name: Grab Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1423,10 +1424,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.166, z: 0.329}
   m_LocalScale: {x: 0.1, y: 0.3627, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8831905963079483870}
+  m_Children: []
   m_Father: {fileID: 8831905963338036778}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8831905964860894771
 MeshFilter:
@@ -1524,7 +1524,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8831905963338036778}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8831905964907499964
 MeshFilter:
