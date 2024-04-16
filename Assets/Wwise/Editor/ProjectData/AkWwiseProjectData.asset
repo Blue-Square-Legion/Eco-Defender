@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8993f511730d194da0cf285e8dbaa7db
     GuidInternal: 
-    m_lastTime: -8584889781696981295
+    m_lastTime: -8584885759297960461
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9ed24b9f533a424681045f077e90190e
     GuidInternal: 
-    m_lastTime: -8584885561231325464
+    m_lastTime: -8584885747279439167
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: SFX
+      guid: c439019a86699f42b8273808142720a1
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9ed24b9f533a424681045f077e90190e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: c439019a86699f42b8273808142720a1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,8 +83,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f9c117837134f440a81e5a381644bd2b
     GuidInternal: 
-    m_lastTime: -8584885561231315485
+    m_lastTime: -8584885530215938498
     List:
+    - name: Music_SoundBank
+      guid: 99f6826fec234d4aa58bb55b326e57a2
+      id: 3589812408
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9c117837134f440a81e5a381644bd2b
+      - ElementName: Music_SoundBank
+        ObjectType: 7
+        guid: 99f6826fec234d4aa58bb55b326e57a2
+      Path: SoundBanks\Default Work Unit\Music_SoundBank
     - name: SFX_SoundBank
       guid: 8d48e18158818c479d24487c63e0c4e8
       id: 2641024368
@@ -94,8 +125,76 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 42a04e71b71ee443af0c1656b6b3ae6b
     GuidInternal: 
-    m_lastTime: -8584885561231527321
+    m_lastTime: -8584885538692445482
     List:
+    - name: Play_Grab_Plastic
+      guid: 8cda6d7937dbd349a8a24076e06a94f0
+      id: 176757445
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Grab_Plastic
+        ObjectType: 3
+        guid: 8cda6d7937dbd349a8a24076e06a94f0
+      Path: Events\Default Work Unit\Play_Grab_Plastic
+      maxAttenuation: 0
+      maxDuration: 0.083841
+      minDuration: 0.066545
+    - name: Play_Gun_Empty
+      guid: dd108ac246ee674ca56058209ebadc23
+      id: 1633093614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Gun_Empty
+        ObjectType: 3
+        guid: dd108ac246ee674ca56058209ebadc23
+      Path: Events\Default Work Unit\Play_Gun_Empty
+      maxAttenuation: 1000
+      maxDuration: 0.118533
+      minDuration: 0.09408
+    - name: Play_PlantBombOneShot
+      guid: e3f9e1ca21486047b7d22d3d007e5e86
+      id: 4286830491
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_PlantBombOneShot
+        ObjectType: 3
+        guid: e3f9e1ca21486047b7d22d3d007e5e86
+      Path: Events\Default Work Unit\Play_PlantBombOneShot
+      maxAttenuation: 1000
+      maxDuration: 0.498997
+      minDuration: 0.368488
+    - name: Play_PlantGrowth
+      guid: 5738cd8832b83547a1598987e88f887c
+      id: 1087491060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_PlantGrowth
+        ObjectType: 3
+        guid: 5738cd8832b83547a1598987e88f887c
+      Path: Events\Default Work Unit\Play_PlantGrowth
+      maxAttenuation: 1000
+      maxDuration: 0.231339
+      minDuration: 0.183614
     - name: Play_WhiteNoiseTest
       guid: 6fd8e69a420fee4ab546f68554eaf461
       id: 2997592729
@@ -125,7 +224,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 51fcacfd084226429e9855e6df44c505
     GuidInternal: 
-    m_lastTime: -8584889781698518655
+    m_lastTime: -8584885759299930904
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -139,7 +238,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f526d83be32e2345b3a5a5ad68f06653
     GuidInternal: 
-    m_lastTime: -8584889781697001259
+    m_lastTime: -8584885759297980470
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -153,7 +252,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f2b8e8a57f2dbe47a52b53b4343620be
     GuidInternal: 
-    m_lastTime: -8584889781696991272
+    m_lastTime: -8584885759297970465
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -167,10 +266,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6876f6de3bf72942bbebc52af1e6656b
     GuidInternal: 
-    m_lastTime: -8584889781696991272
+    m_lastTime: -8584885759297970465
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
