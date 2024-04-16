@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0f6ef3bcbd0de4f835e2ad4b2d7042, type: 3}
   m_Name: Seed
   m_EditorClassIdentifier: 
+  Type: 0
+  Prefab: {fileID: 61062558813809069, guid: 86820208796f94bd48589416cc18b678, type: 3}

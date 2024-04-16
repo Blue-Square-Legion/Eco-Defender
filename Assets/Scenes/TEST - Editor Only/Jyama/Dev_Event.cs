@@ -18,6 +18,11 @@ namespace DevTool
                 Event.Invoke();
             }
         }
+
+        static public void LogText(string text)
+        {
+            print(text);
+        }
     }
 }
 
