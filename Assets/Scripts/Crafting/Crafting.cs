@@ -17,6 +17,9 @@ public class Crafting : MonoBehaviour
 
     private List<ItemSO> _items;
 
+    public string CraftEmpty = "Play_CraftEmpty";
+    public string CraftSuccess = "Play_CraftSuccess";
+
     public void Craft()
     {
         _items = _recipeSocket.ConvertAll<ItemSO>(item =>
@@ -27,6 +30,7 @@ public class Crafting : MonoBehaviour
         if(_items.TrueForAll(item => item == null))
         {
             OnCraftEmpty.Invoke();
+            AkSoundEngine.PostEvent(CraftEmpty, gameObject);
             return;
         }
 
@@ -38,10 +42,12 @@ public class Crafting : MonoBehaviour
             ClearSockets();
             SpawnItem(found.result);
             OnCraftSuccess.Invoke();
+            AkSoundEngine.PostEvent(CraftSuccess, gameObject);
         }
         else
         {
             OnCraftFailed.Invoke();
+            AkSoundEngine.PostEvent(CraftEmpty, gameObject);
         }
     }
 

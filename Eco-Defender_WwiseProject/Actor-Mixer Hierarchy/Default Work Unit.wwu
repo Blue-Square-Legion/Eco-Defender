@@ -319,6 +319,56 @@
 						<ActiveSource Name="EcoDefender_PlantGrowth" ID="{A3CE321E-D0A9-488E-AF8F-C488E95FE205}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Indicators" ID="{35144F1F-77B2-4C71-8C36-2BB9A906BB86}" ShortID="408410894">
+					<ChildrenList>
+						<Sound Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" ShortID="738384902">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_CraftSuccess" ID="{3EF5834C-8C8F-4ADA-A9B0-A0D78222EB01}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_CraftSuccess.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="544201326"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_CraftSuccess" ID="{3EF5834C-8C8F-4ADA-A9B0-A0D78222EB01}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_CraftEmpty" ID="{A3288C8E-668B-47C3-BD06-2E88BBC07FA7}" ShortID="976016797">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_CraftFail" ID="{5B064E0A-6066-4C27-9D78-CD0EEB039257}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_CraftFail.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="313538872"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_CraftFail" ID="{5B064E0A-6066-4C27-9D78-CD0EEB039257}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

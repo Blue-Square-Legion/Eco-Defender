@@ -3,14 +3,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	1087491060	Play_PlantGrowth			\Default Work Unit\Play_PlantGrowth	
 	1633093614	Play_Gun_Empty			\Default Work Unit\Play_Gun_Empty	
 	2997592729	Play_WhiteNoiseTest			\Default Work Unit\Play_WhiteNoiseTest	
+	3402428323	Play_CraftEmpty			\Default Work Unit\Play_CraftEmpty	
+	3701963209	Play_CraftSuccess			\Default Work Unit\Play_CraftSuccess	
 	4286830491	Play_PlantBombOneShot			\Default Work Unit\Play_PlantBombOneShot	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11402219	EcoDef_Bomb_Fire_04	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_04_16A194A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_04		72732
 	118355174	EcoDef_Bomb_Fire_03	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_03_A2E10A33.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_03		65064
 	219172893	Grab_Plastic	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDefender_GrabPlastic_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grab_Plastic		13240
+	313538872	EcoDef_CraftEmpty	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_CraftFail_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Indicators\EcoDef_CraftEmpty		132364
 	344732107	WhiteNoiseTest	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\WhiteNoiseTest_0B57F0DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\WhiteNoiseTest		324168
 	513510797	PlantGrowth	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDefender_PlantGrowth_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantGrowth		36420
+	544201326	EcoDef_CraftSuccess	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_CraftSuccess_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Indicators\EcoDef_CraftSuccess		396964
 	662235655	Gun_Empty	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDefender_EmptyGun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gun_Empty		18692
 	716825240	EcoDef_Bomb_Fire_01	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_01_0B727C4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_01		78744
 	725385265	EcoDef_Bomb_Fire_05	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_05_B65ED867.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_05		79616

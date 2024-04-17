@@ -16,11 +16,27 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="1696140048">
+		<SoundBank Id="2641024368" Language="SFX" Hash="238665008">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3402428323" Name="Play_CraftEmpty" ObjectPath="\Events\Default Work Unit\Play_CraftEmpty" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+					<IncludedMemoryFiles>
+						<File Id="313538872" Language="SFX">
+							<ShortName>EcoDef_CraftFail.wav</ShortName>
+							<Path>SFX\EcoDef_CraftFail_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3701963209" Name="Play_CraftSuccess" ObjectPath="\Events\Default Work Unit\Play_CraftSuccess" DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
+					<IncludedMemoryFiles>
+						<File Id="544201326" Language="SFX">
+							<ShortName>EcoDef_CraftSuccess.wav</ShortName>
+							<Path>SFX\EcoDef_CraftSuccess_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" DurationType="OneShot" DurationMin="0.066545" DurationMax="0.083841">
 					<IncludedMemoryFiles>
 						<File Id="219172893" Language="SFX">
