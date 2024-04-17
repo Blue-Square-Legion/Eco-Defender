@@ -30,6 +30,11 @@ public class PortalManager : MonoBehaviour
     //Async non-void to allow await 
     private async Task<bool> AsyncClose()
     {
+        if(_currentScene == null)
+        {
+            return false;
+        }
+
         _DoorAnim.Close();
 
         await Task.Delay((int)(_DoorAnim.ClipLength * 1000));
