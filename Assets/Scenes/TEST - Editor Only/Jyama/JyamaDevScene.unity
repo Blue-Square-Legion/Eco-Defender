@@ -886,7 +886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8cca6b9ed96343835ed8d050dbbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _DoorAnim: {fileID: 1520575326}
+  _DoorAnimator: {fileID: 1520575326}
+  _throttleBetweenLoads: 0
 --- !u!114 &329528282
 MonoBehaviour:
   m_ObjectHideFlags: 0

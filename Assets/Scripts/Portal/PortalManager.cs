@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 public class PortalManager : MonoBehaviour
 {
-    [SerializeField] private AnimatorController _DoorAnimator;
+    [SerializeField] private DoorAnimatorController _DoorAnimator;
+    [SerializeField, Tooltip("Delay = Throttle between loads + Door Animation time")] 
+    private float _throttleBetweenLoads = 0;
   
     private SceneManagerSO _currentScene = null;
 
@@ -47,9 +49,9 @@ public class PortalManager : MonoBehaviour
 
         await manager.AsyncLoad();
         _currentScene = manager;
-        _DoorAnimator.Open();
+        _DoorAnimator?.Open();
 
-        await Task.Delay((int)(_DoorAnimator.ClipLength * 1000));
+        await Task.Delay((int)((_DoorAnimator?.ClipLength ?? 0 + _throttleBetweenLoads)  * 1000));
         return true;
     }
     
@@ -60,10 +62,11 @@ public class PortalManager : MonoBehaviour
             return false;
         }
 
-        _DoorAnimator.Close();
+        _DoorAnimator?.Close();
 
-        await Task.Delay((int)(_DoorAnimator.ClipLength * 1000));
+        await Task.Delay((int)((_DoorAnimator?.ClipLength ?? 0)  * 1000));
         await _currentScene.AsyncUnload();
+        await Task.Delay((int)((_throttleBetweenLoads) * 1000));
 
         _currentScene = null;
         return true;

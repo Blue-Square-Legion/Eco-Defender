@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimatorController : MonoBehaviour
+public class DoorAnimatorController : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private string _openName = "Open";
