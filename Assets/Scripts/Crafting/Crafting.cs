@@ -13,16 +13,22 @@ public class Crafting : MonoBehaviour
     [SerializeField] private List<RecipeSO> _recipes;
 
     [Space(10)]
-    public UnityEvent OnCraftSuccess, OnCraftFailed;
+    public UnityEvent OnCraftSuccess, OnCraftFailed, OnCraftEmpty;
 
     private List<ItemSO> _items;
 
     public void Craft()
     {
-        _items = _recipeSocket.ConvertAll<ItemSO>(item => 
-            item.GetOldestInteractableSelected()
-            .transform.GetComponent<ItemTag>()?.Tag
-         );
+        _items = _recipeSocket.ConvertAll<ItemSO>(item =>
+            item.GetOldestInteractableSelected()?
+                .transform.GetComponent<ItemTag>()?.Tag
+        );
+
+        if(_items.TrueForAll(item => item == null))
+        {
+            OnCraftEmpty.Invoke();
+            return;
+        }
 
         //iterate to find first match (TODO: Can be improved later)
         RecipeSO found = _recipes.Find(item => item.IsMatch(_items));
