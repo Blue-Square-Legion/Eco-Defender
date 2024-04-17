@@ -6,29 +6,20 @@ namespace DevTool
 {
     public class Dev_SceneManger : MonoBehaviour
     {
-        public SceneManagerSO Scene;
+        public List<SceneManagerSO> Scene;
+        public PortalManager _portalManager;
 
-        public void Toggle()
-        {
-
-            if (Scene.IsLoaded())
-            {
-                UnLoad();
-            }
-            else
-            {
-                Load();
-            }
-        }
+        private int index = 0;
 
         public void Load()
         {
-            Scene.AsyncLoad();
+            index = (index+1) % Scene.Count;
+            _portalManager.Open(Scene[index]);
         }
 
         public void UnLoad()
         {
-            Scene.AsyncUnload();
+            _portalManager.Close();
         }
     }
 

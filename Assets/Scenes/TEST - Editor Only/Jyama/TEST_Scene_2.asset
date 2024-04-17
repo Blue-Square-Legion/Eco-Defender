@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3150653a5c1c9bf45b478bd0a94b6113, type: 3}
-  m_Name: TEST_Manager
+  m_Name: TEST_Scene_2
   m_EditorClassIdentifier: 
-  ScenePath: Assets/Scenes/TEST - Editor Only/Jyama/TESTSubScene.unity
+  ScenePath: Assets/Scenes/TEST - Editor Only/Jyama/TESTSubScene 2.unity
