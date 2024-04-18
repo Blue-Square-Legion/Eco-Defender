@@ -1903,6 +1903,8 @@ GameObject:
   - component: {fileID: 854389076}
   - component: {fileID: 854389075}
   - component: {fileID: 854389074}
+  - component: {fileID: 854389077}
+  - component: {fileID: 854389078}
   m_Layer: 0
   m_Name: FakeManager
   m_TagString: Untagged
@@ -1971,6 +1973,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &854389077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854389073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac8cca6b9ed96343835ed8d050dbbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DoorAnimator: {fileID: 1262764648}
+  _throttleBetweenLoads: 0
+--- !u!114 &854389078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854389073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcee23a5ae51bfb4cbdeed65fddf3141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene:
+  - {fileID: 11400000, guid: f2b970d05a65eb34daa444d6410a4f63, type: 2}
+  - {fileID: 11400000, guid: cd43102eda6f3ec44ad4d66b9363b8bd, type: 2}
+  _portalManager: {fileID: 854389077}
 --- !u!1001 &884077499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3156,6 +3188,48 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1262764645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1262764647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7851771624081464897, guid: 8d59ae24048854eb08cabfb77fffb8fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1262764645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1262764648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262764647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4619d2f37e4e24ea97c124202e2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1262764649}
+  _openName: Open
+  _closeName: Close
+--- !u!95 &1262764649
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262764647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7887e7a90b7b25644a35e893e6b2c84e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1275164482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6952,6 +7026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599aa52bb17ed2e4583ff0762d903eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dev_SceneManger: {fileID: 854389078}
   startButton: {fileID: 3964085566293607620}
   optionsButton: {fileID: 3964085564964930541}
 --- !u!1 &3964085565907071656
@@ -7586,7 +7661,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3964085566293607622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3964085565803348415}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &3964085566293607624
 RectTransform:
   m_ObjectHideFlags: 0
