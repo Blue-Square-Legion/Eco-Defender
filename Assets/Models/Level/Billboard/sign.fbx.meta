@@ -3,7 +3,37 @@ guid: bc5b66c41e8db4701ac9e7555922c85e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a21ab3cb24cc9461cb225f621b149021, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d5fbac45f435941cc8f360abfbe0c3f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: bc657d8174250461b85c17f54ba587e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: d716310f6b0074e59b55ebff9c239ad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: bee00e04bfc704c288b94c9351f1678d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eco_defender_sign
+    second: {fileID: 2100000, guid: 7c1faf7da36b843d2a0c3f5d3daa3a98, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
