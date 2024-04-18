@@ -1276,6 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c066a62f9201904a9d76ba0fe521f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grab_Plastic: Play_Grab_Plastic
 --- !u!1 &7948053524750574165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,6 +2001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c066a62f9201904a9d76ba0fe521f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grab_Plastic: Play_Grab_Plastic
 --- !u!1 &8231043341770648205
 GameObject:
   m_ObjectHideFlags: 0

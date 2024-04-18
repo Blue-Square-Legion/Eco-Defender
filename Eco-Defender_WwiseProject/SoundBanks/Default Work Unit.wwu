@@ -5,8 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="SFX_SoundBank" ID="{81E1488D-8158-478C-9D24-487C63E0C4E8}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_CraftEmpty" ID="{5F8EA2A8-CA76-418C-99D4-2BFCE35468FF}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlantGrowth" ID="{88CD3857-B832-4735-A159-8987E88F887C}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlantBombOneShot" ID="{CAE1F9E3-4821-4760-B7D2-2D3D007E5E86}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CraftSuccess" ID="{F36739A2-7F74-4815-A004-67CF95E4EC7E}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Grab_Plastic" ID="{796DDA8C-DB37-49D3-A8A2-4076E06A94F0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WhiteNoiseTest" ID="{9AE6D86F-0F42-4AEE-B546-F68554EAF461}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Gun_Empty" ID="{C28A10DD-EE46-4C67-A560-58209EBADC23}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>

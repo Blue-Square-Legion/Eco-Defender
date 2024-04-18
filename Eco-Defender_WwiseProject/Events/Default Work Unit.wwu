@@ -58,6 +58,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CraftEmpty" ID="{5F8EA2A8-CA76-418C-99D4-2BFCE35468FF}">
+					<ChildrenList>
+						<Action Name="" ID="{CA0CA180-9955-4FE4-967A-A32388F40B5D}" ShortID="560144162">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_CraftEmpty" ID="{A3288C8E-668B-47C3-BD06-2E88BBC07FA7}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CraftSuccess" ID="{F36739A2-7F74-4815-A004-67CF95E4EC7E}">
+					<ChildrenList>
+						<Action Name="" ID="{7E9C783F-8CE7-404A-9897-97C4D6711AD0}" ShortID="402656534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
