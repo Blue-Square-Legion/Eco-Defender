@@ -8,7 +8,13 @@ using EventSO;
 public class CollectorComponent : MonoBehaviour
 {
     [SerializeField] private XRBaseInteractor _controller;
+    [SerializeField] private Inventory _invRef;
     [SerializeField] private InteractionLayerMask _mask;
+
+    public Inventory InvRef
+    {
+        get { return _invRef; }
+    }
 
     private void OnEnable()
     {
@@ -28,6 +34,15 @@ public class CollectorComponent : MonoBehaviour
         if ((mask & _mask) != 0)
         {
             Event.interactableObject.transform.gameObject.BroadcastMessage("OnCollected");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<ItemTag>().Tag.Type == ItemType.Ammo)
+        {
+            _invRef.SeedCount++;
+            Destroy(other.gameObject);
         }
     }
 }
