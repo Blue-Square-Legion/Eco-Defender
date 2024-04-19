@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: 05036c595da64fb40b5d001dc2262001
-  - enabled: 1
-    path: Assets/Scenes/TEST - Editor Only/Jyama/TESTSubScene 2.unity
-    guid: 836757b94fad38e4593786ef8711b351
-  - enabled: 1
-    path: Assets/Scenes/TEST - Editor Only/Jyama/TESTSubScene 1.unity
-    guid: 9817dad4a4f4d624cab0b7f58b660142
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 740b0dbcc325f47aba184b6d2baf59f5,
       type: 2}
