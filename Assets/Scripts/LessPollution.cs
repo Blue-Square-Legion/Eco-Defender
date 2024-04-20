@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class LessPollution : MonoBehaviour
-{ public ParticleSystem partSys;
+{
+
     public ParticleSystem smog;
-    private float currentTime =5f;
-    // Start is called before the first frame update
-    private void OnCollisionEnter3D(Collider plant)
+    float curTime = 5;
+    private void OnParticleCollision(GameObject SMOG)
     {
-        if (currentTime <= 5)
-        {
-            currentTime -= Time.deltaTime;
-            smog.startLifetime = .1f;
-            smog.Stop();
-        }
-    }
    
+            if (SMOG.CompareTag("Plant")&& curTime <=0) ;
+        {
+         
+
+                SMOG.GetComponent<ParticleSystem>().Stop();
+        
+        }
+        curTime -= Time.deltaTime;
+
+    }
 }
