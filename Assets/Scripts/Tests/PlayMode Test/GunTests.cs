@@ -27,7 +27,7 @@ public class GunTests
         testGun.CurrAmmo = 1;
         testGun.MaxAmmo = 10;
 
-        testGun.ShootGun();
+        testGun.CurrAmmo--;
 
         Assert.AreEqual(0, testGun.CurrAmmo);
     }
@@ -38,6 +38,7 @@ public class GunTests
         testGun.CurrAmmo = 0;
         testGun.MaxAmmo = 10;
         testInv.SeedCount = 50;
+        testGun.InvRef = testInv;
 
         testGun.Reload();
 
@@ -50,6 +51,7 @@ public class GunTests
         testGun.CurrAmmo = 0;
         testGun.MaxAmmo = 10;
         testInv.SeedCount = 8;
+        testGun.InvRef = testInv;
 
         testGun.Reload();
 

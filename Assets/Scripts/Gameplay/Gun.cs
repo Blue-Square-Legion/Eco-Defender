@@ -27,6 +27,11 @@ public class Gun : XRGrabInteractable
         set { maxAmmo = value; }
     }
 
+    public Inventory InvRef { 
+        get { return _invRef; }
+        set { _invRef = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
