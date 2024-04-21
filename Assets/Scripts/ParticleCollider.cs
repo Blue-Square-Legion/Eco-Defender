@@ -30,7 +30,7 @@ public class ParticleCollider : MonoBehaviour
                     //If the collision was close enough to the particle position, destroy it
                     if (Vector3.Magnitude(m_Particles[i].position - coll.intersection) < 0.05f)
                     {
-                    m_Particles[i].Equals( obj); //Kills the particle
+                        m_Particles[i].remainingLifetime = 1; //Kills the particle
                       //  m_System.SetParticles(m_Particles); // Update particle system
                         break;
                     }
