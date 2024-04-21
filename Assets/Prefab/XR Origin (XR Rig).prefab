@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 9327013499300065}
   m_Layer: 0
   m_Name: DamageVision
-  m_TagString: Untagged
+  m_TagString: DamageCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

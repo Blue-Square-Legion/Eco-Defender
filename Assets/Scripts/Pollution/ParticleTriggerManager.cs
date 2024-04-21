@@ -23,6 +23,13 @@ public class ParticleTriggerManager : MonoBehaviour
     {
         if (!_system)
             _system = GetComponent<ParticleSystem>();
+
+        GameObject[] list = GameObject.FindGameObjectsWithTag("DamageCollider");
+
+        foreach (GameObject go in list)
+        {
+            _system.trigger.AddCollider(go.GetComponent<Collider>());
+        }
     }
 
     private void FixedUpdate()
