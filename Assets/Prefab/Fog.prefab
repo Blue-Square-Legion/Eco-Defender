@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -0.47, y: 2.5, z: 9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2032370950346824821}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -3625,7 +3626,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3790,7 +3791,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 1
+    collisionMessages: 0
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -4832,3 +4833,83 @@ MonoBehaviour:
   OnParticleEnd:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &8427992991924230077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3859955815303043263}
+    m_Modifications:
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456777, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: m_Name
+      value: LightController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456783, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50a6408f36e3a6c40b69e6f13afdcc45, type: 3}
+--- !u!4 &2032370950346824821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7548684322398456776, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+    type: 3}
+  m_PrefabInstance: {fileID: 8427992991924230077}
+  m_PrefabAsset: {fileID: 0}
