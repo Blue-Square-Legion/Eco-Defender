@@ -3444,21 +3444,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fog
       objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043260, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043260, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.scalar
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043260, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: InitialModule.startSizeZ.scalar
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3859955815303043263, guid: ecc49fb8b645b4d4382a1784d8751ee8,
         type: 3}
       propertyPath: m_RootOrder
