@@ -8,7 +8,7 @@ public class LessPollution : MonoBehaviour
 {
 
     public ParticleSystem smog;
-    float curTime = 5;
+    float curTime =10;
     private void OnParticleCollision(GameObject SMOG)
     {
    
