@@ -2070,96 +2070,6 @@ Transform:
   m_Father: {fileID: 727645028}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1026396778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1026396779}
-  - component: {fileID: 1026396781}
-  - component: {fileID: 1026396780}
-  m_Layer: 6
-  m_Name: LightController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1026396779
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026396778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2135241185}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1026396780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026396778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 459600b07d94e9d4d9ce4fd6e26e0a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _light: {fileID: 1411992518}
-  _targetSetting:
-    color: {r: 0.19344072, g: 0.21399921, b: 0.5943396, a: 1}
-    intensity: 1
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  _transitionTime: 2
-  _curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!135 &1026396781
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026396778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1031211041 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5931506858617381109, guid: 314e5ce426f6b5f488682436a549f1c2,
@@ -3615,50 +3525,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 520312987}
     m_Modifications:
+    - target: {fileID: 2032370950346824818, guid: ecc49fb8b645b4d4382a1784d8751ee8,
+        type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 1411992518}
     - target: {fileID: 3859955815303043250, guid: ecc49fb8b645b4d4382a1784d8751ee8,
         type: 3}
       propertyPath: m_Name
       value: Fog
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1026396780}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetLight
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LightController, Scripts
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859955815303043262, guid: ecc49fb8b645b4d4382a1784d8751ee8,
-        type: 3}
-      propertyPath: OnParticleEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3859955815303043263, guid: ecc49fb8b645b4d4382a1784d8751ee8,
         type: 3}
