@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4307649822239857513}
   - component: {fileID: 4307649822239857518}
   - component: {fileID: 6258959630829742426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WorkBench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
