@@ -1452,7 +1452,6 @@ MonoBehaviour:
   projectile: {fileID: 4742469898609196209, guid: 850cfb6c4fdf35947af8ec41aa8827de,
     type: 3}
   maxAmmo: 10
-  seedCount: 50
 --- !u!114 &3012231070318297501
 MonoBehaviour:
   m_ObjectHideFlags: 0
