@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ParticleCollider : MonoBehaviour
-{ GameObject obj = null;
+{
     public ParticleSystem m_System;
     private void OnParticleCollision(GameObject other)
     {
@@ -31,7 +32,7 @@ public class ParticleCollider : MonoBehaviour
                     if (Vector3.Magnitude(m_Particles[i].position - coll.intersection) < 0.05f)
                     {
                         m_Particles[i].remainingLifetime = 1; //Kills the particle
-                      //  m_System.SetParticles(m_Particles); // Update particle system
+                        m_System.SetParticles(m_Particles); // Update particle system
                         break;
                     }
                 }

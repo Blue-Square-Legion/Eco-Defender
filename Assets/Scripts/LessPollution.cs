@@ -2,24 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+//robert chaney
 
 public class LessPollution : MonoBehaviour
 {
-
-    public ParticleSystem smog;
-    float curTime =10;
-    private void OnParticleCollision(GameObject SMOG)
+    public GameObject Plant;
+    public ParticleSystem S;
+    public float curTime = 0;
+    private void OnParticleCollision(GameObject S)
     {
    
-            if (SMOG.CompareTag("Plant")&& curTime <=0) ;
+            if (Plant.CompareTag("Plant")&& curTime >9) 
         {
          
 
-                SMOG.GetComponent<ParticleSystem>().Stop();
+                S.GetComponent<ParticleSystem>().Stop();
         
         }
-        curTime -= Time.deltaTime;
+        
 
+    }
+    private void Update()
+    {
+        curTime += Time.deltaTime;
     }
 }
