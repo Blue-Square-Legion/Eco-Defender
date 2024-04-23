@@ -14,6 +14,8 @@ public class ParticleTriggerManager : MonoBehaviour
     [SerializeField, Tooltip("Time Threshold to Stop Particle"), Min(0)] private float _endTimeThreshold = 1;
     [SerializeField, Tooltip("Count Threshold to Stop Particle"), Min(0)] private int _particleCountThreshold = 0;
 
+    [SerializeField] private string _tag = "DamageCollider";
+
     public UnityEvent OnParticleEnd;
 
     private readonly List<ParticleSystem.Particle> _enter = new List<ParticleSystem.Particle>();
@@ -24,7 +26,7 @@ public class ParticleTriggerManager : MonoBehaviour
         if (!_system)
             _system = GetComponent<ParticleSystem>();
 
-        GameObject[] list = GameObject.FindGameObjectsWithTag("DamageCollider");
+        GameObject[] list = GameObject.FindGameObjectsWithTag(_tag);
 
         foreach (GameObject go in list)
         {
