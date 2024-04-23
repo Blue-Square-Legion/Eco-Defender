@@ -2074,22 +2074,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3466080768763296534}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6088144621396500705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2941994630470924647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eca74faac280f14aaa8156d0da72633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
-  _invRef: {fileID: 5088640099808296543}
-  _mask:
-    m_Bits: 2
 --- !u!114 &2151587524647416782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,6 +2243,25 @@ MonoBehaviour:
   OnGunHeld:
     m_PersistentCalls:
       m_Calls: []
+  OnGunReleased:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6088144621396500705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941994630470924647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eca74faac280f14aaa8156d0da72633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 2151587524647416782}
+  _invRef: {fileID: 5088640099808296543}
+  _mask:
+    m_Bits: 2
 --- !u!4 &7034876562555069862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5888765399538998960, guid: ad818c36731146e994540a1896ad8f24,
@@ -2531,22 +2534,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3724386095698143133}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6088144620964866090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3126135809969513964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eca74faac280f14aaa8156d0da72633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
-  _invRef: {fileID: 5088640099808296543}
-  _mask:
-    m_Bits: 2
 --- !u!114 &4863715611202546461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,6 +2703,25 @@ MonoBehaviour:
   OnGunHeld:
     m_PersistentCalls:
       m_Calls: []
+  OnGunReleased:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6088144620964866090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126135809969513964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eca74faac280f14aaa8156d0da72633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 4863715611202546461}
+  _invRef: {fileID: 5088640099808296543}
+  _mask:
+    m_Bits: 2
 --- !u!4 &7068036250948598061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5888765399538998960, guid: ad818c36731146e994540a1896ad8f24,
