@@ -14,7 +14,6 @@ public class ParticleTriggerManager : MonoBehaviour
     [SerializeField, Tooltip("Time Threshold to Stop Particle"), Min(0)] private float _endTimeThreshold = 1;
     [SerializeField, Tooltip("Count Threshold to Stop Particle"), Min(0)] private int _particleCountThreshold = 0;
 
-    [SerializeField, Min(0.01f)] float _updateRate = 0.1f;
     [SerializeField] private string _tag = "DamageCollider";
 
     public UnityEvent OnParticleEnd;

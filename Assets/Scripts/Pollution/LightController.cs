@@ -62,7 +62,6 @@ public class LightController : MonoBehaviour
         if (_inside || !_enableEffect) return;
         if (((1 << other.gameObject.layer) & _layerMask) == 0) return;
 
-        print("Enter");
         _inside = true;
         BlendToTarget();
     }
