@@ -211,6 +211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307649822239857517, guid: 3d3195243dfe7604a941230d9080a825,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307649822239857517, guid: 3d3195243dfe7604a941230d9080a825,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -226,30 +231,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3195243dfe7604a941230d9080a825, type: 3}
---- !u!1 &7872974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 999207912, guid: 3d3195243dfe7604a941230d9080a825,
-    type: 3}
-  m_PrefabInstance: {fileID: 7872973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7872975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4307649822239857513, guid: 3d3195243dfe7604a941230d9080a825,
     type: 3}
   m_PrefabInstance: {fileID: 7872973}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7872976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5182426901389395782, guid: 3d3195243dfe7604a941230d9080a825,
-    type: 3}
-  m_PrefabInstance: {fileID: 7872973}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7872977 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8370416544693095633, guid: 3d3195243dfe7604a941230d9080a825,
@@ -552,7 +539,7 @@ GameObject:
   - component: {fileID: 179264146}
   - component: {fileID: 179264148}
   - component: {fileID: 179264149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LabGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +630,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 17
   m_DistanceCalculationMode: 1
   m_SelectMode: 1
   m_FocusMode: 1
@@ -5268,7 +5255,7 @@ GameObject:
   - component: {fileID: 1696151112}
   - component: {fileID: 1696151114}
   - component: {fileID: 1696151115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OutsideGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5359,7 +5346,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 17
   m_DistanceCalculationMode: 1
   m_SelectMode: 1
   m_FocusMode: 1
@@ -5497,8 +5484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeSocket:
   - {fileID: 7872977}
-  - {fileID: 7872976}
-  _spawnLocation: {fileID: 7872974}
+  - {fileID: 0}
+  _spawnLocation: {fileID: 0}
   _recipes:
   - {fileID: 11400000, guid: 994ad43382260994faae79a1d0c046f5, type: 2}
   OnCraftSuccess:
