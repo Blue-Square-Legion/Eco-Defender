@@ -14,6 +14,7 @@ public class ParticleTriggerManager : MonoBehaviour
     [SerializeField, Tooltip("Time Threshold to Stop Particle"), Min(0)] private float _endTimeThreshold = 1;
     [SerializeField, Tooltip("Count Threshold to Stop Particle"), Min(0)] private int _particleCountThreshold = 0;
 
+    [SerializeField, Min(0.01f)] float _updateRate = 0.1f;
     [SerializeField] private string _tag = "DamageCollider";
 
     public UnityEvent OnParticleEnd;
@@ -21,17 +22,23 @@ public class ParticleTriggerManager : MonoBehaviour
     private readonly List<ParticleSystem.Particle> _enter = new List<ParticleSystem.Particle>();
     private float _time = 0;
 
+    public float MaxParticleCount { get; private set; }
+    public float ParticleCount { get { return _system.particleCount; } }
+
     private void Awake()
     {
         if (!_system)
             _system = GetComponent<ParticleSystem>();
 
+        //Grabs colliders by tag
         GameObject[] list = GameObject.FindGameObjectsWithTag(_tag);
 
         foreach (GameObject go in list)
         {
             _system.trigger.AddCollider(go.GetComponent<Collider>());
         }
+
+        MaxParticleCount = _system.startLifetime * _system.emission.rateOverTime.constant;
     }
 
     private void FixedUpdate()
@@ -70,7 +77,6 @@ public class ParticleTriggerManager : MonoBehaviour
 
     private void EndParticle()
     {
-        print("Particles is Ended");
         _system.Stop();
         enabled = false;
         OnParticleEnd.Invoke();

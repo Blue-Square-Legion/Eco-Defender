@@ -27,12 +27,14 @@ public class LightController : MonoBehaviour
     [Space(5)]
     [SerializeField] private LightSetting _targetSetting = new(Color.white, 1f);
     [SerializeField, Min(0.1f)] private float _transitionTime = 1f;
+    [SerializeField, Range(0, 1)] private float _minIntensity = 0f, _maxIntensity = 1f;
 
     [SerializeField] private AnimationCurve _curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     private LightSetting _defaultSetting;
 
     private float _time = 0f;
+    private float _currentBlend = 0f, _targetBlend = 0f, _insideBlend = 1f;
     private Action<float> _curveAnimFn;
     private bool _inside = false, _enableEffect = true;
     private Action _transisitionEnd;
@@ -52,17 +54,7 @@ public class LightController : MonoBehaviour
     //Use FixedUpdate as psuedo timeline
     private void FixedUpdate()
     {
-        _time += Time.fixedDeltaTime;
-
-        if (_time >= _transitionTime || _time <= 0)
-        {
-            _time = Mathf.Clamp01(_time);
-            _curveAnimFn(_curve.Evaluate(_time));
-            _transisitionEnd?.Invoke();
-            enabled = false;
-        }
-
-        _curveAnimFn(_curve.Evaluate(_time));
+        _curveAnimFn(Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,6 +62,7 @@ public class LightController : MonoBehaviour
         if (_inside || !_enableEffect) return;
         if (((1 << other.gameObject.layer) & _layerMask) == 0) return;
 
+        print("Enter");
         _inside = true;
         BlendToTarget();
     }
@@ -91,7 +84,7 @@ public class LightController : MonoBehaviour
     }
 
 
-    //Handles Animation curve for timeline
+    //Handles Animation curve for psuedo timeline
     private void PlayCurve(Action<float> cb)
     {
         _time = 0;
@@ -99,9 +92,41 @@ public class LightController : MonoBehaviour
         enabled = true;
     }
 
-    private Action<float> MakeBlendFn(LightSetting start, LightSetting end)
+    //Should Improve later. Blends to target based on time & disables component once done.
+    private Action<float> MakeBlendFn(float target)
     {
-        return (float time) => BlendLight(time, start, end);
+        _targetBlend = target;
+
+        if (_currentBlend < _targetBlend)
+        {
+            return (float deltaTime) =>
+            {
+                _currentBlend += deltaTime / _transitionTime;
+
+                if (_currentBlend >= _targetBlend)
+                {
+                    enabled = false;
+                    _currentBlend = _targetBlend;
+                }
+
+                BlendLight(_curve.Evaluate(_currentBlend), _defaultSetting, _targetSetting);
+            };
+        }
+        else
+        {
+            return (float deltaTime) =>
+            {
+                _currentBlend -= deltaTime / _transitionTime;
+
+                if (_currentBlend <= _targetBlend)
+                {
+                    enabled = false;
+                    _currentBlend = _targetBlend;
+                }
+
+                BlendLight(_curve.Evaluate(_currentBlend), _defaultSetting, _targetSetting);
+            };
+        }
     }
 
     private void BlendLight(float alpha, LightSetting start, LightSetting end)
@@ -133,12 +158,21 @@ public class LightController : MonoBehaviour
 
     public void BlendToDefault()
     {
-        PlayCurve(MakeBlendFn(_targetSetting, _defaultSetting));
+        PlayCurve(MakeBlendFn(0));
     }
 
     public void BlendToTarget()
     {
-        PlayCurve(MakeBlendFn(_defaultSetting, _targetSetting));
+        PlayCurve(MakeBlendFn(Mathf.Lerp(_minIntensity, _maxIntensity, _insideBlend)));
+    }
+
+    public void Blend(float target)
+    {
+        if (_inside && _insideBlend != target)
+        {
+            _insideBlend = target;
+            BlendToTarget();
+        }
     }
     #endregion
 }
