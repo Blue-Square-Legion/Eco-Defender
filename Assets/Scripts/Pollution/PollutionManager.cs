@@ -7,7 +7,9 @@ using UnityEngine.Events;
 public class PollutionManager : MonoBehaviour
 {
     [SerializeField] List<ParticleTriggerManager> particleSystems = new List<ParticleTriggerManager>();
-    [SerializeField, Min(0.01f)] float _updateRate = 0.1f;
+    [SerializeField, Min(0.01f), Tooltip("Rate (sec) OnPollutionValue is triggered")] float _updateRate = 0.1f;
+
+    [Space(5)]
     public UnityEvent OnPollutionEnd;
     public UnityEvent<float> OnPollutionValue;
 
