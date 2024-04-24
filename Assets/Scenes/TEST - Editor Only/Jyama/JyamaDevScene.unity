@@ -4259,11 +4259,6 @@ PrefabInstance:
       propertyPath: _light
       value: 
       objectReference: {fileID: 1411992518}
-    - target: {fileID: 2032064406334618301, guid: e7f786dd586038f4699039dad01c601b,
-        type: 3}
-      propertyPath: _minIntensity
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 8048384971452845090, guid: e7f786dd586038f4699039dad01c601b,
         type: 3}
       propertyPath: m_RootOrder
