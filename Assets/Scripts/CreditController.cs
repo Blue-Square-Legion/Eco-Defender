@@ -30,7 +30,14 @@ public class CreditController : MonoBehaviour
         //get forward based on horizontal plane
         _target = _distance * Vector3.ProjectOnPlane(_camera.transform.forward, Vector3.up).normalized;
 
-        if (_useHeightRange) { ClampTarget(ref _target); }
+        if (_useHeightRange)
+        {
+            ClampTarget(ref _target);
+        }
+        else
+        {
+            _target.y = transform.position.y;
+        }
 
         //Dappens screen movement
         if (_useDampening)
