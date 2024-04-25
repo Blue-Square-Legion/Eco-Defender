@@ -68,12 +68,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.25
+    - _OutlineWidth: 0.374
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
+    - _ScaleRatioB: 0.48958334
+    - _ScaleRatioC: 0.48958334
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -92,8 +92,8 @@ Material:
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
-    - _WeightBold: 0.75
-    - _WeightNormal: 0
+    - _WeightBold: 1.65
+    - _WeightNormal: 1.23
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
     m_PointSize: 59
     m_Scale: 1
     m_UnitsPerEM: 1000
-    m_LineHeight: 73.16
+    m_LineHeight: 65
     m_AscentLine: 58.705
     m_CapLine: 45
     m_MeanLine: 34
@@ -2761,11 +2761,11 @@ MonoBehaviour:
   - regularTypeface: {fileID: 0}
     italicTypeface: {fileID: 0}
   fontWeights: []
-  normalStyle: 0
-  normalSpacingOffset: 0
-  boldStyle: 0.75
+  normalStyle: 1.23
+  normalSpacingOffset: 4.3
+  boldStyle: 1.65
   boldSpacing: 7
-  italicStyle: 35
+  italicStyle: 34
   tabSize: 10
 --- !u!28 &9006170575381584236
 Texture2D:
