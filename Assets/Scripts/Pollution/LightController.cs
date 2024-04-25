@@ -27,17 +27,15 @@ public class LightController : MonoBehaviour
     [Space(5)]
     [SerializeField] private LightSetting _targetSetting = new(Color.white, 1f);
     [SerializeField, Min(0.1f)] private float _transitionTime = 1f;
-    [SerializeField, Range(0, 1)] private float _minIntensity = 0f, _maxIntensity = 1f;
+    [SerializeField, Range(0, 1), Tooltip("Inside Pollution light intensity")] private float _minIntensity = 0f, _maxIntensity = 1f;
 
-    [SerializeField] private AnimationCurve _curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    [SerializeField, Tooltip("Transition blend curve")] private AnimationCurve _curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     private LightSetting _defaultSetting;
 
-    private float _time = 0f;
     private float _currentBlend = 0f, _targetBlend = 0f, _insideBlend = 1f;
     private Action<float> _curveAnimFn;
     private bool _inside = false, _enableEffect = true;
-    private Action _transisitionEnd;
 
     private void Awake()
     {
@@ -86,7 +84,6 @@ public class LightController : MonoBehaviour
     //Handles Animation curve for psuedo timeline
     private void PlayCurve(Action<float> cb)
     {
-        _time = 0;
         _curveAnimFn = cb;
         enabled = true;
     }
@@ -98,6 +95,7 @@ public class LightController : MonoBehaviour
 
         if (_currentBlend < _targetBlend)
         {
+            //increase to target
             return (float deltaTime) =>
             {
                 _currentBlend += deltaTime / _transitionTime;
@@ -113,6 +111,7 @@ public class LightController : MonoBehaviour
         }
         else
         {
+            //decrease to target
             return (float deltaTime) =>
             {
                 _currentBlend -= deltaTime / _transitionTime;
@@ -162,7 +161,9 @@ public class LightController : MonoBehaviour
 
     public void BlendToTarget()
     {
-        PlayCurve(MakeBlendFn(Mathf.Lerp(_minIntensity, _maxIntensity, _insideBlend)));
+        //Caps blended change by min / max
+        float intesity = Mathf.Lerp(_minIntensity, _maxIntensity, _insideBlend);
+        PlayCurve(MakeBlendFn(intesity));
     }
 
     public void Blend(float target)

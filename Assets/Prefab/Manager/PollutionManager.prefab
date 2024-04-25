@@ -48,7 +48,7 @@ MonoBehaviour:
   particleSystems:
   - {fileID: 0}
   - {fileID: 0}
-  _updateTime: 0.1
+  _updateRate: 0.1
   OnPollutionEnd:
     m_PersistentCalls:
       m_Calls:
@@ -145,6 +145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LightController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456783, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: _minIntensity
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a6408f36e3a6c40b69e6f13afdcc45, type: 3}
