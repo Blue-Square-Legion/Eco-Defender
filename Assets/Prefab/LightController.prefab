@@ -61,11 +61,13 @@ MonoBehaviour:
   _light: {fileID: 0}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
   _targetSetting:
     color: {r: 0.19344072, g: 0.21399921, b: 0.5943396, a: 1}
     intensity: 1
   _transitionTime: 2
+  _minIntensity: 0.4
+  _maxIntensity: 1
   _curve:
     serializedVersion: 2
     m_Curve:
