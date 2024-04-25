@@ -7,6 +7,8 @@ namespace AudioScript
     public class PlayerController : MonoBehaviour
     {
         public string Grab_Plastic = "Play_Grab_Plastic";
+        public string hoverSoundEvent = "Play_EcoDef_Hover";
+        public string DropSoundEvent = "Play_EcoDef_Drop";
 
         private Collider handCollider;
 
@@ -35,12 +37,14 @@ namespace AudioScript
 
         public void OnRelease()
         {
-            StartCoroutine(ReleaseTimer());            
+            StartCoroutine(ReleaseTimer());
+            AkSoundEngine.PostEvent(DropSoundEvent, gameObject);
         }
 
         public void OnHover()
         {
             print("Hover");
+            AkSoundEngine.PostEvent(hoverSoundEvent, gameObject);
         }
 
         public IEnumerator ReleaseTimer()
