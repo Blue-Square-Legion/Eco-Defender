@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="1976766092">
+		<SoundBank Id="2641024368" Language="SFX" Hash="2822805505">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -53,11 +53,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="692969629" Name="Play_EcoDef_Hover" ObjectPath="\Events\Default Work Unit\UI\Play_EcoDef_Hover" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.236621" DurationMax="0.236621">
+				<Event Id="692969629" Name="Play_EcoDef_Hover" ObjectPath="\Events\Default Work Unit\UI\Play_EcoDef_Hover" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.177234" DurationMax="0.177234">
 					<IncludedMemoryFiles>
-						<File Id="720161923" Language="SFX">
-							<ShortName>EcoDef_Hover.wav</ShortName>
-							<Path>SFX\EcoDef_Hover_10C4C929.wem</Path>
+						<File Id="892485848" Language="SFX">
+							<ShortName>EcoDef_Hover_V3.wav</ShortName>
+							<Path>SFX\EcoDef_Hover_V3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
