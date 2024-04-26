@@ -67,7 +67,7 @@ public class Gun : XRGrabInteractable
             }
         } else
         {
-            // Reload();
+            // Gun is empty, put empty sound here
         }
     }
 
