@@ -391,7 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a565dd1e4e8e5e540a30015f3e013d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedCount: 50
+  invSize: 5
+  _invCanvas: {fileID: 0}
+  _invSlot: {fileID: 3472675426067027227, guid: 8a0a3471883de984e85ba64c64b0025f,
+    type: 3}
 --- !u!1 &5339595567713106032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2149,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3466080768763296534}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &4486557743473392580
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941994630470924647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2151587524647416782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,6 +2627,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3724386095698143133}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &7221135577345034113
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126135809969513964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4863715611202546461
 MonoBehaviour:
   m_ObjectHideFlags: 0

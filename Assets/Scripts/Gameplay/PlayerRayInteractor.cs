@@ -31,4 +31,28 @@ public class PlayerRayInteractor : XRRayInteractor
             Debug.Log("Gun released");
         }
     }
+
+    protected override void OnHoverEntered(HoverEnterEventArgs args)
+    {
+        base.OnHoverEntered(args);
+
+        InventorySlot _invSlotRef = args.interactableObject.transform.gameObject.GetComponent<InventorySlot>();
+
+        if (_invSlotRef)
+        {
+            _invSlotRef.HighlightItem();
+        }
+    }
+
+    protected override void OnHoverExited(HoverExitEventArgs args)
+    {
+        base.OnHoverExited(args);
+
+        InventorySlot _invSlotRef = args.interactableObject.transform.gameObject.GetComponent<InventorySlot>();
+
+        if (_invSlotRef)
+        {
+            _invSlotRef.HighlightItem();
+        }
+    }
 }

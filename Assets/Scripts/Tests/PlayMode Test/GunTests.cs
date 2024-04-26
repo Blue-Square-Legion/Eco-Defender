@@ -35,9 +35,23 @@ public class GunTests
     [Test]
     public void GunReloadedWithSeedCountExceedingMax()
     {
+        testInv = new GameObject().AddComponent<Inventory>();
+        testGun = new GameObject().AddComponent<Gun>();
+
         testGun.CurrAmmo = 0;
         testGun.MaxAmmo = 10;
-        testInv.SeedCount = 50;
+
+        testGun.SeedProjectile = new GameObject().AddComponent<ItemTag>().Tag;
+        testGun.SeedProjectile = new ItemSO();
+        testGun.SeedProjectile.Prefab = new GameObject();
+
+        ItemSO ammo = testGun.SeedProjectile;
+
+        for (int i = 0; i < 50; i++)
+        {
+            testInv.AddToInventory(ammo);
+        }
+
         testGun.InvRef = testInv;
 
         testGun.Reload();
@@ -50,7 +64,21 @@ public class GunTests
     {
         testGun.CurrAmmo = 0;
         testGun.MaxAmmo = 10;
-        testInv.SeedCount = 8;
+
+        testInv = new GameObject().AddComponent<Inventory>();
+        testGun = new GameObject().AddComponent<Gun>();
+
+        testGun.SeedProjectile = new GameObject().AddComponent<ItemTag>().Tag;
+        testGun.SeedProjectile = new ItemSO();
+        testGun.SeedProjectile.Prefab = new GameObject();
+
+        ItemSO ammo = testGun.SeedProjectile;
+
+        for (int i = 0; i < 8; i++)
+        {
+            testInv.AddToInventory(ammo);
+        }
+
         testGun.InvRef = testInv;
 
         testGun.Reload();

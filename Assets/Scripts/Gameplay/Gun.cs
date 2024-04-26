@@ -12,7 +12,8 @@ public class Gun : XRGrabInteractable
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
     [SerializeField] private GameObject spawnPoint;
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private ItemSO seedProjectileSO;
+    [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
 
     public int CurrAmmo
@@ -32,6 +33,12 @@ public class Gun : XRGrabInteractable
         set { _invRef = value; }
     }
 
+    public ItemSO SeedProjectile
+    {
+        get { return seedProjectileSO; }
+        set { seedProjectileSO = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +48,7 @@ public class Gun : XRGrabInteractable
     // Update is called once per frame
     void Update()
     {
-        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo }");
+        
     }
 
     protected override void OnActivated(ActivateEventArgs args)
@@ -55,10 +62,10 @@ public class Gun : XRGrabInteractable
     {
         if (currAmmo > 0)
         {
-            if (projectile)
+            if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
-                GameObject projObj = Instantiate(projectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
                 Destroy(projObj, 1f);
             }
             else
@@ -69,6 +76,8 @@ public class Gun : XRGrabInteractable
         {
             Reload();
         }
+
+        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -76,20 +85,21 @@ public class Gun : XRGrabInteractable
         base.OnSelectEntered(args);
 
         _invRef = args.interactorObject.transform.gameObject.GetComponent<CollectorComponent>().InvRef;
+        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
     }
 
     public void Reload()
     {
-        if (_invRef.SeedCount > 0)
+        if (_invRef.Inv[seedProjectileSO] > 0)
         {
-            if (_invRef.SeedCount < maxAmmo)
+            if (_invRef.Inv[seedProjectileSO] < maxAmmo)
             {
-                currAmmo = _invRef.SeedCount;
-                _invRef.SeedCount = 0;
+                currAmmo = _invRef.Inv[seedProjectileSO];
+                _invRef.RemoveFromInventory(seedProjectileSO, currAmmo, true);
             }
             else
             {
-                _invRef.SeedCount -= maxAmmo;
+                _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo, true);
                 currAmmo = maxAmmo;
             }
         }

@@ -39,9 +39,9 @@ public class CollectorComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<ItemTag>().Tag.Type == ItemType.Ammo)
+        if(other.GetComponent<ItemTag>())
         {
-            _invRef.SeedCount++;
+            _invRef.AddToInventory(other.gameObject.GetComponent<ItemTag>().Tag);
             Destroy(other.gameObject);
         }
     }
