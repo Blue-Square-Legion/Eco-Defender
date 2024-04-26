@@ -429,6 +429,11 @@
 						<Sound Name="EcoDef_Hover" ID="{F60A2354-A1C7-44A9-909B-464817642349}" ShortID="873110008">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -442,17 +447,17 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="EcoDef_Hover" ID="{DE7DB4AE-7C2A-4A5A-A363-29B2FAFEBD34}">
+								<AudioFileSource Name="EcoDef_Hover_V3" ID="{2D2F6D9F-258C-4176-95DB-5B46C5F28A84}">
 									<Language>SFX</Language>
-									<AudioFile>EcoDef_Hover.wav</AudioFile>
+									<AudioFile>EcoDef_Hover_V3.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="720161923"/>
+										<MediaID ID="961406682"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="EcoDef_Hover" ID="{DE7DB4AE-7C2A-4A5A-A363-29B2FAFEBD34}" Platform="Linked"/>
+								<ActiveSource Name="EcoDef_Hover_V3" ID="{2D2F6D9F-258C-4176-95DB-5B46C5F28A84}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

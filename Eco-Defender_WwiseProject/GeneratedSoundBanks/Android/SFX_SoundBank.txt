@@ -22,7 +22,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	643800286	EcoDef_Drop	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Drop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EcoDef_Drop		55296
 	662235655	Gun_Empty	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDefender_EmptyGun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gun_Empty		18692
 	716825240	EcoDef_Bomb_Fire_01	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_01_0B727C4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_01		78744
-	720161923	EcoDef_Hover	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EcoDef_Hover		41804
 	725385265	EcoDef_Bomb_Fire_05	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_05_B65ED867.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_05		79616
 	781484774	EcoDef_Bomb_Fire_02	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Bomb_Fire_02_D40055DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_02		88088
+	961406682	EcoDef_Hover	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Hover_V3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EcoDef_Hover		31328
 
