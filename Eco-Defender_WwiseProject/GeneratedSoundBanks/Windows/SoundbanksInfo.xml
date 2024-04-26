@@ -16,12 +16,12 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="238665008">
+		<SoundBank Id="2641024368" Language="SFX" Hash="1976766092">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3402428323" Name="Play_CraftEmpty" ObjectPath="\Events\Default Work Unit\Play_CraftEmpty" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+				<Event Id="3402428323" Name="Play_CraftEmpty" ObjectPath="\Events\Default Work Unit\Play_CraftEmpty" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<IncludedMemoryFiles>
 						<File Id="313538872" Language="SFX">
 							<ShortName>EcoDef_CraftFail.wav</ShortName>
@@ -29,7 +29,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3701963209" Name="Play_CraftSuccess" ObjectPath="\Events\Default Work Unit\Play_CraftSuccess" DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
+				<Event Id="3701963209" Name="Play_CraftSuccess" ObjectPath="\Events\Default Work Unit\Play_CraftSuccess" MaxAttenuation="1000." DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
 					<IncludedMemoryFiles>
 						<File Id="544201326" Language="SFX">
 							<ShortName>EcoDef_CraftSuccess.wav</ShortName>
@@ -37,7 +37,31 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" DurationType="OneShot" DurationMin="0.066545" DurationMax="0.083841">
+				<Event Id="3796544448" Name="Play_EcoDef_Button_Click" ObjectPath="\Events\Default Work Unit\UI\Play_EcoDef_Button_Click" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.040612" DurationMax="0.040612">
+					<IncludedMemoryFiles>
+						<File Id="42842145" Language="SFX">
+							<ShortName>EcoDef_Button_Click.wav</ShortName>
+							<Path>SFX\EcoDef_Button_Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="476286426" Name="Play_EcoDef_Drop" ObjectPath="\Events\Default Work Unit\Play_EcoDef_Drop" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.813107" DurationMax="0.813107">
+					<IncludedMemoryFiles>
+						<File Id="643800286" Language="SFX">
+							<ShortName>EcoDef_Drop.wav</ShortName>
+							<Path>SFX\EcoDef_Drop_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="692969629" Name="Play_EcoDef_Hover" ObjectPath="\Events\Default Work Unit\UI\Play_EcoDef_Hover" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.236621" DurationMax="0.236621">
+					<IncludedMemoryFiles>
+						<File Id="720161923" Language="SFX">
+							<ShortName>EcoDef_Hover.wav</ShortName>
+							<Path>SFX\EcoDef_Hover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.066545" DurationMax="0.083841">
 					<IncludedMemoryFiles>
 						<File Id="219172893" Language="SFX">
 							<ShortName>EcoDefender_GrabPlastic.wav</ShortName>

@@ -1,23 +1,29 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace AudioScript
 {
     public class PlayerController : MonoBehaviour
     {
         public string Grab_Plastic = "Play_Grab_Plastic";
+        public string hoverSoundEvent = "Play_EcoDef_Hover";
+        public string DropSoundEvent = "Play_EcoDef_Drop";
 
         private Collider handCollider;
 
+
         [SerializeField] private float timeTillCollisionEnabled = 2f;
+
+        private string _grabTag;
+        private static readonly string GRABBED = "Grabbed";
 
         public void Start()
         {
             handCollider = GetComponent<Collider>();
         }
 
-        public void OnGrab()
+        public void OnGrab(SelectEnterEventArgs args)
         {
             print("Grab");
             if (!string.IsNullOrEmpty(Grab_Plastic))
@@ -30,17 +36,27 @@ namespace AudioScript
                 Debug.LogWarning("Wwise Event name is not set!");
             }
 
+            _grabTag = args.interactableObject.transform.tag;
+            args.interactableObject.transform.tag = "Grabbed";
             handCollider.enabled = false;
         }
 
-        public void OnRelease()
+        public void OnRelease(SelectExitEventArgs args)
         {
-            StartCoroutine(ReleaseTimer());            
+            args.interactableObject.transform.tag = _grabTag;
+
+            StartCoroutine(ReleaseTimer());
+            AkSoundEngine.PostEvent(DropSoundEvent, gameObject);
         }
 
-        public void OnHover()
+        public void OnHover(HoverEnterEventArgs args)
         {
-            print("Hover");
+            print(args.interactableObject.transform.tag);
+            if (!args.interactableObject.transform.CompareTag(GRABBED))
+            {
+                print("Hover");
+                AkSoundEngine.PostEvent(hoverSoundEvent, gameObject);
+            }
         }
 
         public IEnumerator ReleaseTimer()
