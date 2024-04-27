@@ -9,6 +9,7 @@ namespace AudioScript
     {
         public string Grab_Plastic = "Play_Grab_Plastic";
 
+        private bool toggleInventory = false;
         private Collider handCollider;
 
         [SerializeField] private GameObject inventoryCanvas;
@@ -28,13 +29,15 @@ namespace AudioScript
 
         public void ToggleInventory(InputAction.CallbackContext obj)
         {
-            if (inventoryCanvas.activeSelf)
+            if (toggleInventory)
             {
-                inventoryCanvas.SetActive(false);
+                toggleInventory = false;
             } else
             {
-                inventoryCanvas.SetActive(true);
+                toggleInventory = true;
             }
+
+            inventoryCanvas.SetActive(toggleInventory);
         }
 
         private void OnEnable()
