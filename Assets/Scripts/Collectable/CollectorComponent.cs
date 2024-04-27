@@ -19,11 +19,6 @@ public class CollectorComponent : MonoBehaviour
         if(other.GetComponent<ItemTag>())
         {
             _invRef.AddToInventory(other.gameObject.GetComponent<ItemTag>().Tag);
-
-            if (InventoryUI.Instance.gameObject)
-            {
-                InventoryUI.Instance.OnEnable();
-            }
             
             Destroy(other.gameObject);
         }
