@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Gun : XRGrabInteractable
@@ -15,6 +16,8 @@ public class Gun : XRGrabInteractable
     [SerializeField] private ItemSO seedProjectileSO;
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
+
+    public UnityEvent OnReloaded;
 
     public int CurrAmmo
     {
@@ -109,6 +112,8 @@ public class Gun : XRGrabInteractable
                 _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo);
                 currAmmo = maxAmmo;
             }
+
+            OnReloaded.Invoke();
         }
     }
 }
