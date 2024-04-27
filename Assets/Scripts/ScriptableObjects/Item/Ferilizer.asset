@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Ferilizer
   m_EditorClassIdentifier: 
   Type: 0
+  Prefab: {fileID: 2802101084306878966, guid: 0ab646e789d50a649bb2e69540e7cbb9, type: 3}
