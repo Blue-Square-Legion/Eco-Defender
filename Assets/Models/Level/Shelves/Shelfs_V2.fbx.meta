@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b91db5fdd5c94df982cbc97532aec8a
+guid: cd19bcaef62084b2dabdf2d8181f301f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,32 +8,32 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black Objects
-    second: {fileID: 2100000, guid: be0a275921c9f4a12bfac9fab7d978f7, type: 2}
+    second: {fileID: 2100000, guid: 04a73fd95f8ce482fbe4b6cbaba39e0f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Magnet red
-    second: {fileID: 2100000, guid: c7c385af18bd34c6b8db313613cfe8c7, type: 2}
+    second: {fileID: 2100000, guid: eb5e4ea27bb8748d495650f880f92def, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Silver Objects
-    second: {fileID: 2100000, guid: 63b3caae5a0024dd19745cb44c92535e, type: 2}
+    second: {fileID: 2100000, guid: 23569c91fff364e2cacc1de66a9a5584, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Transparents Objects
-    second: {fileID: 2100000, guid: b6a9caebf19c54b788aaca4c2d6be78c, type: 2}
+    second: {fileID: 2100000, guid: b069d9cb897ed4542b2c88fb72f6cf95, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: White Objects
-    second: {fileID: 2100000, guid: e92251ca1c9aa40a29d6f25a72203552, type: 2}
+    second: {fileID: 2100000, guid: a87c31fe330a74a58828fa90197ae06d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: magnifying glass body
-    second: {fileID: 2100000, guid: d61d740a609734cf4bfc3f71383877a3, type: 2}
+    second: {fileID: 2100000, guid: f5c16dd6b43644277bde5b0e56236ef3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
