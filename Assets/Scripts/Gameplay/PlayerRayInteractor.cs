@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using AudioScript;
 
 public class PlayerRayInteractor : XRRayInteractor
 {
     [SerializeField] private Inventory _inv;
+    [SerializeField] private PlayerController playerController;
 
     [Header("Custom Data")]
     public UnityEvent OnGunHeld;
@@ -16,23 +18,29 @@ public class PlayerRayInteractor : XRRayInteractor
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        base.OnSelectEntered(args);
-
-        if(args.interactableObject.transform.gameObject.GetComponent<Gun>())
+        if (!playerController.InventoryOn)
         {
-            OnGunHeld.Invoke();
-            Debug.Log("Gun held");
+            base.OnSelectEntered(args);
+
+            if (args.interactableObject.transform.gameObject.GetComponent<Gun>())
+            {
+                OnGunHeld.Invoke();
+                Debug.Log("Gun held");
+            }
         }
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        base.OnSelectExited(args);
-
-        if (args.interactableObject.transform.gameObject.GetComponent<Gun>())
+        if (!playerController.InventoryOn)
         {
-            OnGunReleased.Invoke();
-            Debug.Log("Gun released");
+            base.OnSelectExited(args);
+
+            if (args.interactableObject.transform.gameObject.GetComponent<Gun>())
+            {
+                OnGunReleased.Invoke();
+                Debug.Log("Gun released");
+            }
         }
     }
 

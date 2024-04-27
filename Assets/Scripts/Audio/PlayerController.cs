@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace AudioScript
 {
@@ -10,16 +11,21 @@ namespace AudioScript
         public string Grab_Plastic = "Play_Grab_Plastic";
 
         private bool toggleInventory = false;
+        private float defaultRay;
         private Collider handCollider;
+        private XRIDefaultInputActions inputActionOpenInv;
 
         [SerializeField] private GameObject inventoryCanvas;
+        [SerializeField] private GameObject InvRayInteractorRef;
+        [SerializeField] private GameObject PlayerRayInteractorRef;
         [SerializeField] private float timeTillCollisionEnabled = 2f;
 
-        private XRIDefaultInputActions inputActionOpenInv;
+        public bool InventoryOn => toggleInventory;
 
         public void Start()
         {
             handCollider = GetComponent<Collider>();
+            defaultRay = InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance;
 
             inputActionOpenInv = new XRIDefaultInputActions();
 
@@ -31,9 +37,15 @@ namespace AudioScript
         {
             if (toggleInventory)
             {
+                InvRayInteractorRef.SetActive(false);
+                InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = defaultRay;
+                PlayerRayInteractorRef.SetActive(true);
                 toggleInventory = false;
             } else
             {
+                InvRayInteractorRef.SetActive(true);
+                InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = 0;
+                PlayerRayInteractorRef.SetActive(false);
                 toggleInventory = true;
             }
 
