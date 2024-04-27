@@ -964,7 +964,7 @@
                     "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Open Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1780,7 +1780,7 @@
                     "path": "<XRController>{RightHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Open Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
