@@ -25,11 +25,6 @@ public class InventoryUI : MonoBehaviour
             GameObject go = Instantiate(_invSlot, transform);
             go.GetComponent<InventorySlot>().itemData = item;
             go.GetComponent<InventorySlot>().ItemSpawnPoint = _itemSpawnPoint;
-
-            if(_inv.Inv.ContainsKey(item.Key) && _inv.Inv[item.Key] > 1)
-            {
-                Destroy(go);
-            }
         }
 
         if(_inv.Inv.Count != 0)
