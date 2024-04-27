@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47e8a7618f3bf48999bbf1c6603cb0ee
+guid: 36edb668f8d794a8493ccd5068acb4da
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,42 +8,42 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black Objects
-    second: {fileID: 2100000, guid: 6a0e6dd69ac37404398be75aa203e9f5, type: 2}
+    second: {fileID: 2100000, guid: 36f59463381e14ec1bc11894f7c7d78a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Magnet red
-    second: {fileID: 2100000, guid: 06c43c8bb4d4e4924bb2f57d6933b653, type: 2}
+    second: {fileID: 2100000, guid: ca8e7a36344b34a268351c499aed2936, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Silver Objects
-    second: {fileID: 2100000, guid: 29f6344794f6143b5b20c466687522ca, type: 2}
+    second: {fileID: 2100000, guid: b5b17879cf1f74d9fab83dbec3e43dd3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Transparents Objects
-    second: {fileID: 2100000, guid: 0b35c626862f04e55b0f0e14350145da, type: 2}
+    second: {fileID: 2100000, guid: 4607353bc1d3f40c6b4acb908b9810a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Weight Body
-    second: {fileID: 2100000, guid: d48427be2c04344a4a0c8d94d915d48e, type: 2}
+    second: {fileID: 2100000, guid: eb9c898843ba34ecb93d2c039225e92c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Weight_
-    second: {fileID: 2100000, guid: e154c9cca253d405295e7bc71e395dda, type: 2}
+    second: {fileID: 2100000, guid: 4d7c5839cfe494e618b62779c2c43063, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: White Objects
-    second: {fileID: 2100000, guid: 7c5b439d6c5ff4e1eadaa5099c6225f0, type: 2}
+    second: {fileID: 2100000, guid: 6da7d4b14b70f413fb7bbb4a7a78e534, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: magnifying glass body
-    second: {fileID: 2100000, guid: 0da9bbccd256d4942ab7127fd804131f, type: 2}
+    second: {fileID: 2100000, guid: a818e675fb9ea4a89b8df31f45e8b98a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -75,7 +75,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -129,7 +129,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.005
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
