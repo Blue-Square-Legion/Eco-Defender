@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace AudioScript
 {
@@ -10,11 +11,46 @@ namespace AudioScript
 
         private Collider handCollider;
 
+        [SerializeField] private GameObject inventoryCanvas;
         [SerializeField] private float timeTillCollisionEnabled = 2f;
+
+        private XRIDefaultInputActions inputActionOpenInv;
 
         public void Start()
         {
             handCollider = GetComponent<Collider>();
+
+            inputActionOpenInv = new XRIDefaultInputActions();
+
+            inputActionOpenInv.XRILeftHandInteraction.OpenInventory.started += ToggleInventory;
+            inputActionOpenInv.XRIRightHandInteraction.OpenInventory.started += ToggleInventory;
+        }
+
+        public void ToggleInventory(InputAction.CallbackContext obj)
+        {
+            if (inventoryCanvas.activeSelf)
+            {
+                inventoryCanvas.SetActive(false);
+            } else
+            {
+                inventoryCanvas.SetActive(true);
+            }
+        }
+
+        private void OnEnable()
+        {
+            if (inputActionOpenInv != null)
+            {
+                inputActionOpenInv.Enable();
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (inputActionOpenInv != null)
+            {
+                inputActionOpenInv.Disable();
+            }
         }
 
         public void OnGrab()

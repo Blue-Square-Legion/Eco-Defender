@@ -5,9 +5,6 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 	[SerializeField] private int invSize = 5;
-	[SerializeField] private GameObject _invCanvas;
-	[SerializeField] private GameObject _invSlot;
-	[SerializeField] private Transform _itemSpawnPoint;
 
 	private Dictionary<ItemSO, int> _inv;
 
@@ -18,8 +15,15 @@ public class Inventory : MonoBehaviour
 		_inv = new Dictionary<ItemSO, int>(invSize);
 	}
 
+	public static Inventory Instance;
+
 	void Start()
 	{
+        if (!Instance)
+        {
+			Instance = this;
+        }
+
 		_inv = new Dictionary<ItemSO, int>(invSize);
 	}
 
@@ -35,15 +39,10 @@ public class Inventory : MonoBehaviour
 		}
 	}
 
-	public void RemoveFromInventory(ItemSO item, int amount = 1, bool spawnedFromGun = false)
+	public void RemoveFromInventory(ItemSO item, int amount = 1)
 	{
 		if (_inv[item] > 0)
 		{
-			if (!spawnedFromGun)
-			{
-				Instantiate(item.Prefab, _invCanvas.transform.position, _invCanvas.transform.rotation);
-			}
-
 			_inv[item] -= amount;
 
 			if (_inv[item] <= 0)
@@ -51,24 +50,5 @@ public class Inventory : MonoBehaviour
 				_inv.Remove(item);
 			}
 		}
-	}
-
-    private void OnEnable()
-    {
-		foreach (KeyValuePair<ItemSO, int> item in _inv)
-		{
-			GameObject go = Instantiate(_invSlot, _invCanvas.transform);
-			go.GetComponent<InventorySlot>().ItemData = item.Key;
-			go.GetComponent<InventorySlot>().Amount = item.Value;
-			go.GetComponent<InventorySlot>().ItemSpawnPoint = _itemSpawnPoint;
-		}
-	}
-
-    private void OnDisable()
-    {
-        foreach (InventorySlot item in FindObjectsOfType<InventorySlot>())
-        {
-			Destroy(item.gameObject);
-        }
 	}
 }

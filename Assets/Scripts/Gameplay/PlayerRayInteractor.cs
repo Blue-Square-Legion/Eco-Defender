@@ -6,9 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerRayInteractor : XRRayInteractor
 {
+    [SerializeField] private Inventory _inv;
+
     [Header("Custom Data")]
     public UnityEvent OnGunHeld;
     public UnityEvent OnGunReleased;
+
+    public Inventory Inv { get { return _inv; } }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {

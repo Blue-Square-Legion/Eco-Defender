@@ -48,7 +48,16 @@ public class Gun : XRGrabInteractable
     // Update is called once per frame
     void Update()
     {
-        
+        if(_invRef)
+        {
+            if (_invRef.Inv.ContainsKey(seedProjectileSO))
+            {
+                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
+            } else
+            {
+                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: 0");
+            }
+        }
     }
 
     protected override void OnActivated(ActivateEventArgs args)
@@ -66,6 +75,7 @@ public class Gun : XRGrabInteractable
             {
                 currAmmo--;
                 GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                
                 Destroy(projObj, 1f);
             }
             else
@@ -76,30 +86,27 @@ public class Gun : XRGrabInteractable
         {
             Reload();
         }
-
-        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
 
-        _invRef = args.interactorObject.transform.gameObject.GetComponent<CollectorComponent>().InvRef;
-        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
+        _invRef = args.interactorObject.transform.gameObject.GetComponent<PlayerRayInteractor>().Inv;
     }
 
     public void Reload()
     {
-        if (_invRef.Inv[seedProjectileSO] > 0)
+        if (_invRef.Inv.ContainsKey(seedProjectileSO))
         {
             if (_invRef.Inv[seedProjectileSO] < maxAmmo)
             {
                 currAmmo = _invRef.Inv[seedProjectileSO];
-                _invRef.RemoveFromInventory(seedProjectileSO, currAmmo, true);
+                _invRef.RemoveFromInventory(seedProjectileSO, currAmmo);
             }
             else
             {
-                _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo, true);
+                _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo);
                 currAmmo = maxAmmo;
             }
         }
