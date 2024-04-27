@@ -986,7 +986,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
                     ""path"": ""<XRController>{LeftHand}/{PrimaryButton}"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Generic XR Controller"",
                     ""action"": ""Open Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1802,7 +1802,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
                     ""path"": ""<XRController>{RightHand}/{PrimaryButton}"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Generic XR Controller"",
                     ""action"": ""Open Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
