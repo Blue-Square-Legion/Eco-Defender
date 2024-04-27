@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-
+#if UNITY_EDITOR
 /// <summary>
 /// Based on https://docs.unity3d.com/ScriptReference/SceneAsset.html
 /// Allows Selection of Scene instead of manual typing path
@@ -28,3 +28,4 @@ public class EditorSceneSelector : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif

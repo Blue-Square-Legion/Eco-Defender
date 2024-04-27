@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Gun : XRGrabInteractable
 {
     private int currAmmo;
-    private Inventory _invRef;
+    [SerializeField] private Inventory _invRef;
 
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
@@ -67,7 +67,7 @@ public class Gun : XRGrabInteractable
             }
         } else
         {
-            Reload();
+            // Gun is empty, put empty sound here
         }
     }
 

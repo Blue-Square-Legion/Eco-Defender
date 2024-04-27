@@ -2141,6 +2141,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad818c36731146e994540a1896ad8f24, type: 3}
@@ -2606,6 +2611,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad818c36731146e994540a1896ad8f24, type: 3}
@@ -2875,6 +2885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.numCapVertices
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902504, guid: c1800acf6366418a9b5f610249000331,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2761784063978902504, guid: c1800acf6366418a9b5f610249000331,
         type: 3}
@@ -3506,6 +3521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.numCapVertices
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902504, guid: c1800acf6366418a9b5f610249000331,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2761784063978902504, guid: c1800acf6366418a9b5f610249000331,
         type: 3}

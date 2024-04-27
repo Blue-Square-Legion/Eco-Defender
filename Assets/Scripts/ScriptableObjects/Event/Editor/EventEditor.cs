@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace EventSO
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(EventSO), editorForChildClasses: true)]
     public class EventEditor : Editor
     {
@@ -19,4 +20,5 @@ namespace EventSO
                 e.Invoke();
         }
     }
+#endif
 }

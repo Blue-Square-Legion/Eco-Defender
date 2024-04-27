@@ -151,6 +151,11 @@ PrefabInstance:
       propertyPath: _minIntensity
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7548684322398456783, guid: 50a6408f36e3a6c40b69e6f13afdcc45,
+        type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 516
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a6408f36e3a6c40b69e6f13afdcc45, type: 3}
 --- !u!4 &2032064406334618298 stripped

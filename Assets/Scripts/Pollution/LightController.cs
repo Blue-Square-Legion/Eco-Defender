@@ -39,14 +39,17 @@ public class LightController : MonoBehaviour
 
     private void Awake()
     {
-        _defaultSetting = new(_light.color, _light.intensity);
-        enabled = false;
-
+        // First, try finding the light
+        if (!_light) _light = FindObjectOfType<Light>();
         if (_light == null)
         {
             Debug.LogError($"{name} - Light Not set : Disabled Effect");
             _enableEffect = false;
         }
+
+        _defaultSetting = new(_light.color, _light.intensity);
+        enabled = false;
+
     }
 
     //Use FixedUpdate as psuedo timeline
