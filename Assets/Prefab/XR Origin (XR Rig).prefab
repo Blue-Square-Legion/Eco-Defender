@@ -1338,6 +1338,8 @@ MonoBehaviour:
   InvRayInteractorRef: {fileID: 515741440000108016}
   PlayerRayInteractorRef: {fileID: 3126135809969513964}
   timeTillCollisionEnabled: 2
+  Inventory: {fileID: -3752914285730977329, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &6088144620064177999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +1990,8 @@ MonoBehaviour:
   InvRayInteractorRef: {fileID: 6060756671599156651}
   PlayerRayInteractorRef: {fileID: 2941994630470924647}
   timeTillCollisionEnabled: 2
+  Inventory: {fileID: 7972162474764782429, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &6103165753519829170
 GameObject:
   m_ObjectHideFlags: 0

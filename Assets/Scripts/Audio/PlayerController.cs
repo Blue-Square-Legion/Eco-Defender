@@ -13,12 +13,12 @@ namespace AudioScript
         private bool toggleInventory;
         private float defaultRay;
         private Collider handCollider;
-        private XRIDefaultInputActions inputActionOpenInv;
 
         [SerializeField] private GameObject inventoryCanvas;
         [SerializeField] private GameObject InvRayInteractorRef;
         [SerializeField] private GameObject PlayerRayInteractorRef;
         [SerializeField] private float timeTillCollisionEnabled = 2f;
+        [SerializeField] private InputActionReference Inventory;
 
         public bool InventoryOn => toggleInventory;
 
@@ -27,11 +27,6 @@ namespace AudioScript
             handCollider = GetComponent<Collider>();
             defaultRay = PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance;
             toggleInventory = false;
-
-            inputActionOpenInv = new XRIDefaultInputActions();
-
-            inputActionOpenInv.XRILeftHandInteraction.OpenInventory.started += ToggleInventory;
-            inputActionOpenInv.XRIRightHandInteraction.OpenInventory.started += ToggleInventory;
         }
 
         public void ToggleInventory(InputAction.CallbackContext obj)
@@ -55,18 +50,12 @@ namespace AudioScript
 
         private void OnEnable()
         {
-            if (inputActionOpenInv != null)
-            {
-                inputActionOpenInv.Enable();
-            }
+            Inventory.action.performed += ToggleInventory;
         }
 
         private void OnDisable()
         {
-            if (inputActionOpenInv != null)
-            {
-                inputActionOpenInv.Disable();
-            }
+            Inventory.action.performed -= ToggleInventory;
         }
 
         public void OnGrab()
