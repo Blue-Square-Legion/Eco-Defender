@@ -241,6 +241,7 @@
 				</Sound>
 				<Sound Name="Grab_Plastic" ID="{4001B067-7E3D-4FFE-9137-909F6C520783}" ShortID="717939216">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -254,8 +255,16 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 						</Reference>
@@ -322,12 +331,18 @@
 				<Folder Name="Indicators" ID="{35144F1F-77B2-4C71-8C36-2BB9A906BB86}" ShortID="408410894">
 					<ChildrenList>
 						<Sound Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" ShortID="738384902">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -345,12 +360,18 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="EcoDef_CraftEmpty" ID="{A3288C8E-668B-47C3-BD06-2E88BBC07FA7}" ShortID="976016797">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -369,6 +390,112 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{C69B045D-DD76-4DAD-B884-C75A170E00F7}" ShortID="289805332">
+					<ChildrenList>
+						<Sound Name="EcoDef_Button_Click" ID="{B81CB932-D0C9-489C-9256-734E4065475E}" ShortID="999104803">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Button_Click" ID="{6F195F68-270F-4686-B584-6441A62482ED}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Button_Click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="42842145"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Button_Click" ID="{6F195F68-270F-4686-B584-6441A62482ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Hover" ID="{F60A2354-A1C7-44A9-909B-464817642349}" ShortID="873110008">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Hover_V3" ID="{EB120053-F161-4BFC-9727-21D016751B4A}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Hover_V3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="892485848"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Hover_V3" ID="{EB120053-F161-4BFC-9727-21D016751B4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="EcoDef_Drop" ID="{AB9EE997-234B-475F-921E-762DDC77CB9C}" ShortID="64910859">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDef_Drop" ID="{2EA7107D-FF07-4ED3-BCF1-B02B83DE02D2}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDef_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="643800286"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDef_Drop" ID="{2EA7107D-FF07-4ED3-BCF1-B02B83DE02D2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

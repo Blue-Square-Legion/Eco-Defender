@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace DevEditors
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(DoorAnimatorController), editorForChildClasses: true)]
     public class DoorAnimEditor : Editor
     {
@@ -22,4 +23,5 @@ namespace DevEditors
                 e.Close();
         }
     }
+#endif
 }

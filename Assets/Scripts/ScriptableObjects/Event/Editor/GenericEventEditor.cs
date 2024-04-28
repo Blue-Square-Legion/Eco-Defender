@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace EventSO
 {
+#if UNITY_EDITOR
     public abstract class GenericEventEditor<T> : Editor
     {
         SerializedProperty _testData;
@@ -35,6 +36,7 @@ namespace EventSO
 
         }
     }
+#endif
 }
 
 
