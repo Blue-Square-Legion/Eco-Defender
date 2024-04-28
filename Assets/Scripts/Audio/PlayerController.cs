@@ -10,7 +10,7 @@ namespace AudioScript
     {
         public string Grab_Plastic = "Play_Grab_Plastic";
 
-        private bool toggleInventory = false;
+        private bool toggleInventory;
         private float defaultRay;
         private Collider handCollider;
         private XRIDefaultInputActions inputActionOpenInv;
@@ -25,7 +25,8 @@ namespace AudioScript
         public void Start()
         {
             handCollider = GetComponent<Collider>();
-            defaultRay = InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance;
+            defaultRay = PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance;
+            toggleInventory = false;
 
             inputActionOpenInv = new XRIDefaultInputActions();
 
@@ -38,13 +39,13 @@ namespace AudioScript
             if (toggleInventory)
             {
                 InvRayInteractorRef.SetActive(false);
-                InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = defaultRay;
+                PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = defaultRay;
                 PlayerRayInteractorRef.SetActive(true);
                 toggleInventory = false;
             } else
             {
                 InvRayInteractorRef.SetActive(true);
-                InvRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = 0;
+                PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = 0;
                 PlayerRayInteractorRef.SetActive(false);
                 toggleInventory = true;
             }
