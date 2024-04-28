@@ -5,9 +5,9 @@ using UnityEngine;
 public class LabState : MonoBehaviour
 {
     public string stateGroupName = "MusicStates";
-    public string stateName = "Lab"; // 
+    public string stateName = "Lab"; 
 
-    // Function to set the state in Wwise
+  
     public void SetLabState()
     {
 

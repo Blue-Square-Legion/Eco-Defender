@@ -14,10 +14,13 @@
 						<ObjectRef Name="Play_CraftSuccess" ID="{F36739A2-7F74-4815-A004-67CF95E4EC7E}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PollutedAmbience" ID="{8708CBF5-11D3-4858-8A12-AE0F0DCF15AD}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Grab_Plastic" ID="{796DDA8C-DB37-49D3-A8A2-4076E06A94F0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience" ID="{92C2C1D4-14DC-4A37-9FC3-7C36094BE6B0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WhiteNoiseTest" ID="{9AE6D86F-0F42-4AEE-B546-F68554EAF461}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Gun_Empty" ID="{C28A10DD-EE46-4C67-A560-58209EBADC23}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PortalOpen" ID="{2B677D01-0DF8-4DA3-86A4-380320F8566A}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_LabAmbience" ID="{4A7D517C-11F2-4DB5-96BD-C420AABAA24C}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Reload" ID="{EE689A97-EE6B-4E07-8ECC-62D267A3B0E8}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_PollutedAmbience" ID="{839EEFF7-F857-4E88-B177-CA0C281EA69E}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EcoDef_Drop" ID="{76FB2005-A9BF-4ED2-9CCF-28C310FC87DD}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EcoDef_Hover" ID="{47BEC072-53A7-4FE2-93AC-3A396F6DE6BE}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

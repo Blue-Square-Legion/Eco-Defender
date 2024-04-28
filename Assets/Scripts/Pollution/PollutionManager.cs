@@ -14,7 +14,11 @@ public class PollutionManager : MonoBehaviour
     public UnityEvent<float> OnPollutionValue;
 
     public string stateGroupName = "MusicStates";
-    public string stateName = "OutsideClean"; // 
+    public string stateName = "OutsideClean";
+
+
+    
+        
 
     //Pollution Particle Counts
     public float ParticleMaxCount { get; private set; }

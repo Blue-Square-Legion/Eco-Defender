@@ -669,12 +669,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="CleanAmbience" ID="{FA742082-71CE-4EE0-B2DE-D3F33A1AE959}" ShortID="381494018">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -692,12 +695,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="PollutedAmbience" ID="{17B1DEA4-BCC1-4AB3-A5E3-C301ED99C02A}" ShortID="460891083">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

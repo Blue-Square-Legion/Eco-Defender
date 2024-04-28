@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CLEANAMBIENCE = 1429403605U;
         static const AkUniqueID PLAY_CRAFTEMPTY = 3402428323U;
         static const AkUniqueID PLAY_CRAFTSUCCESS = 3701963209U;
@@ -29,6 +30,8 @@ namespace AK
         static const AkUniqueID PLAY_PORTALOPEN = 1129740972U;
         static const AkUniqueID PLAY_RELOAD = 1910506537U;
         static const AkUniqueID PLAY_WHITENOISETEST = 2997592729U;
+        static const AkUniqueID STOP_LABAMBIENCE = 1579806121U;
+        static const AkUniqueID STOP_POLLUTEDAMBIENCE = 2932960663U;
     } // namespace EVENTS
 
     namespace STATES

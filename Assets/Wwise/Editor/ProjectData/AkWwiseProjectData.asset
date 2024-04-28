@@ -134,7 +134,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f9c117837134f440a81e5a381644bd2b
     GuidInternal: 
-    m_lastTime: -8584872949345681363
+    m_lastTime: -8584872918966622654
     List:
     - name: Music_SoundBank
       guid: 99f6826fec234d4aa58bb55b326e57a2
@@ -176,8 +176,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 42a04e71b71ee443af0c1656b6b3ae6b
     GuidInternal: 
-    m_lastTime: -8584873054377446482
+    m_lastTime: -8584872919620399066
     List:
+    - name: Play_Ambience
+      guid: d4c1c292dc14374a9fc37c36094be6b0
+      id: 278617630
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Ambience
+        ObjectType: 3
+        guid: d4c1c292dc14374a9fc37c36094be6b0
+      Path: Events\Default Work Unit\Play_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_CleanAmbience
       guid: 878a94be75a0f946bc14107386c52c1b
       id: 1429403605
@@ -193,8 +210,8 @@ MonoBehaviour:
         guid: 878a94be75a0f946bc14107386c52c1b
       Path: Events\Default Work Unit\Play_CleanAmbience
       maxAttenuation: 0
-      maxDuration: 15.84966
-      minDuration: 15.84966
+      maxDuration: -1
+      minDuration: -1
     - name: Play_CraftEmpty
       guid: a8a28e5f76ca8c4199d42bfce35468ff
       id: 3402428323
@@ -403,8 +420,8 @@ MonoBehaviour:
         guid: f5cb0887d31158488a12ae0f0dcf15ad
       Path: Events\Default Work Unit\Play_PollutedAmbience
       maxAttenuation: 0
-      maxDuration: 16
-      minDuration: 16
+      maxDuration: -1
+      minDuration: -1
     - name: Play_PortalOpen
       guid: 017d672bf80da34d86a4380320f8566a
       id: 1129740972
@@ -456,6 +473,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.787978
       minDuration: 1.592907
+    - name: Stop_LabAmbience
+      guid: 7c517d4af211b54d96bdc420aabaa24c
+      id: 1579806121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Stop_LabAmbience
+        ObjectType: 3
+        guid: 7c517d4af211b54d96bdc420aabaa24c
+      Path: Events\Default Work Unit\Stop_LabAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_PollutedAmbience
+      guid: f7ef9e8357f8884eb177ca0c281ea69e
+      id: 2932960663
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Stop_PollutedAmbience
+        ObjectType: 3
+        guid: f7ef9e8357f8884eb177ca0c281ea69e
+      Path: Events\Default Work Unit\Stop_PollutedAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: aa4d78d6905d8e4096f209353d3c3b04
       id: 1551306167
@@ -628,7 +679,7 @@ MonoBehaviour:
     m_lastTime: -8584877679087410856
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000030000000400000005000000060000000e00000015000000160000001700000018000000190000001a000000
+  ExpandedWaapiItemIds: 02000000030000000400000005000000060000000e00000015000000160000001700000018000000190000001a0000001b0000001c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
