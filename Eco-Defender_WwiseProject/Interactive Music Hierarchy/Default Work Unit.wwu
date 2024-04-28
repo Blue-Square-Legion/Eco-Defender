@@ -3146,6 +3146,11 @@
 								<MusicSegment Name="EcoDef_CleanAmbience" ID="{BEC2CD43-29CE-47BE-AD3D-2F9401C4F06F}" ShortID="20682582">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="15849.6598639456"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
