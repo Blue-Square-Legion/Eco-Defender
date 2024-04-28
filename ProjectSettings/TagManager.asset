@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Plant
+  - DamageCollider
+  - Grabbed
   layers:
   - Default
   - TransparentFX
@@ -13,10 +15,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Props
+  - Player
+  - ForceField
   - 
   - 
   - 

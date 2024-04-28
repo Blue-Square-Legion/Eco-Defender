@@ -13,16 +13,26 @@ public class Crafting : MonoBehaviour
     [SerializeField] private List<RecipeSO> _recipes;
 
     [Space(10)]
-    public UnityEvent OnCraftSuccess, OnCraftFailed;
+    public UnityEvent OnCraftSuccess, OnCraftFailed, OnCraftEmpty;
 
     private List<ItemSO> _items;
 
+    public string CraftEmpty = "Play_CraftEmpty";
+    public string CraftSuccess = "Play_CraftSuccess";
+
     public void Craft()
     {
-        _items = _recipeSocket.ConvertAll<ItemSO>(item => 
-            item.GetOldestInteractableSelected()
-            .transform.GetComponent<ItemTag>()?.Tag
-         );
+        _items = _recipeSocket.ConvertAll<ItemSO>(item =>
+            item.GetOldestInteractableSelected()?
+                .transform.GetComponent<ItemTag>()?.Tag
+        );
+
+        if(_items.TrueForAll(item => item == null))
+        {
+            OnCraftEmpty.Invoke();
+            AkSoundEngine.PostEvent(CraftEmpty, gameObject);
+            return;
+        }
 
         //iterate to find first match (TODO: Can be improved later)
         RecipeSO found = _recipes.Find(item => item.IsMatch(_items));
@@ -32,10 +42,12 @@ public class Crafting : MonoBehaviour
             ClearSockets();
             SpawnItem(found.result);
             OnCraftSuccess.Invoke();
+            AkSoundEngine.PostEvent(CraftSuccess, gameObject);
         }
         else
         {
             OnCraftFailed.Invoke();
+            AkSoundEngine.PostEvent(CraftEmpty, gameObject);
         }
     }
 

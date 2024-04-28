@@ -13,6 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_CRAFTEMPTY = 3402428323U;
+        static const AkUniqueID PLAY_CRAFTSUCCESS = 3701963209U;
+        static const AkUniqueID PLAY_ECODEF_BUTTON_CLICK = 3796544448U;
+        static const AkUniqueID PLAY_ECODEF_DROP = 476286426U;
+        static const AkUniqueID PLAY_ECODEF_HOVER = 692969629U;
         static const AkUniqueID PLAY_GRAB_PLASTIC = 176757445U;
         static const AkUniqueID PLAY_GUN_EMPTY = 1633093614U;
         static const AkUniqueID PLAY_PLANTBOMBONESHOT = 4286830491U;

@@ -58,6 +58,65 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CraftEmpty" ID="{5F8EA2A8-CA76-418C-99D4-2BFCE35468FF}">
+					<ChildrenList>
+						<Action Name="" ID="{CA0CA180-9955-4FE4-967A-A32388F40B5D}" ShortID="560144162">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_CraftEmpty" ID="{A3288C8E-668B-47C3-BD06-2E88BBC07FA7}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CraftSuccess" ID="{F36739A2-7F74-4815-A004-67CF95E4EC7E}">
+					<ChildrenList>
+						<Action Name="" ID="{7E9C783F-8CE7-404A-9897-97C4D6711AD0}" ShortID="402656534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="UI" ID="{D6784DAA-5D90-408E-96F2-09353D3C3B04}" ShortID="203995811">
+					<ChildrenList>
+						<Event Name="Play_EcoDef_Button_Click" ID="{B3D98477-E814-41F0-A80F-838432151B10}">
+							<ChildrenList>
+								<Action Name="" ID="{624EA971-F03F-4BC5-8C76-2BB1B9651881}" ShortID="472790409">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EcoDef_Button_Click" ID="{B81CB932-D0C9-489C-9256-734E4065475E}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EcoDef_Hover" ID="{47BEC072-53A7-4FE2-93AC-3A396F6DE6BE}">
+							<ChildrenList>
+								<Action Name="" ID="{D26BC1D9-C739-47C5-9DEF-58C59D514569}" ShortID="1000340106">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EcoDef_Hover" ID="{F60A2354-A1C7-44A9-909B-464817642349}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_EcoDef_Drop" ID="{76FB2005-A9BF-4ED2-9CCF-28C310FC87DD}">
+					<ChildrenList>
+						<Action Name="" ID="{39BF1713-66B2-4CCC-967F-F87F68F00FFA}" ShortID="443323573">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_Drop" ID="{AB9EE997-234B-475F-921E-762DDC77CB9C}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

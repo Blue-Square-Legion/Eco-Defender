@@ -3,11 +3,16 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{4109D763-7BCF-41EB-AF19-185F4B3F7F19}">
 			<PropertyList>
+				<Property Name="Event Action List\{47BEC072-53A7-4FE2-93AC-3A396F6DE6BE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5F8EA2A8-CA76-418C-99D4-2BFCE35468FF}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{76FB2005-A9BF-4ED2-9CCF-28C310FC87DD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{796DDA8C-DB37-49D3-A8A2-4076E06A94F0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{88CD3857-B832-4735-A159-8987E88F887C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9AE6D86F-0F42-4AEE-B546-F68554EAF461}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B3D98477-E814-41F0-A80F-838432151B10}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C28A10DD-EE46-4C67-A560-58209EBADC23}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CAE1F9E3-4821-4760-B7D2-2D3D007E5E86}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F36739A2-7F74-4815-A004-67CF95E4EC7E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -29,7 +34,7 @@
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="9DYY284zS0OUVL+1Yb1Pv+GyPZZKb+JCjPnTyUksMuq+HOnwtsxlTY3RmVFqWEEW"/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="jUjhgViBjEedJEh8Y+DE6Jn2gm/sI01KpYu1WzJuV6I="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="mfaCb+wjTUqli7VbMm5Xoo1I4YFYgYxHnSRIfGPgxOg="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="mh3/IbKcGUSnKaLIpxkm/gE8XXz//////tIMkpfskES3JJ2uwytgDgE8XXz/////"/>
 				<Property Name="LoudnessMeterView\LastObject2" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
