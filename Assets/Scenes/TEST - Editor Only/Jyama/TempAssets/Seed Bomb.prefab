@@ -317,6 +317,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerCube: {fileID: 308388407984943563, guid: a6e739ea7c8d44eb681936b9d2ae78c1,
     type: 3}
+  plantList:
+  - {fileID: 8982355172018065996, guid: 0dd4301975f214c149dcc8795795adf1, type: 3}
+  - {fileID: 5882530752092918909, guid: 61d3cd873b3604bea9027deda87c18e7, type: 3}
+  - {fileID: 5242463975776401472, guid: 95af4706f610a478f958c8606da9c98c, type: 3}
+  - {fileID: 308388407984943563, guid: a6e739ea7c8d44eb681936b9d2ae78c1, type: 3}
   _hitMask:
     serializedVersion: 2
     m_Bits: 64
