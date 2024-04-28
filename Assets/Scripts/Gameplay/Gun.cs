@@ -17,6 +17,7 @@ public class Gun : XRGrabInteractable
 
     public string gunEmptySound = "Play_Gun_Empty";
     public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
+    public string Gun_ReloadSound = "Play_Reload";
 
     public int CurrAmmo
     {
@@ -87,16 +88,20 @@ public class Gun : XRGrabInteractable
     {
         if (_invRef.SeedCount > 0)
         {
+           
             if (_invRef.SeedCount < maxAmmo)
             {
                 currAmmo = _invRef.SeedCount;
                 _invRef.SeedCount = 0;
+
             }
             else
             {
                 _invRef.SeedCount -= maxAmmo;
                 currAmmo = maxAmmo;
             }
+            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
         }
+        
     }
 }

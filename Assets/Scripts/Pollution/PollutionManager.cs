@@ -13,6 +13,9 @@ public class PollutionManager : MonoBehaviour
     public UnityEvent OnPollutionEnd;
     public UnityEvent<float> OnPollutionValue;
 
+    public string stateGroupName = "MusicStates";
+    public string stateName = "OutsideClean"; // 
+
     //Pollution Particle Counts
     public float ParticleMaxCount { get; private set; }
     public float ParticleCount { get { return GetParticleCount(); } }
@@ -55,6 +58,8 @@ public class PollutionManager : MonoBehaviour
         ActiveCount--;
         if (ActiveCount <= 0)
         {
+            AkSoundEngine.SetState(stateGroupName, stateName);
+            Debug.Log("OutsideClean State");
             OnPollutionEnd.Invoke();
             enabled = false;
         }

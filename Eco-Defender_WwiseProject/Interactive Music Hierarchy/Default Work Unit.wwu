@@ -1,6 +1,2877 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{99E3744B-99D3-4C3D-B009-97A346999F27}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{99E3744B-99D3-4C3D-B009-97A346999F27}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{99E3744B-99D3-4C3D-B009-97A346999F27}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music" ID="{21D1BB89-E721-4A14-AE6A-9BF429F0A5D4}" ShortID="2383159">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{664243CD-A3BD-4021-8396-5E464106CFF5}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Lab" ID="{20743DCC-23A9-48C8-9018-F489F0B9C740}" ShortID="182011819">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Lab" ID="{0E64D975-6B12-4631-B96B-5DD22A4D1170}" ShortID="261766820">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="44500"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{664243CD-A3BD-4021-8396-5E464106CFF5}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Lab2_Base" ID="{8EAAFD1C-1D0B-4704-B990-FDE44D3E6AC8}" ShortID="953405431">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Base" ID="{ABA3329A-645E-43AB-AF58-E31B90DA4BB5}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1001511853"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F3A9B8CC-5515-4FBA-9437-2922AF8C7E42}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6C3CE65C-8D9F-4FE7-B311-1F666E964F70}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Base" ID="{FCD2BAF1-ACEF-4285-A72F-2D3CFA424FF1}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Base" ID="{ABA3329A-645E-43AB-AF58-E31B90DA4BB5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Git1" ID="{E5669CE8-A8BA-4ED4-B761-03BF37E33A90}" ShortID="824565054">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Git1" ID="{6269D2C9-6FE8-49CA-B6CE-D131BD6B73A5}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Git1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="781068834"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F95A08D1-BB68-43AB-AFC7-319654809DA0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F518D3A4-0B90-43B1-83FC-70407E9FF8BF}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Git1" ID="{96AB9DB1-89BF-4783-A68A-BA21F5760454}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Git1" ID="{6269D2C9-6FE8-49CA-B6CE-D131BD6B73A5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1126DB34-D527-4C85-8C73-9926264E0E38}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Git2" ID="{2B3D3EA5-99E4-4CDD-AA89-65C2E1C70213}" ShortID="625586963">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Git2" ID="{E0C58E10-09F2-4B1B-B126-48B237917F53}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="611134350"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{83024114-2E66-40D0-84F2-CCFD8B95DA5A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0546AC03-7B92-4979-AE38-CC19E3BB9CAD}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Git2" ID="{8B61124A-C336-416B-91DC-36194DB9151E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Git2" ID="{E0C58E10-09F2-4B1B-B126-48B237917F53}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{66AC0007-481F-4D71-BB85-45971AA2D3D2}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_RiserMid" ID="{E7E50ABE-C262-45CB-AD06-80D60234AA16}" ShortID="453179946">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_RiserMid" ID="{13A110C1-EFFD-420D-BF50-16039D75CF74}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_RiserMid.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="509822016"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{5048E6D5-18F2-4FAD-A6D6-C4D0AE81ED90}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{8BD875CA-A6F0-4CFC-8105-D45BD2DBC5CB}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_RiserMid" ID="{C984737F-86FD-4DEE-8A23-9BB5A64A73C6}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_RiserMid" ID="{13A110C1-EFFD-420D-BF50-16039D75CF74}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5DD8E48F-159B-4785-BAD8-9ECCF3064506}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Zeb1" ID="{0876B24A-3E3A-4D68-BEB8-31756382E4DB}" ShortID="602203022">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Zeb1" ID="{2629451B-788B-4051-8AA9-310FD918AF5B}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Zeb1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="701918272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{FDDBC729-33D7-4791-95B5-7096B86BBE7D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{51B64D12-5A55-42E3-86EE-AB70E520B5FE}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Zeb1" ID="{E6EB515F-56F0-499F-A972-AAC0108C2957}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Zeb1" ID="{2629451B-788B-4051-8AA9-310FD918AF5B}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{56E52247-5F1F-45A5-A411-FBB460A98C9F}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{2D5306B9-3A75-4D49-82F6-2662E6EA1616}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{CA26D256-0296-4E93-A7E7-3B98164E3BBF}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="32000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="MainHyb" ID="{C13BDFEF-97E9-4F37-A9CC-D1BFA1114BD4}" ShortID="203727296">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{664243CD-A3BD-4021-8396-5E464106CFF5}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Lab_Base" ID="{816A99E5-2ACF-4845-A9D7-653C141548D8}" ShortID="598262219">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Base" ID="{A40101B8-76AC-4FE1-BDE2-D3ED254B2E2D}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785494999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{0AC5B14E-5B94-4BC9-BA42-54A0BD313C81}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{347731BC-5BE6-4484-97B4-CC417AD00A88}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Base" ID="{9AF1D7C6-A102-41C8-86AC-F636685690B5}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Base" ID="{A40101B8-76AC-4FE1-BDE2-D3ED254B2E2D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Git1" ID="{508E2213-F91E-4957-8B58-0B9178008D9D}" ShortID="371645131">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Git1" ID="{1D8C6372-FE06-4826-94B3-58D3ECE8552D}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Git1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="66657914"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E40198C2-25D2-49E2-9B21-12F2ADD2773E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{07588BB0-EBE3-40E5-9DAE-ECBAEAA3216B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Git1" ID="{40154772-18D6-41EF-B61C-AA42C44A9E54}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Git1" ID="{1D8C6372-FE06-4826-94B3-58D3ECE8552D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0A991547-2649-4111-B01E-F82A068B4186}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Git2" ID="{AA4C4E9B-7BF4-4664-95B1-38D15F5EE5ED}" ShortID="1014128289">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Git2" ID="{6CE675D5-7D8D-4464-A8A2-2DAA082E432F}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="163321020"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C2963DB7-AF09-4C45-BB94-79482E65A327}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A6FA371F-58A9-41FB-8327-1A3C32C21EC6}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Git2" ID="{6386748F-8AF0-4FC3-A979-DB3EA12BA806}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Git2" ID="{6CE675D5-7D8D-4464-A8A2-2DAA082E432F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CBA3F7AA-6BEC-40EE-84C3-63D2E9473CBB}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Hyb1" ID="{C8186861-9EA1-412B-A33F-09DB4ACBEEF2}" ShortID="564465026">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Hyb1" ID="{FEA3B747-D635-45C9-BE69-8A90F19FAA56}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Hyb1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="890285551"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{80BAD294-0C71-4274-83CE-11924393D17B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{479F7E6B-E477-4EFC-9C75-7BF5BD1C8297}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Hyb1" ID="{9A153510-DDB9-42FF-81E2-D43C2D15CB35}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Hyb1" ID="{FEA3B747-D635-45C9-BE69-8A90F19FAA56}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F6F5CD14-BD97-40D0-ACA9-0F13AC8C753C}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Hyb2" ID="{4F7449B4-DAC5-4156-99E9-EE39DE8E5247}" ShortID="1020912930">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Hyb2" ID="{B752116E-016F-49E4-9A58-62FCA706C99F}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Hyb2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="824011032"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B5590A4C-30E7-40A1-8FA5-8398714A68A9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F5697B62-89CB-4287-B932-5C6A360A51B9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Hyb2" ID="{23064F92-0CF8-4351-8F5D-48E53BF5E0BE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Hyb2" ID="{B752116E-016F-49E4-9A58-62FCA706C99F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9B03AF4F-B95E-44F3-802D-73BD1FF8153D}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Base_2" ID="{1BEA1A43-EB6E-40E9-B1AE-D9A7619B6437}" ShortID="902973172">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Base_2" ID="{6722AEDB-AABC-4406-A41A-59FDEE21610F}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Base_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="435178344"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F990B5FA-D81D-46C9-810B-B4D458E60865}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0C6C2871-94DD-4321-8A59-095C8533D6DF}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Base_2" ID="{EEC1BE7C-ABC1-4C5F-BED9-6D254C6D7A13}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Base_2" ID="{6722AEDB-AABC-4406-A41A-59FDEE21610F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{61585684-45C4-424D-AF13-E60FB4A4EF37}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="2000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{7E57998A-2B1B-4C2E-AC0F-3370C29E1C70}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="21000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{13D8B1D1-3C6A-4A8E-9BE5-C81EDCB67597}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{12460C22-CCB5-4095-AEDE-E4DF1E150E94}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{0246AA16-CA9E-409E-91E0-11A77AD4D47C}" ShortID="769166713">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{D9C51018-50FB-42CC-9EDB-575C063FFA3F}" ShortID="67509421">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Lab" ID="{0E64D975-6B12-4631-B96B-5DD22A4D1170}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{7FD994B8-86E5-41DE-945F-303350E52BA8}" ShortID="614019005">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="MainHyb" ID="{C13BDFEF-97E9-4F37-A9CC-D1BFA1114BD4}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="OutsidePoluted" ID="{50A925A8-A4A0-4CC6-81BA-B0085BB917CE}" ShortID="1003108504">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="OutsidePolutedTrack" ID="{A6F7E890-2114-4E0F-AF35-655DAF753C89}" ShortID="415446701">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="21650.3328991171"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="170"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Outside_Base" ID="{45C8A6C4-F4BD-4441-B94B-7DF9694102D0}" ShortID="451855389">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Outside_Base" ID="{CB1D2485-72B9-4E50-AC60-F5179CFFEAF0}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="411292419"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{24FED569-275C-4E03-B837-941E7951EC01}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{BBBDF1E2-997E-42D0-A651-A48A3D5989D8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_Base" ID="{6C38E362-EB3C-4ABE-A960-E626D820BBAA}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_Base" ID="{CB1D2485-72B9-4E50-AC60-F5179CFFEAF0}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Outside_L1" ID="{04A08E52-DAEE-494F-830B-25A6F1221B68}" ShortID="640944652">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Outside_L1" ID="{39C3E833-2C1D-47D2-B794-6C81B3943A4E}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_L1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="247887247"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="EcoDef_Outside_L2" ID="{3885359D-4EF7-4C7F-B389-E4E0C9E11845}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_L2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="21059461"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="EcoDef_Outside_L3" ID="{2149CAF7-23E8-4DED-9FFD-6F369C64927B}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_L3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="299942272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{27479E72-A5F8-415C-BAC0-2BC474B81FB7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5DE8CD4E-3700-444C-8EE7-643501A0411D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_L1" ID="{383F5566-EE80-436F-9A81-05F15D73D2B4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_L1" ID="{39C3E833-2C1D-47D2-B794-6C81B3943A4E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{26CA9635-E254-41E5-8FE5-9ECB642B8A78}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_L2" ID="{4E771CED-E1FF-4C45-AE43-0599FFD6B3B0}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_L2" ID="{3885359D-4EF7-4C7F-B389-E4E0C9E11845}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D11CFF32-A713-4B5B-A1F2-1558C865A1B3}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_L3" ID="{E2BB5A35-C25A-4B5F-B4FA-5C6CE057C714}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_L3" ID="{2149CAF7-23E8-4DED-9FFD-6F369C64927B}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{AE390F12-03E7-481C-BF0F-5A8E6487368E}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Outside_R1" ID="{984C7A8E-EA5C-4DB3-B6B1-BCC366B90464}" ShortID="93264159">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Outside_R1" ID="{EE749A88-DC9F-4F90-B1F3-92722CB78368}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_R1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="969980085"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="EcoDef_Outside_R2" ID="{BAF05565-20CB-45BC-925C-9F80A1A99F2E}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_R2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="174915490"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="EcoDef_Outside_R3" ID="{0FE2A475-E291-47CA-872D-018651A35C39}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Outside_R3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="516856278"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8D9276D6-F2CD-47DB-B6BD-CA84EB43386F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E6CCA036-EED5-4892-B23F-D30C9CD5047B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_R1" ID="{6D822218-B019-4101-8391-EEAB9E2465CC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_R1" ID="{EE749A88-DC9F-4F90-B1F3-92722CB78368}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3771CF1D-4DA7-45C2-B066-CDEF7AC0C8C6}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_R2" ID="{5552ECFE-E94F-4446-AF66-B8FDA96ABF8F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_R2" ID="{BAF05565-20CB-45BC-925C-9F80A1A99F2E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{73E0252B-7F57-4836-BC57-D5EAA150E848}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Outside_R3" ID="{CF064CA0-59A6-4395-BF3D-B214B3A7246C}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="13058.843537415"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Outside_R3" ID="{0FE2A475-E291-47CA-872D-018651A35C39}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3D4D6759-4BFF-4EF9-AEAE-D93C3C27647A}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{A46F6026-3D9B-4449-816C-74CED14EEC62}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="352.941176470588"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{EB8DDF04-7C16-43CE-AF87-7B1C79AA7E45}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="11647.0588235294"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{354389CB-0500-4A68-8D2B-2A422854F15D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{47B067FE-480C-4924-A89B-1D6E1ABAB1F8}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{02589F19-FF20-41E0-AA2C-767A1B749EE3}" ShortID="576268241">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{7B4F5A34-2E27-43BC-A273-40CCDAF1E3AE}" ShortID="453728326">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="OutsidePolutedTrack" ID="{A6F7E890-2114-4E0F-AF35-655DAF753C89}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="OutsideClean" ID="{9EDB0E21-228B-42E1-8ECE-55ADE067C368}" ShortID="871476383">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Main" ID="{96CA995B-511E-440B-81BF-6BF9170B8083}" ShortID="861095375">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="42500"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{664243CD-A3BD-4021-8396-5E464106CFF5}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Main_Base" ID="{FE10141F-1650-4AF8-A001-B17864646D3C}" ShortID="803515839">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Base" ID="{F0E48621-8772-4057-BE8E-0B8FCD7B23C9}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="409446096"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{14C0D101-1543-4579-9A69-89866E7DB37B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{89513A4D-FEBC-416D-BE71-8BFE45103A97}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Base" ID="{6C76F9C2-2037-4473-AD2F-57D5C6610B9E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="42500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Base" ID="{F0E48621-8772-4057-BE8E-0B8FCD7B23C9}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{C38B7462-DBCD-48E8-B874-EBBCC7BC9114}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{FE1EC92E-1FE7-4874-AF87-F3D6457F6E18}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{5B2A3E0B-8B13-47E9-BA4C-389450888B74}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Mel" ID="{77C6890C-F406-4D3E-ABEB-896616D15723}" ShortID="286342262">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Mel" ID="{FB113C4E-C0A3-430D-81DC-4BD3D1FE757C}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Mel.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="553882366"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{793507C4-5467-4EB8-BA7A-9465F65289F0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{91D47389-69BC-4566-8E80-8119D4A0BC51}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Mel" ID="{C08A02D1-1A7B-4B39-BB12-D4207BA7CCFA}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="42500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Mel" ID="{FB113C4E-C0A3-430D-81DC-4BD3D1FE757C}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{70D9A286-6BC8-408D-8DEB-E4E7741E305C}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{DF35F329-1F43-4B98-AE6D-A5A0A811EB23}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{863A51E7-F58E-46FA-9CA5-AC863E6DB506}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Trp" ID="{DE3CCA2B-2DDF-4CE3-8FBB-888D4F6A0229}" ShortID="359379097">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Trp" ID="{3B05EAA4-53D9-476B-9EF3-DC4AA91F65D1}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Trp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1063470039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A210F4B7-33B8-464A-96D1-B68777999B7B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{8435718E-2E8A-4028-A38E-4F1C9CFC4CD8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Trp" ID="{79D4C7D9-E0EB-4B01-82BC-3FF1C6E23B94}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="42500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Trp" ID="{3B05EAA4-53D9-476B-9EF3-DC4AA91F65D1}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{E9EAF47A-0DE1-404D-BBF7-BBA001F18912}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{66E79F73-5B06-4D73-897B-BD04D6411182}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{1B332C52-B394-416C-A97D-C291E033C169}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Git2" ID="{41FC93D1-2719-4EB9-997B-FEEB1B2FD8AE}" ShortID="495052327">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Git2" ID="{B1B98902-FE87-43CF-85A2-F47FFD925FFF}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="21047827"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E754B453-8B76-48A3-80A0-D6386DA6E67D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D15A273B-AD63-4277-92CB-6BFDAA79573E}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Git2" ID="{42F34E73-7DFA-46FE-B6A4-5DF71D6D230E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="42500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Git2" ID="{B1B98902-FE87-43CF-85A2-F47FFD925FFF}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{C5008328-A349-4043-B91B-BBC2ED5A296C}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{491A0D2B-AB7C-4215-82AE-B3A2869DFDE4}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{4B431B98-5FE0-4532-BE67-92EDF776A37F}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>42.5</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{CA30D6B5-0842-4EEB-B576-B7BAF63326A8}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="500"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{F8880C13-E2CC-4828-AB16-B79BDD1B7653}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="39500"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{2F8CB69F-D164-45AA-990E-54147C2F4462}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{6DD999FB-71B9-40D8-A3F9-1E28FE41EC2E}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{543161A3-A863-4F79-AD98-5F15E90EDBB3}" ShortID="841007724">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{65CA78A3-C3F0-4912-958D-C37384B70CEA}" ShortID="693263972">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Main" ID="{96CA995B-511E-440B-81BF-6BF9170B8083}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Intro" ID="{7DF706B2-BC78-45B9-84D9-D4FBBBE20F7F}" ShortID="114196057">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Main" ID="{8AC31F20-6805-4F93-822D-B916B170EE81}" ShortID="750512235">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="44500"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Main_Base" ID="{742B907F-56D1-402F-8041-1D0B827EC802}" ShortID="80408317">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Base" ID="{764CC7F8-E657-4FDD-8692-4570908282CD}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="409446096"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{CA030316-A010-413F-AFC4-BB1007E2E3EA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D98C5D90-B35E-43A8-92D7-26A8E570EBF3}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Base" ID="{1824E815-7418-4D56-AEB7-81A1134A168E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="44500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Base" ID="{764CC7F8-E657-4FDD-8692-4570908282CD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Mel" ID="{FC72EC47-8E35-46C6-9699-2207E7B04164}" ShortID="467358086">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Mel" ID="{EC8EF8C6-73AF-415F-95C4-3C417553687F}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Mel.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="553882366"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{2526AED7-078A-4123-8F40-89EB18DF5650}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6CE6CC96-0CCE-425F-B151-87E75E76C7EB}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Mel" ID="{A95CF31B-C149-4FAE-A182-934C401C6F9C}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="44500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Mel" ID="{EC8EF8C6-73AF-415F-95C4-3C417553687F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Trp" ID="{D15F97F2-38EC-446F-A683-92536A998FC1}" ShortID="98521745">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Trp" ID="{86AB2476-7324-4C62-8BE8-2F90F52C2267}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Trp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1063470039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E62D1EA9-8BBA-4307-AB15-A3E3360CE9D0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B0D4B473-E80E-455D-977A-ADE680891077}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Trp" ID="{A0CD7065-51DF-4DF7-8C88-CB3E55C835C4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="44500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Trp" ID="{86AB2476-7324-4C62-8BE8-2F90F52C2267}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Main_Git2" ID="{76E2BF04-8339-4BDB-AE4E-7DA6EB886181}" ShortID="629929098">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Main_Git2" ID="{35C7711E-AAD8-4A9D-8642-A29B5353FCAA}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Main_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="21047827"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{0CB8E7B3-5BAA-4890-A49A-6A8B692AEC5E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{AC011CE5-EBAD-4C23-8607-4B671AC22948}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Main_Git2" ID="{6F6A0DEB-6C46-438B-9827-A2F70A94AA00}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="44500"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Main_Git2" ID="{35C7711E-AAD8-4A9D-8642-A29B5353FCAA}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{C0A7332B-34E3-4BCB-8ADE-E7A820AB85DD}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="500"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{439B5029-CD20-41B3-B535-4C3DDF2B614E}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="39500"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="MainMid" ID="{47583320-82A0-44D5-B171-3B76F13AAF7F}" ShortID="896889351">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Lab_Base" ID="{6F2E416D-72E0-4D18-B8E6-9C55DFC3201A}" ShortID="518240317">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Base" ID="{30C1A1C3-3017-4D87-948B-05CE17104108}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785494999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A086CFA1-7633-420F-AE53-9E5202B32FBD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{AF90E699-F2C6-4725-993C-FEB7D0AB611C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Base" ID="{AD7E6DC8-D50B-4D84-A93B-CF6D220DF306}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Base" ID="{30C1A1C3-3017-4D87-948B-05CE17104108}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Hyb1" ID="{5502F760-C6C6-4BFA-8A2E-824469267977}" ShortID="1045200261">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Hyb2" ID="{FC996D8E-17FC-4E03-8562-72078722C642}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Hyb2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="824011032"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A9978F59-E9CE-495B-AAAC-3709B6FD2D3D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9ADB1177-4838-41BB-B117-D3DBAA011FCE}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Hyb2" ID="{82BD4A02-2AEB-4AFD-A472-95437E6247AC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Hyb2" ID="{FC996D8E-17FC-4E03-8562-72078722C642}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{4A590B83-F05D-49E5-902C-1B8C834B775A}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="2000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{430BD666-EAD3-4DEE-8869-B1AB005F8D31}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="21000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="Lab" ID="{6693CD0E-06F1-49AE-B6DE-E46AD843B714}" ShortID="883867125">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="44500"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Lab2_Base" ID="{5C384C36-6354-4184-90D3-3E42C22FAC43}" ShortID="26556654">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Base" ID="{1E8996CE-508A-465F-B4FE-6ACA727B1518}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1001511853"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{EAEAACB5-1486-4BB9-B7BE-0BA60D619B8C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{DB2769BA-2584-4001-A935-F03E21213C94}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Base" ID="{90B9B2AF-D7E8-4945-8A16-ED8AD4F0DFBA}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Base" ID="{1E8996CE-508A-465F-B4FE-6ACA727B1518}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Git1" ID="{5EDDA51D-C719-4433-B168-C67176BF8D36}" ShortID="1613655">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Git1" ID="{E4E42C53-8AEC-4AED-AD8D-E8F187F87494}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Git1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="781068834"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{088AB622-D54A-4EC4-96C1-25494E7A1A05}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{754B2467-F7D8-4EDB-B55F-13FE5521C82A}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Git1" ID="{0BC12728-745F-4C6B-AAC6-CD96A8195B14}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Git1" ID="{E4E42C53-8AEC-4AED-AD8D-E8F187F87494}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9279DD07-AB71-41AC-92AE-D206EBBDAD82}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Git2" ID="{741A39A8-B22C-49F9-ADC1-EC9F4D0172DA}" ShortID="510091791">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Git2" ID="{1B3E2E91-7067-40D5-BFD2-D8F08C2EE4CC}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="611134350"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{0A94C894-C879-4ACE-BB73-8127D8B5695C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{86B7BA0C-07F6-4312-91F1-7FD8C856D149}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Git2" ID="{78541DD7-B3D1-4358-99C5-D726684F1D2A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Git2" ID="{1B3E2E91-7067-40D5-BFD2-D8F08C2EE4CC}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CA955921-0027-463A-8181-7FEFB6C62E1E}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_RiserMid" ID="{2D32044D-EE58-413E-A0A1-9589731637AB}" ShortID="250210437">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_RiserMid" ID="{1A3C6322-E3D2-49CF-BF4D-CEC94049FE71}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_RiserMid.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="509822016"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{22B0718C-63FF-417C-B883-CA4518FB18D7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{76BF3316-BAAF-408E-BD64-F3B11A304DC9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_RiserMid" ID="{15CF2074-928C-4061-9503-794648699014}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_RiserMid" ID="{1A3C6322-E3D2-49CF-BF4D-CEC94049FE71}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{7C3E24DB-2E1B-4A1F-B4BC-CAA8E410FD3B}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab2_Zeb1" ID="{BC385653-40F2-4364-9C32-10BCDF4E16F6}" ShortID="426273809">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab2_Zeb1" ID="{B407A119-3C0C-4E38-8181-7F6C47730A77}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab2_Zeb1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="701918272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{798ACBB5-9245-4426-BFBC-AA099AE49DD4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CEEC2603-4F31-4CEF-930E-86E9B99FF455}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab2_Zeb1" ID="{36E8DFAF-B32F-4DBE-A040-957E8EF6AC87}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="32000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab2_Zeb1" ID="{B407A119-3C0C-4E38-8181-7F6C47730A77}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A7D6F1D6-FBED-4694-95F8-77B4467205DF}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{479549F2-A33D-4D78-BCC9-8101D0FBFBD7}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{95998F2C-851F-428E-8629-8D0C40A33C5F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="32000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="MainHyb" ID="{C29495A6-5A60-4E59-AEC5-920A3DF4C3BF}" ShortID="322510791">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="EcoDef_Lab_Base" ID="{43A1894D-CEFF-46DF-BAF6-F6C4BE0F1EEE}" ShortID="344665241">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Base" ID="{870E2523-7753-4927-A2B1-CA94B776C41C}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785494999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A2E652A4-DF78-441E-B9C6-F9C08115F570}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList/>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D372EBDB-EED6-49FD-9229-98289D36C4C1}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Base" ID="{855F8364-D522-4863-AE24-24CAA33280B8}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Base" ID="{870E2523-7753-4927-A2B1-CA94B776C41C}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Git1" ID="{E8EDDBA2-2D92-48D5-8C21-75A940F8D6EA}" ShortID="873159799">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Git1" ID="{EE3E0C6D-83FA-403C-8C07-15BA43D33CB5}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Git1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="66657914"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F3ABADC8-1A16-48D5-AFD6-746BF83D9328}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{DA8896D9-78D6-4531-B2F3-9201ED85F0A8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Git1" ID="{1A70E4A7-4FC9-444C-9C11-7051AB147D4F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Git1" ID="{EE3E0C6D-83FA-403C-8C07-15BA43D33CB5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A7CC79F6-A7B3-4EFF-9891-AD930366E332}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Git2" ID="{CFF43969-3087-4DDC-BFF8-FDD96C2D8CF8}" ShortID="27593636">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Git2" ID="{35A30B5F-9804-421F-A1C5-0EFC63C423F2}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Git2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="163321020"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{49F2F687-4C93-4D14-AB5C-774E0876CF27}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D73739ED-BE2E-4764-8802-7641D269A14D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Git2" ID="{90F7D20E-C0D6-4BDD-872D-339109BE0DD6}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Git2" ID="{35A30B5F-9804-421F-A1C5-0EFC63C423F2}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{2CBB85A8-E00F-4F2A-9FD2-5C5F62F9D577}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Hyb1" ID="{070EF81B-85A1-4F31-944A-8174418FC5A1}" ShortID="667760458">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Hyb1" ID="{630C9842-3C89-4E44-B90F-1213AACA4410}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Hyb1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="890285551"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{82B91E2B-7ACC-43A4-AFDE-FDCB3BA00190}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F2E5C213-8346-4FBB-BFF6-F33F5C7292AA}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Hyb1" ID="{2F243C2D-1E98-47D9-BB92-E44A2FA94BD8}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Hyb1" ID="{630C9842-3C89-4E44-B90F-1213AACA4410}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{64386840-E9B3-4D1E-B5CA-734316103334}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Hyb2" ID="{F7448DCF-25AB-4734-A469-C74787410D54}" ShortID="389469519">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Hyb2" ID="{9E2FB1D7-7369-4512-9AC6-18DEE3348C21}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Hyb2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="824011032"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F91C385E-F6B6-4378-AC75-3AFC87FBCF90}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{55EA6B85-ED36-4F64-87E4-7401AEB987CF}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Hyb2" ID="{9AEAE5C0-80BB-4184-8421-049F0A4B941F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Hyb2" ID="{9E2FB1D7-7369-4512-9AC6-18DEE3348C21}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F5984EAB-F686-449F-8E2B-5ABBF1EBC199}">
+																<ObjectLists/>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="EcoDef_Lab_Base_2" ID="{DAE34195-F73D-45B9-A8E3-C37A426B1C60}" ShortID="949655903">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EcoDef_Lab_Base_2" ID="{80079A69-AB50-45AB-A575-86817800BDE5}">
+													<Language>SFX</Language>
+													<AudioFile>EcoDef_Lab_Base_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="435178344"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{AFB92410-E896-4F63-89ED-6FF25F2ABADA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C5399F15-CD38-4BDB-A82F-7B68EE06F0D8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="EcoDef_Lab_Base_2" ID="{3A1DF866-8AE4-4441-B253-BA9A4838E4D4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="EcoDef_Lab_Base_2" ID="{80079A69-AB50-45AB-A575-86817800BDE5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{531DBF36-4085-4DEF-9823-E0695A7892E6}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="2000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{C5D5683E-E748-4370-B8E4-F5EAA7238D7D}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="21000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{098A6004-9DD8-4C98-AFC5-8CBF2E01329F}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{53637EA6-528F-41C8-BBA4-1DAA9BC84378}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{3ECB6B4E-1FC5-47C8-A3EC-1C0A15EBE189}" ShortID="533640948">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{D36D4542-8F32-467D-B767-022736A2A6C5}" ShortID="119117330">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Main" ID="{8AC31F20-6805-4F93-822D-B916B170EE81}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{0EF85BF9-03BC-4516-BAC5-4E4FD1653439}" ShortID="514413856">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="MainMid" ID="{47583320-82A0-44D5-B171-3B76F13AAF7F}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{0BD4B8A4-85B8-4319-ADBC-F3219E66CECB}" ShortID="278401638">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Lab" ID="{6693CD0E-06F1-49AE-B6DE-E46AD843B714}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{7CBE93E3-63DC-4917-B4A0-1CD825180139}" ShortID="498661015">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlayMode" Type="int16" Value="2"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{B0C3D8E3-C8C1-4B1B-B7BF-2B223D854EDF}" ShortID="770340559">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="MainHyb" ID="{C29495A6-5A60-4E59-AEC5-920A3DF4C3BF}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{831C34BC-378B-4DCA-BE98-37191945C460}" ShortID="742858548">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Lab" ID="{6693CD0E-06F1-49AE-B6DE-E46AD843B714}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{D90467F3-DA28-4372-82AB-649339524747}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{D422B68B-09A5-441D-8916-89CACBAFD274}">
+									<PropertyList>
+										<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<ArgumentList>
+						<ArgumentRef Name="MusicStates" ID="{95DB279A-6AA7-4E34-A426-D6CCDD861EF5}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Intro" ID="{66B00C06-D654-4E29-A91A-6005B71B044B}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Intro" ID="{7DF706B2-BC78-45B9-84D9-D4FBBBE20F7F}" WorkUnitID="{99E3744B-99D3-4C3D-B009-97A346999F27}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Lab" ID="{3A0261B3-FEEE-4E1E-B2EB-14CE46C6BC22}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Lab" ID="{20743DCC-23A9-48C8-9018-F489F0B9C740}" WorkUnitID="{99E3744B-99D3-4C3D-B009-97A346999F27}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="OutsideClean" ID="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="OutsideClean" ID="{9EDB0E21-228B-42E1-8ECE-55ADE067C368}" WorkUnitID="{99E3744B-99D3-4C3D-B009-97A346999F27}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="OutsidePoluted" ID="{E8A16771-681C-4FBE-A11F-D13ED09C5025}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="OutsidePoluted" ID="{50A925A8-A4A0-4CC6-81BA-B0085BB917CE}" WorkUnitID="{99E3744B-99D3-4C3D-B009-97A346999F27}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

@@ -117,6 +117,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Reload" ID="{EE689A97-EE6B-4E07-8ECC-62D267A3B0E8}">
+					<ChildrenList>
+						<Action Name="" ID="{F209B7EA-1298-4D9B-9B63-B10273AFBFA4}" ShortID="21830000">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_Reload" ID="{F5F0646A-C325-41A3-A03D-8D2698A10CF9}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PortalOpen" ID="{2B677D01-0DF8-4DA3-86A4-380320F8566A}">
+					<ChildrenList>
+						<Action Name="" ID="{2D8A5229-2C5D-4C8F-89B4-71307F2F8217}" ShortID="180442722">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EcoDef_PortalOpen" ID="{15253775-CC1D-4E6F-9E65-314C5C072FB6}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CleanAmbience" ID="{BE948A87-A075-46F9-BC14-107386C52C1B}">
+					<ChildrenList>
+						<Action Name="" ID="{ECB74CAF-0B3B-4E97-B117-F9F4C2D2E019}" ShortID="315619792">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CleanAmbience" ID="{FA742082-71CE-4EE0-B2DE-D3F33A1AE959}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LabAmbience" ID="{9C18BD12-A36C-419A-B753-C67C00DCF3CA}">
+					<ChildrenList>
+						<Action Name="" ID="{DFD348A5-73A3-4D61-B6A6-0752680A0A9F}" ShortID="992662355">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LabAmbience" ID="{A4C3DDBE-E1C5-4A51-92AD-B6B9E978E49D}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PollutedAmbience" ID="{8708CBF5-11D3-4858-8A12-AE0F0DCF15AD}">
+					<ChildrenList>
+						<Action Name="" ID="{FF8FDA4D-1026-4019-8050-C6BE5E62497E}" ShortID="247328077">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PollutedAmbience" ID="{17B1DEA4-BCC1-4AB3-A5E3-C301ED99C02A}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{D414310F-AB88-4F0A-A537-C46A682A8601}">
+					<ChildrenList>
+						<Action Name="" ID="{642A7B29-4083-4781-A778-DCE34A326749}" ShortID="336948108">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{21D1BB89-E721-4A14-AE6A-9BF429F0A5D4}" WorkUnitID="{99E3744B-99D3-4C3D-B009-97A346999F27}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
