@@ -11,16 +11,66 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2503890582">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2550196256">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="816266598" Name="LabReverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LabReverb"/>
+				<AuxBus Id="3370640258" Name="OutsideReverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\OutsideReverb"/>
+			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="2822805505">
+		<SoundBank Id="2641024368" Language="SFX" Hash="960452287">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="249371759" Language="SFX">
+							<ShortName>EcoDef_CleanAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_CleanAmbience_D79FB2B7.wem</Path>
+						</File>
+						<File Id="383284880" Language="SFX">
+							<ShortName>EcoDef_PollutedAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_PollutedAmbience_D79FB2B7.wem</Path>
+						</File>
+						<File Id="925044041" Language="SFX">
+							<ShortName>EcoDef_LabAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_LabAmbience_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{66B00C06-D654-4E29-A91A-6005B71B044B}">
+							<Media>
+								<File Id="925044041"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}">
+							<Media>
+								<File Id="249371759"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E8A16771-681C-4FBE-A11F-D13ED09C5025}">
+							<Media>
+								<File Id="383284880"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A0261B3-FEEE-4E1E-B2EB-14CE46C6BC22}">
+							<Media>
+								<File Id="925044041"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1429403605" Name="Play_CleanAmbience" ObjectPath="\Events\Default Work Unit\Play_CleanAmbience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="249371759" Language="SFX">
+							<ShortName>EcoDef_CleanAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_CleanAmbience_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3402428323" Name="Play_CraftEmpty" ObjectPath="\Events\Default Work Unit\Play_CraftEmpty" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<IncludedMemoryFiles>
 						<File Id="313538872" Language="SFX">
@@ -45,7 +95,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="476286426" Name="Play_EcoDef_Drop" ObjectPath="\Events\Default Work Unit\Play_EcoDef_Drop" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.813107" DurationMax="0.813107">
+				<Event Id="476286426" Name="Play_EcoDef_Drop" ObjectPath="\Events\Default Work Unit\Play_EcoDef_Drop" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.795533" DurationMax="0.831725">
 					<IncludedMemoryFiles>
 						<File Id="643800286" Language="SFX">
 							<ShortName>EcoDef_Drop.wav</ShortName>
@@ -61,7 +111,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.066545" DurationMax="0.083841">
+				<Event Id="176757445" Name="Play_Grab_Plastic" ObjectPath="\Events\Default Work Unit\Play_Grab_Plastic" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.070502" DurationMax="0.079135">
 					<IncludedMemoryFiles>
 						<File Id="219172893" Language="SFX">
 							<ShortName>EcoDefender_GrabPlastic.wav</ShortName>
@@ -69,13 +119,24 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1633093614" Name="Play_Gun_Empty" ObjectPath="\Events\Default Work Unit\Play_Gun_Empty" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.09408" DurationMax="0.118533">
+				<Event Id="1633093614" Name="Play_Gun_Empty" ObjectPath="\Events\Default Work Unit\Play_Gun_Empty" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.099674" DurationMax="0.11188">
 					<IncludedMemoryFiles>
 						<File Id="662235655" Language="SFX">
 							<ShortName>EcoDefender_EmptyGun.wav</ShortName>
 							<Path>SFX\EcoDefender_EmptyGun_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1614965127" Name="Play_LabAmbience" ObjectPath="\Events\Default Work Unit\Play_LabAmbience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="925044041" Language="SFX">
+							<ShortName>EcoDef_LabAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_LabAmbience_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="2932960663" Name="Stop_PollutedAmbience" ObjectPath="\Events\Default Work Unit\Stop_PollutedAmbience"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="4286830491" Name="Play_PlantBombOneShot" ObjectPath="\Events\Default Work Unit\Play_PlantBombOneShot" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.368488" DurationMax="0.498997">
 					<IncludedMemoryFiles>
@@ -101,7 +162,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1087491060" Name="Play_PlantGrowth" ObjectPath="\Events\Default Work Unit\Play_PlantGrowth" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.183614" DurationMax="0.231339">
+				<Event Id="1087491060" Name="Play_PlantGrowth" ObjectPath="\Events\Default Work Unit\Play_PlantGrowth" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.194532" DurationMax="0.218355">
 					<IncludedMemoryFiles>
 						<File Id="513510797" Language="SFX">
 							<ShortName>EcoDefender_PlantGrowth.wav</ShortName>
@@ -109,7 +170,34 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2997592729" Name="Play_WhiteNoiseTest" ObjectPath="\Events\Default Work Unit\Play_WhiteNoiseTest" DurationType="OneShot" DurationMin="1.687627" DurationMax="1.687627">
+				<Event Id="3864304129" Name="Play_PollutedAmbience" ObjectPath="\Events\Default Work Unit\Play_PollutedAmbience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="383284880" Language="SFX">
+							<ShortName>EcoDef_PollutedAmbience.wav</ShortName>
+							<Path>SFX\EcoDef_PollutedAmbience_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1579806121" Name="Stop_LabAmbience" ObjectPath="\Events\Default Work Unit\Stop_LabAmbience"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="1129740972" Name="Play_PortalOpen" ObjectPath="\Events\Default Work Unit\Play_PortalOpen" MaxAttenuation="1000." DurationType="OneShot" DurationMin="1.810826" DurationMax="2.032584">
+					<IncludedMemoryFiles>
+						<File Id="746457429" Language="SFX">
+							<ShortName>EcoDef_PortalOpen.wav</ShortName>
+							<Path>SFX\EcoDef_PortalOpen_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1910506537" Name="Play_Reload" ObjectPath="\Events\Default Work Unit\Play_Reload" MaxAttenuation="1000." DurationType="OneShot" DurationMin="0.422539" DurationMax="0.474284">
+					<IncludedMemoryFiles>
+						<File Id="357824657" Language="SFX">
+							<ShortName>EcoDef_Reload.wav</ShortName>
+							<Path>SFX\EcoDef_Reload_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2997592729" Name="Play_WhiteNoiseTest" ObjectPath="\Events\Default Work Unit\Play_WhiteNoiseTest" DurationType="OneShot" DurationMin="1.592907" DurationMax="1.787978">
 					<IncludedMemoryFiles>
 						<File Id="344732107" Language="SFX">
 							<ShortName>WhiteNoiseTest.wav</ShortName>
@@ -117,12 +205,185 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1579806121" Name="Stop_LabAmbience" ObjectPath="\Events\Default Work Unit\Stop_LabAmbience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2932960663" Name="Stop_PollutedAmbience" ObjectPath="\Events\Default Work Unit\Stop_PollutedAmbience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="3103015060" Name="MusicStates" ObjectPath="\States\Default Work Unit\MusicStates" GUID="{95DB279A-6AA7-4E34-A426-D6CCDD861EF5}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicStates\None" GUID="{71B237D7-8A5C-4016-8284-3D25334083F1}"/>
+						<State Id="578926554" Name="Lab" ObjectPath="\States\Default Work Unit\MusicStates\Lab" GUID="{3A0261B3-FEEE-4E1E-B2EB-14CE46C6BC22}"/>
+						<State Id="1298763127" Name="OutsidePoluted" ObjectPath="\States\Default Work Unit\MusicStates\OutsidePoluted" GUID="{E8A16771-681C-4FBE-A11F-D13ED09C5025}"/>
+						<State Id="2818594349" Name="OutsideClean" ObjectPath="\States\Default Work Unit\MusicStates\OutsideClean" GUID="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}"/>
+						<State Id="1125500713" Name="Intro" ObjectPath="\States\Default Work Unit\MusicStates\Intro" GUID="{66B00C06-D654-4E29-A91A-6005B71B044B}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3589812408" Language="SFX" Hash="808684632">
+		<SoundBank Id="3589812408" Language="SFX" Hash="317989578">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
 			<ShortName>Music_SoundBank</ShortName>
 			<Path>Music_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="21047827" Language="SFX">
+							<ShortName>EcoDef_Main_Git2.wav</ShortName>
+							<Path>SFX\EcoDef_Main_Git2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="21059461" Language="SFX">
+							<ShortName>EcoDef_Outside_L2.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_L2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="66657914" Language="SFX">
+							<ShortName>EcoDef_Lab_Git1.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Git1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="163321020" Language="SFX">
+							<ShortName>EcoDef_Lab_Git2.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Git2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="174915490" Language="SFX">
+							<ShortName>EcoDef_Outside_R2.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_R2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="247887247" Language="SFX">
+							<ShortName>EcoDef_Outside_L1.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_L1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="299942272" Language="SFX">
+							<ShortName>EcoDef_Outside_L3.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_L3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="409446096" Language="SFX">
+							<ShortName>EcoDef_Main_Base.wav</ShortName>
+							<Path>SFX\EcoDef_Main_Base_D79FB2B7.wem</Path>
+						</File>
+						<File Id="411292419" Language="SFX">
+							<ShortName>EcoDef_Outside_Base.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_Base_D79FB2B7.wem</Path>
+						</File>
+						<File Id="435178344" Language="SFX">
+							<ShortName>EcoDef_Lab_Base_2.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Base_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="509822016" Language="SFX">
+							<ShortName>EcoDef_Lab2_RiserMid.wav</ShortName>
+							<Path>SFX\EcoDef_Lab2_RiserMid_D79FB2B7.wem</Path>
+						</File>
+						<File Id="516856278" Language="SFX">
+							<ShortName>EcoDef_Outside_R3.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_R3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="553882366" Language="SFX">
+							<ShortName>EcoDef_Main_Mel.wav</ShortName>
+							<Path>SFX\EcoDef_Main_Mel_D79FB2B7.wem</Path>
+						</File>
+						<File Id="611134350" Language="SFX">
+							<ShortName>EcoDef_Lab2_Git2.wav</ShortName>
+							<Path>SFX\EcoDef_Lab2_Git2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="701918272" Language="SFX">
+							<ShortName>EcoDef_Lab2_Zeb1.wav</ShortName>
+							<Path>SFX\EcoDef_Lab2_Zeb1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="781068834" Language="SFX">
+							<ShortName>EcoDef_Lab2_Git1.wav</ShortName>
+							<Path>SFX\EcoDef_Lab2_Git1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="785494999" Language="SFX">
+							<ShortName>EcoDef_Lab_Base.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Base_D79FB2B7.wem</Path>
+						</File>
+						<File Id="824011032" Language="SFX">
+							<ShortName>EcoDef_Lab_Hyb2.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Hyb2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="890285551" Language="SFX">
+							<ShortName>EcoDef_Lab_Hyb1.wav</ShortName>
+							<Path>SFX\EcoDef_Lab_Hyb1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="969980085" Language="SFX">
+							<ShortName>EcoDef_Outside_R1.wav</ShortName>
+							<Path>SFX\EcoDef_Outside_R1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1001511853" Language="SFX">
+							<ShortName>EcoDef_Lab2_Base.wav</ShortName>
+							<Path>SFX\EcoDef_Lab2_Base_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1063470039" Language="SFX">
+							<ShortName>EcoDef_Main_Trp.wav</ShortName>
+							<Path>SFX\EcoDef_Main_Trp_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{66B00C06-D654-4E29-A91A-6005B71B044B}">
+							<Media>
+								<File Id="21047827"/>
+								<File Id="66657914"/>
+								<File Id="163321020"/>
+								<File Id="409446096"/>
+								<File Id="435178344"/>
+								<File Id="509822016"/>
+								<File Id="553882366"/>
+								<File Id="611134350"/>
+								<File Id="701918272"/>
+								<File Id="781068834"/>
+								<File Id="785494999"/>
+								<File Id="824011032"/>
+								<File Id="890285551"/>
+								<File Id="1001511853"/>
+								<File Id="1063470039"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A0261B3-FEEE-4E1E-B2EB-14CE46C6BC22}">
+							<Media>
+								<File Id="66657914"/>
+								<File Id="163321020"/>
+								<File Id="435178344"/>
+								<File Id="509822016"/>
+								<File Id="611134350"/>
+								<File Id="701918272"/>
+								<File Id="781068834"/>
+								<File Id="785494999"/>
+								<File Id="824011032"/>
+								<File Id="890285551"/>
+								<File Id="1001511853"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}">
+							<Media>
+								<File Id="21047827"/>
+								<File Id="409446096"/>
+								<File Id="553882366"/>
+								<File Id="1063470039"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E8A16771-681C-4FBE-A11F-D13ED09C5025}">
+							<Media>
+								<File Id="21059461"/>
+								<File Id="174915490"/>
+								<File Id="247887247"/>
+								<File Id="299942272"/>
+								<File Id="411292419"/>
+								<File Id="516856278"/>
+								<File Id="969980085"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="3103015060" Name="MusicStates" ObjectPath="\States\Default Work Unit\MusicStates" GUID="{95DB279A-6AA7-4E34-A426-D6CCDD861EF5}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicStates\None" GUID="{71B237D7-8A5C-4016-8284-3D25334083F1}"/>
+						<State Id="578926554" Name="Lab" ObjectPath="\States\Default Work Unit\MusicStates\Lab" GUID="{3A0261B3-FEEE-4E1E-B2EB-14CE46C6BC22}"/>
+						<State Id="1298763127" Name="OutsidePoluted" ObjectPath="\States\Default Work Unit\MusicStates\OutsidePoluted" GUID="{E8A16771-681C-4FBE-A11F-D13ED09C5025}"/>
+						<State Id="2818594349" Name="OutsideClean" ObjectPath="\States\Default Work Unit\MusicStates\OutsideClean" GUID="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}"/>
+						<State Id="1125500713" Name="Intro" ObjectPath="\States\Default Work Unit\MusicStates\Intro" GUID="{66B00C06-D654-4E29-A91A-6005B71B044B}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
