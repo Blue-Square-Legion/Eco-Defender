@@ -15,6 +15,10 @@ public class Gun : XRGrabInteractable
     [SerializeField] private GameObject projectile;
     [SerializeField] private int maxAmmo = 10;
 
+    public string gunEmptySound = "Play_Gun_Empty";
+    public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
+    public string Gun_ReloadSound = "Play_Reload";
+
     public int CurrAmmo
     {
         get { return currAmmo; }
@@ -58,6 +62,7 @@ public class Gun : XRGrabInteractable
             if (projectile)
             {
                 currAmmo--;
+                AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
                 GameObject projObj = Instantiate(projectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
                 Destroy(projObj, 1f);
             }
@@ -68,6 +73,7 @@ public class Gun : XRGrabInteractable
         } else
         {
             // Gun is empty, put empty sound here
+            AkSoundEngine.PostEvent(gunEmptySound, gameObject);
         }
     }
 
@@ -82,16 +88,20 @@ public class Gun : XRGrabInteractable
     {
         if (_invRef.SeedCount > 0)
         {
+           
             if (_invRef.SeedCount < maxAmmo)
             {
                 currAmmo = _invRef.SeedCount;
                 _invRef.SeedCount = 0;
+
             }
             else
             {
                 _invRef.SeedCount -= maxAmmo;
                 currAmmo = maxAmmo;
             }
+            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
         }
+        
     }
 }

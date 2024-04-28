@@ -1,6 +1,25 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	578926554	Lab	MusicStates			
+	748895195	None	MusicStates			
+	1125500713	Intro	MusicStates			
+	1298763127	OutsidePoluted	MusicStates			
+	2818594349	OutsideClean	MusicStates			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	816266598	LabReverb			\Default Work Unit\Master Audio Bus\LabReverb	
+	3370640258	OutsideReverb			\Default Work Unit\Master Audio Bus\OutsideReverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	1159390747	Room_Medium_Tiled	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
