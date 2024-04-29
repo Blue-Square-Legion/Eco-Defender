@@ -11794,11 +11794,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1731572768}
     m_Modifications:
+    - target: {fileID: 2151587524647416782, guid: 7a4242bb551bc444a82b13867390f5d4,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2972717527794638540, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_System
       value: 
       objectReference: {fileID: 7948053523565946999}
+    - target: {fileID: 4863715611202546461, guid: 7a4242bb551bc444a82b13867390f5d4,
+        type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4875720355059934736, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_RootOrder
