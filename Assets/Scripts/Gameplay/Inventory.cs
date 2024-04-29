@@ -4,23 +4,51 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private int seedCount = 50;
+	[SerializeField] private int invSize = 5;
 
-    public int SeedCount
-    {
-        get { return seedCount; }
-        set { seedCount = value; }
-    }
+	private Dictionary<ItemSO, int> _inv;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Dictionary<ItemSO, int> Inv { get { return _inv; } }
 
-    // Update is called once per frame
-    void Update()
+	public Inventory()
     {
-        
-    }
+		_inv = new Dictionary<ItemSO, int>(invSize);
+	}
+
+	public static Inventory Instance;
+
+	void Start()
+	{
+        if (!Instance)
+        {
+			Instance = this;
+        }
+
+		_inv = new Dictionary<ItemSO, int>(invSize);
+	}
+
+	public void AddToInventory(ItemSO item, int amount = 1)
+	{
+		if (_inv.ContainsKey(item))
+		{
+			_inv[item] += amount;
+		}
+		else
+		{
+			_inv.Add(item, 1);
+		}
+	}
+
+	public void RemoveFromInventory(ItemSO item, int amount = 1)
+	{
+		if (_inv[item] > 0)
+		{
+			_inv[item] -= amount;
+
+			if (_inv[item] <= 0)
+			{
+				_inv.Remove(item);
+			}
+		}
+	}
 }
