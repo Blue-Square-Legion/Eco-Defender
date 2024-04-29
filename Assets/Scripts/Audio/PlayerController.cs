@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace AudioScript
@@ -10,10 +11,18 @@ namespace AudioScript
         public string hoverSoundEvent = "Play_EcoDef_Hover";
         public string DropSoundEvent = "Play_EcoDef_Drop";
 
+        private bool toggleInventory;
+        private float defaultRay;
         private Collider handCollider;
 
-
+        [SerializeField] private GameObject inventoryCanvas;
+        [SerializeField] private GameObject InvRayInteractorRef;
+        [SerializeField] private GameObject PlayerRayInteractorRef;
+        
         [SerializeField] private float timeTillCollisionEnabled = 2f;
+        [SerializeField] private InputActionReference Inventory;
+
+        public bool InventoryOn => toggleInventory;
 
         private string _grabTag;
         private static readonly string GRABBED = "Grabbed";
@@ -21,6 +30,37 @@ namespace AudioScript
         public void Start()
         {
             handCollider = GetComponent<Collider>();
+            defaultRay = PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance;
+            toggleInventory = false;
+        }
+
+        public void ToggleInventory(InputAction.CallbackContext obj)
+        {
+            if (toggleInventory)
+            {
+                InvRayInteractorRef.SetActive(false);
+                PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = defaultRay;
+                PlayerRayInteractorRef.SetActive(true);
+                toggleInventory = false;
+            } else
+            {
+                InvRayInteractorRef.SetActive(true);
+                PlayerRayInteractorRef.GetComponent<XRRayInteractor>().maxRaycastDistance = 0;
+                PlayerRayInteractorRef.SetActive(false);
+                toggleInventory = true;
+            }
+
+            inventoryCanvas.SetActive(toggleInventory);
+        }
+
+        private void OnEnable()
+        {
+            Inventory.action.performed += ToggleInventory;
+        }
+
+        private void OnDisable()
+        {
+            Inventory.action.performed -= ToggleInventory;
         }
 
         public void OnGrab(SelectEnterEventArgs args)
