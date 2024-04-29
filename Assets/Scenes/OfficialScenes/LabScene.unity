@@ -11869,6 +11869,11 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6088144620596622134, guid: 7a4242bb551bc444a82b13867390f5d4,
+        type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483745
+      objectReference: {fileID: 0}
     - target: {fileID: 7948053524124810313, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_BackGroundColor.a
@@ -11961,6 +11966,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1288523435159758301, guid: 41fc69dfcc7f4491ba44c7d16fd9fcea,
         type: 3}
+    - target: {fileID: 8467342541414504239, guid: 7a4242bb551bc444a82b13867390f5d4,
+        type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483745
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4242bb551bc444a82b13867390f5d4, type: 3}
 --- !u!4 &7948053523565946998 stripped
