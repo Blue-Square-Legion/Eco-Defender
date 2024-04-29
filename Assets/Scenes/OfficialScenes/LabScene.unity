@@ -3533,7 +3533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &974562193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6618,7 +6618,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1822834725}
+      - m_Target: {fileID: 1715880745}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7857,7 +7857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1715880747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8353,12 +8353,6 @@ PrefabInstance:
 --- !u!4 &1822834724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7946513135214729612, guid: e816773ebfdcc4eafbe72f19dcbc7614,
-    type: 3}
-  m_PrefabInstance: {fileID: 1822834723}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1822834725 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4560935636959129176, guid: e816773ebfdcc4eafbe72f19dcbc7614,
     type: 3}
   m_PrefabInstance: {fileID: 1822834723}
   m_PrefabAsset: {fileID: 0}
