@@ -5,6 +5,20 @@
 			<ChildrenList>
 				<Sound Name="WhiteNoiseTest" ID="{8258E9B2-F30C-44C8-A63A-11ADD7B5BDEA}" ShortID="441886228">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0A59D879-8988-4384-BFC3-B55AA709E6A5}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-15</Value>
@@ -41,6 +55,7 @@
 				<RandomSequenceContainer Name="PlantBombOneShot" ID="{5CF80C9F-42D5-4FB1-8E7D-6E0D275FDD13}" ShortID="992803037">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -206,13 +221,14 @@
 									<Modifier Name="" ID="{647556C3-3BD3-481B-9808-3AE9AE3E2E23}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -241,21 +257,31 @@
 				</Sound>
 				<Sound Name="Grab_Plastic" ID="{4001B067-7E3D-4FFE-9137-909F6C520783}" ShortID="717939216">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{C8A08D1B-4BEA-4AE5-A573-CA0668896BCF}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 						</Reference>
@@ -286,13 +312,14 @@
 									<Modifier Name="" ID="{84C8F94B-3C07-427B-B5DA-40C14A57623D}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -322,12 +349,19 @@
 				<Folder Name="Indicators" ID="{35144F1F-77B2-4C71-8C36-2BB9A906BB86}" ShortID="408410894">
 					<ChildrenList>
 						<Sound Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" ShortID="738384902">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -345,12 +379,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="EcoDef_CraftEmpty" ID="{A3288C8E-668B-47C3-BD06-2E88BBC07FA7}" ShortID="976016797">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -365,6 +406,318 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="EcoDef_CraftFail" ID="{5B064E0A-6066-4C27-9D78-CD0EEB039257}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{C69B045D-DD76-4DAD-B884-C75A170E00F7}" ShortID="289805332">
+					<ChildrenList>
+						<Sound Name="EcoDef_Button_Click" ID="{B81CB932-D0C9-489C-9256-734E4065475E}" ShortID="999104803">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Button_Click" ID="{6F195F68-270F-4686-B584-6441A62482ED}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Button_Click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="42842145"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Button_Click" ID="{6F195F68-270F-4686-B584-6441A62482ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EcoDef_Hover" ID="{F60A2354-A1C7-44A9-909B-464817642349}" ShortID="873110008">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_Hover_V3" ID="{EB120053-F161-4BFC-9727-21D016751B4A}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_Hover_V3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="892485848"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_Hover_V3" ID="{EB120053-F161-4BFC-9727-21D016751B4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="EcoDef_Drop" ID="{AB9EE997-234B-475F-921E-762DDC77CB9C}" ShortID="64910859">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{5B91DE43-BC66-4720-B629-9E476544011A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDef_Drop" ID="{2EA7107D-FF07-4ED3-BCF1-B02B83DE02D2}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDef_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="643800286"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDef_Drop" ID="{2EA7107D-FF07-4ED3-BCF1-B02B83DE02D2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="EcoDef_Reload" ID="{F5F0646A-C325-41A3-A03D-8D2698A10CF9}" ShortID="737967465">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9CAF4412-678C-48E5-9B0C-C961A843C5F6}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDef_Reload" ID="{91139F6B-3761-4969-AF9E-FAA9AB0FCFC8}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDef_Reload.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="357824657"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDef_Reload" ID="{91139F6B-3761-4969-AF9E-FAA9AB0FCFC8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="EcoDef_PortalOpen" ID="{15253775-CC1D-4E6F-9E65-314C5C072FB6}" ShortID="299179202">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E693E9BC-976F-48F3-9565-AD932362E483}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ED_Default_Attenuation" ID="{F32710F0-FD53-4C27-8B21-5678F849500A}" WorkUnitID="{11F8AACA-639E-45B5-AF32-68D949B22DDA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EcoDef_PortalOpen" ID="{7E9F4389-725F-41D5-9C8C-6996FFD519C8}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDef_PortalOpen.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="746457429"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EcoDef_PortalOpen" ID="{7E9F4389-725F-41D5-9C8C-6996FFD519C8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="Ambience" ID="{172AECE4-860B-482F-BF17-51F7520FEEBF}" ShortID="179475470">
+					<ChildrenList>
+						<Sound Name="LabAmbience" ID="{A4C3DDBE-E1C5-4A51-92AD-B6B9E978E49D}" ShortID="448827657">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_LabAmbience" ID="{CD9FB0D5-5922-4349-B4ED-980BB2DAC1D2}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_LabAmbience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="925044041"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_LabAmbience" ID="{CD9FB0D5-5922-4349-B4ED-980BB2DAC1D2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CleanAmbience" ID="{FA742082-71CE-4EE0-B2DE-D3F33A1AE959}" ShortID="381494018">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_CleanAmbience" ID="{3A48FE97-656E-461E-9D3F-1CF370C40EFC}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_CleanAmbience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249371759"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_CleanAmbience" ID="{3A48FE97-656E-461E-9D3F-1CF370C40EFC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PollutedAmbience" ID="{17B1DEA4-BCC1-4AB3-A5E3-C301ED99C02A}" ShortID="460891083">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9A0139C4-6986-429F-B827-3808142720A1}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EcoDef_PollutedAmbience" ID="{A3D5F701-0477-47D7-ACBA-1E9FE20E402A}">
+									<Language>SFX</Language>
+									<AudioFile>EcoDef_PollutedAmbience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="383284880"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="EcoDef_PollutedAmbience" ID="{A3D5F701-0477-47D7-ACBA-1E9FE20E402A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

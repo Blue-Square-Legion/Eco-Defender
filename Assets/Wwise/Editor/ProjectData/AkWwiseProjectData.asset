@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e6701d0643b93e4a80f84de3c21fd71, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8993f511730d194da0cf285e8dbaa7db
     GuidInternal: 
-    m_lastTime: -8584885759297960461
+    m_lastTime: -8584877679087410856
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9ed24b9f533a424681045f077e90190e
     GuidInternal: 
-    m_lastTime: -8584885747279439167
+    m_lastTime: -8584873054377396462
     List:
+    - name: LabReverb
+      guid: 77cfac86b00cb74abc02bb59e6b94a9d
+      id: 816266598
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9ed24b9f533a424681045f077e90190e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: LabReverb
+        ObjectType: 1
+        guid: 77cfac86b00cb74abc02bb59e6b94a9d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LabReverb
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +71,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: cd434266bda3214083965e464106cff5
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9ed24b9f533a424681045f077e90190e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: cd434266bda3214083965e464106cff5
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: OutsideReverb
+      guid: 1a1833f08e24f14f8950fd8f350f9cbf
+      id: 3370640258
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9ed24b9f533a424681045f077e90190e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: OutsideReverb
+        ObjectType: 1
+        guid: 1a1833f08e24f14f8950fd8f350f9cbf
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\OutsideReverb
     - name: SFX
       guid: c439019a86699f42b8273808142720a1
       id: 393239870
@@ -83,7 +134,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f9c117837134f440a81e5a381644bd2b
     GuidInternal: 
-    m_lastTime: -8584882108443848115
+    m_lastTime: -8584872918966622654
     List:
     - name: Music_SoundBank
       guid: 99f6826fec234d4aa58bb55b326e57a2
@@ -125,11 +176,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 42a04e71b71ee443af0c1656b6b3ae6b
     GuidInternal: 
-    m_lastTime: -8584882108443888122
+    m_lastTime: -8584872919620399066
     List:
-    - name: Play_CraftFail
-      guid: a8a28e5f76ca8c4199d42bfce35468ff
-      id: 3464849300
+    - name: Play_Ambience
+      guid: d4c1c292dc14374a9fc37c36094be6b0
+      id: 278617630
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -137,11 +188,45 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 42a04e71b71ee443af0c1656b6b3ae6b
-      - ElementName: Play_CraftFail
+      - ElementName: Play_Ambience
+        ObjectType: 3
+        guid: d4c1c292dc14374a9fc37c36094be6b0
+      Path: Events\Default Work Unit\Play_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_CleanAmbience
+      guid: 878a94be75a0f946bc14107386c52c1b
+      id: 1429403605
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_CleanAmbience
+        ObjectType: 3
+        guid: 878a94be75a0f946bc14107386c52c1b
+      Path: Events\Default Work Unit\Play_CleanAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_CraftEmpty
+      guid: a8a28e5f76ca8c4199d42bfce35468ff
+      id: 3402428323
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_CraftEmpty
         ObjectType: 3
         guid: a8a28e5f76ca8c4199d42bfce35468ff
-      Path: Events\Default Work Unit\Play_CraftFail
-      maxAttenuation: 0
+      Path: Events\Default Work Unit\Play_CraftEmpty
+      maxAttenuation: 1000
       maxDuration: 0.75
       minDuration: 0.75
     - name: Play_CraftSuccess
@@ -158,9 +243,66 @@ MonoBehaviour:
         ObjectType: 3
         guid: a23967f3747f1548a00467cf95e4ec7e
       Path: Events\Default Work Unit\Play_CraftSuccess
-      maxAttenuation: 0
+      maxAttenuation: 1000
       maxDuration: 2.25
       minDuration: 2.25
+    - name: Play_EcoDef_Button_Click
+      guid: 7784d9b314e8f041a80f838432151b10
+      id: 3796544448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: UI
+        ObjectType: 4
+        guid: aa4d78d6905d8e4096f209353d3c3b04
+      - ElementName: Play_EcoDef_Button_Click
+        ObjectType: 3
+        guid: 7784d9b314e8f041a80f838432151b10
+      Path: Events\Default Work Unit\UI\Play_EcoDef_Button_Click
+      maxAttenuation: 1000
+      maxDuration: 0.040612
+      minDuration: 0.040612
+    - name: Play_EcoDef_Drop
+      guid: 0520fb76bfa9d24e9ccf28c310fc87dd
+      id: 476286426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_EcoDef_Drop
+        ObjectType: 3
+        guid: 0520fb76bfa9d24e9ccf28c310fc87dd
+      Path: Events\Default Work Unit\Play_EcoDef_Drop
+      maxAttenuation: 1000
+      maxDuration: 0.831725
+      minDuration: 0.795533
+    - name: Play_EcoDef_Hover
+      guid: 72c0be47a753e24f93ac3a396f6de6be
+      id: 692969629
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: UI
+        ObjectType: 4
+        guid: aa4d78d6905d8e4096f209353d3c3b04
+      - ElementName: Play_EcoDef_Hover
+        ObjectType: 3
+        guid: 72c0be47a753e24f93ac3a396f6de6be
+      Path: Events\Default Work Unit\UI\Play_EcoDef_Hover
+      maxAttenuation: 1000
+      maxDuration: 0.177234
+      minDuration: 0.177234
     - name: Play_Grab_Plastic
       guid: 8cda6d7937dbd349a8a24076e06a94f0
       id: 176757445
@@ -175,9 +317,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8cda6d7937dbd349a8a24076e06a94f0
       Path: Events\Default Work Unit\Play_Grab_Plastic
-      maxAttenuation: 0
-      maxDuration: 0.083841
-      minDuration: 0.066545
+      maxAttenuation: 1000
+      maxDuration: 0.079135
+      minDuration: 0.070502
     - name: Play_Gun_Empty
       guid: dd108ac246ee674ca56058209ebadc23
       id: 1633093614
@@ -193,8 +335,42 @@ MonoBehaviour:
         guid: dd108ac246ee674ca56058209ebadc23
       Path: Events\Default Work Unit\Play_Gun_Empty
       maxAttenuation: 1000
-      maxDuration: 0.118533
-      minDuration: 0.09408
+      maxDuration: 0.11188
+      minDuration: 0.099674
+    - name: Play_LabAmbience
+      guid: 12bd189c6ca39a41b753c67c00dcf3ca
+      id: 1614965127
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_LabAmbience
+        ObjectType: 3
+        guid: 12bd189c6ca39a41b753c67c00dcf3ca
+      Path: Events\Default Work Unit\Play_LabAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music
+      guid: 0f3114d488ab0a4fa537c46a682a8601
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 0f3114d488ab0a4fa537c46a682a8601
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_PlantBombOneShot
       guid: e3f9e1ca21486047b7d22d3d007e5e86
       id: 4286830491
@@ -227,8 +403,59 @@ MonoBehaviour:
         guid: 5738cd8832b83547a1598987e88f887c
       Path: Events\Default Work Unit\Play_PlantGrowth
       maxAttenuation: 1000
-      maxDuration: 0.231339
-      minDuration: 0.183614
+      maxDuration: 0.218355
+      minDuration: 0.194532
+    - name: Play_PollutedAmbience
+      guid: f5cb0887d31158488a12ae0f0dcf15ad
+      id: 3864304129
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_PollutedAmbience
+        ObjectType: 3
+        guid: f5cb0887d31158488a12ae0f0dcf15ad
+      Path: Events\Default Work Unit\Play_PollutedAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_PortalOpen
+      guid: 017d672bf80da34d86a4380320f8566a
+      id: 1129740972
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_PortalOpen
+        ObjectType: 3
+        guid: 017d672bf80da34d86a4380320f8566a
+      Path: Events\Default Work Unit\Play_PortalOpen
+      maxAttenuation: 1000
+      maxDuration: 2.032584
+      minDuration: 1.810826
+    - name: Play_Reload
+      guid: 979a68ee6bee074e8ecc62d267a3b0e8
+      id: 1910506537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Reload
+        ObjectType: 3
+        guid: 979a68ee6bee074e8ecc62d267a3b0e8
+      Path: Events\Default Work Unit\Play_Reload
+      maxAttenuation: 1000
+      maxDuration: 0.474284
+      minDuration: 0.422539
     - name: Play_WhiteNoiseTest
       guid: 6fd8e69a420fee4ab546f68554eaf461
       id: 2997592729
@@ -244,8 +471,59 @@ MonoBehaviour:
         guid: 6fd8e69a420fee4ab546f68554eaf461
       Path: Events\Default Work Unit\Play_WhiteNoiseTest
       maxAttenuation: 0
-      maxDuration: 1.687627
-      minDuration: 1.687627
+      maxDuration: 1.787978
+      minDuration: 1.592907
+    - name: Stop_LabAmbience
+      guid: 7c517d4af211b54d96bdc420aabaa24c
+      id: 1579806121
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Stop_LabAmbience
+        ObjectType: 3
+        guid: 7c517d4af211b54d96bdc420aabaa24c
+      Path: Events\Default Work Unit\Stop_LabAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_PollutedAmbience
+      guid: f7ef9e8357f8884eb177ca0c281ea69e
+      id: 2932960663
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Stop_PollutedAmbience
+        ObjectType: 3
+        guid: f7ef9e8357f8884eb177ca0c281ea69e
+      Path: Events\Default Work Unit\Stop_PollutedAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI
+      guid: aa4d78d6905d8e4096f209353d3c3b04
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: UI
+        ObjectType: 4
+        guid: aa4d78d6905d8e4096f209353d3c3b04
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -258,7 +536,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 51fcacfd084226429e9855e6df44c505
     GuidInternal: 
-    m_lastTime: -8584885759299930904
+    m_lastTime: -8584877679088228554
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -272,8 +550,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f526d83be32e2345b3a5a5ad68f06653
     GuidInternal: 
-    m_lastTime: -8584885759297980470
-    List: []
+    m_lastTime: -8584873364140762028
+    List:
+    - name: MusicStates
+      guid: 9a27db95a76a344ea426d6ccdd861ef5
+      id: 3103015060
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f526d83be32e2345b3a5a5ad68f06653
+      - ElementName: MusicStates
+        ObjectType: 9
+        guid: 9a27db95a76a344ea426d6ccdd861ef5
+      Path: States\Default Work Unit\MusicStates
+      values:
+      - name: Intro
+        guid: 060cb06654d6294ea91a6005b71b044b
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f526d83be32e2345b3a5a5ad68f06653
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: 9a27db95a76a344ea426d6ccdd861ef5
+        - ElementName: Intro
+          ObjectType: 8
+          guid: 060cb06654d6294ea91a6005b71b044b
+      - name: Lab
+        guid: b361023aeefe1e4eb2eb14ce46c6bc22
+        id: 578926554
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f526d83be32e2345b3a5a5ad68f06653
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: 9a27db95a76a344ea426d6ccdd861ef5
+        - ElementName: Lab
+          ObjectType: 8
+          guid: b361023aeefe1e4eb2eb14ce46c6bc22
+      - name: None
+        guid: d737b2715c8a164082843d25334083f1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f526d83be32e2345b3a5a5ad68f06653
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: 9a27db95a76a344ea426d6ccdd861ef5
+        - ElementName: None
+          ObjectType: 8
+          guid: d737b2715c8a164082843d25334083f1
+      - name: OutsideClean
+        guid: b4d622edd058d54bbe305b357e94700e
+        id: 2818594349
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f526d83be32e2345b3a5a5ad68f06653
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: 9a27db95a76a344ea426d6ccdd861ef5
+        - ElementName: OutsideClean
+          ObjectType: 8
+          guid: b4d622edd058d54bbe305b357e94700e
+      - name: OutsidePoluted
+        guid: 7167a1e81c68be4fa11fd13ed09c5025
+        id: 1298763127
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f526d83be32e2345b3a5a5ad68f06653
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: 9a27db95a76a344ea426d6ccdd861ef5
+        - ElementName: OutsidePoluted
+          ObjectType: 8
+          guid: 7167a1e81c68be4fa11fd13ed09c5025
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -286,7 +662,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f2b8e8a57f2dbe47a52b53b4343620be
     GuidInternal: 
-    m_lastTime: -8584885759297970465
+    m_lastTime: -8584877679087420855
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -300,10 +676,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 6876f6de3bf72942bbebc52af1e6656b
     GuidInternal: 
-    m_lastTime: -8584885759297970465
+    m_lastTime: -8584877679087410856
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000b0000000c000000
+  ExpandedWaapiItemIds: 02000000030000000400000005000000060000000e00000015000000160000001700000018000000190000001a0000001b0000001c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

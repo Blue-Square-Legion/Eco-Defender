@@ -1,0 +1,37 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	578926554	Lab	MusicStates			
+	748895195	None	MusicStates			
+	1125500713	Intro	MusicStates			
+	1298763127	OutsidePoluted	MusicStates			
+	2818594349	OutsideClean	MusicStates			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	21047827	EcoDef_Main_Git2	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Main_Git2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Main\EcoDef_Main_Git2		7849864
+	21059461	EcoDef_Outside_L1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_L2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_L1		2303644
+	66657914	EcoDef_Lab_Git1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Git1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainHyb\EcoDef_Lab_Git1		4586464
+	163321020	EcoDef_Lab_Git2	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Git2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainHyb\EcoDef_Lab_Git2		4586464
+	174915490	EcoDef_Outside_R1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_R2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_R1		2303644
+	247887247	EcoDef_Outside_L1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_L1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_L1		2303644
+	299942272	EcoDef_Outside_L1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_L3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_L1		2303644
+	409446096	EcoDef_Main_Base	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Main_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Main\EcoDef_Main_Base		7497064
+	411292419	EcoDef_Outside_Base	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_Base		2303644
+	435178344	EcoDef_Lab_Base_2	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Base_2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainHyb\EcoDef_Lab_Base_2		4233664
+	509822016	EcoDef_Lab2_RiserMid	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab2_RiserMid_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Lab\EcoDef_Lab2_RiserMid		5644864
+	516856278	EcoDef_Outside_R1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_R3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_R1		2303644
+	553882366	EcoDef_Main_Mel	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Main_Mel_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Main\EcoDef_Main_Mel		7849864
+	611134350	EcoDef_Lab2_Git2	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab2_Git2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Lab\EcoDef_Lab2_Git2		5644864
+	701918272	EcoDef_Lab2_Zeb1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab2_Zeb1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Lab\EcoDef_Lab2_Zeb1		5644864
+	781068834	EcoDef_Lab2_Git1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab2_Git1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Lab\EcoDef_Lab2_Git1		5644864
+	785494999	EcoDef_Lab_Base	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainMid\EcoDef_Lab_Base		4586464
+	824011032	EcoDef_Lab_Hyb1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Hyb2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainMid\EcoDef_Lab_Hyb1		4586464
+	890285551	EcoDef_Lab_Hyb1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab_Hyb1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\MainHyb\EcoDef_Lab_Hyb1		4586464
+	969980085	EcoDef_Outside_R1	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Outside_R1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\OutsidePoluted\OutsidePolutedTrack\EcoDef_Outside_R1		2303644
+	1001511853	EcoDef_Lab2_Base	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Lab2_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Lab\EcoDef_Lab2_Base		5644864
+	1063470039	EcoDef_Main_Trp	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Android\SFX\EcoDef_Main_Trp_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Intro\Main\EcoDef_Main_Trp		7849864
+

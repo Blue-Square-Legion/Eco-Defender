@@ -1,22 +1,51 @@
 Event	ID	Name			Wwise Object Path	Notes
 	176757445	Play_Grab_Plastic			\Default Work Unit\Play_Grab_Plastic	
+	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	476286426	Play_EcoDef_Drop			\Default Work Unit\Play_EcoDef_Drop	
+	692969629	Play_EcoDef_Hover			\Default Work Unit\UI\Play_EcoDef_Hover	
 	1087491060	Play_PlantGrowth			\Default Work Unit\Play_PlantGrowth	
+	1129740972	Play_PortalOpen			\Default Work Unit\Play_PortalOpen	
+	1429403605	Play_CleanAmbience			\Default Work Unit\Play_CleanAmbience	
+	1579806121	Stop_LabAmbience			\Default Work Unit\Stop_LabAmbience	
+	1614965127	Play_LabAmbience			\Default Work Unit\Play_LabAmbience	
 	1633093614	Play_Gun_Empty			\Default Work Unit\Play_Gun_Empty	
+	1910506537	Play_Reload			\Default Work Unit\Play_Reload	
+	2932960663	Stop_PollutedAmbience			\Default Work Unit\Stop_PollutedAmbience	
 	2997592729	Play_WhiteNoiseTest			\Default Work Unit\Play_WhiteNoiseTest	
 	3402428323	Play_CraftEmpty			\Default Work Unit\Play_CraftEmpty	
 	3701963209	Play_CraftSuccess			\Default Work Unit\Play_CraftSuccess	
+	3796544448	Play_EcoDef_Button_Click			\Default Work Unit\UI\Play_EcoDef_Button_Click	
+	3864304129	Play_PollutedAmbience			\Default Work Unit\Play_PollutedAmbience	
 	4286830491	Play_PlantBombOneShot			\Default Work Unit\Play_PlantBombOneShot	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	578926554	Lab	MusicStates			
+	748895195	None	MusicStates			
+	1125500713	Intro	MusicStates			
+	1298763127	OutsidePoluted	MusicStates			
+	2818594349	OutsideClean	MusicStates			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11402219	EcoDef_Bomb_Fire_04	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Bomb_Fire_04_16A194A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_04		72732
+	42842145	EcoDef_Button_Click	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Button_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EcoDef_Button_Click		7228
 	118355174	EcoDef_Bomb_Fire_03	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Bomb_Fire_03_A2E10A33.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_03		65064
 	219172893	Grab_Plastic	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDefender_GrabPlastic_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grab_Plastic		13240
+	249371759	CleanAmbience	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_CleanAmbience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\CleanAmbience		2795944
 	313538872	EcoDef_CraftEmpty	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_CraftFail_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Indicators\EcoDef_CraftEmpty		132364
 	344732107	WhiteNoiseTest	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\WhiteNoiseTest_0B57F0DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\WhiteNoiseTest		324168
+	357824657	EcoDef_Reload	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Reload_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EcoDef_Reload		79032
+	383284880	PollutedAmbience	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_PollutedAmbience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PollutedAmbience		2822464
 	513510797	PlantGrowth	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDefender_PlantGrowth_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantGrowth		36420
 	544201326	EcoDef_CraftSuccess	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_CraftSuccess_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Indicators\EcoDef_CraftSuccess		396964
+	643800286	EcoDef_Drop	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Drop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EcoDef_Drop		55296
 	662235655	Gun_Empty	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDefender_EmptyGun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gun_Empty		18692
 	716825240	EcoDef_Bomb_Fire_01	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Bomb_Fire_01_0B727C4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_01		78744
 	725385265	EcoDef_Bomb_Fire_05	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Bomb_Fire_05_B65ED867.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_05		79616
+	746457429	EcoDef_PortalOpen	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_PortalOpen_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EcoDef_PortalOpen		338488
 	781484774	EcoDef_Bomb_Fire_02	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Bomb_Fire_02_D40055DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlantBombOneShot\EcoDef_Bomb_Fire_02		88088
+	892485848	EcoDef_Hover	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_Hover_V3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EcoDef_Hover		31328
+	925044041	LabAmbience	F:\Poslovi\P1-OM\EcoDefender\Eco-Defender\Eco-Defender_WwiseProject\.cache\Windows\SFX\EcoDef_LabAmbience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\LabAmbience		3518368
 

@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Gun : XRGrabInteractable
 {
     private int currAmmo;
-    private Inventory _invRef;
+    [SerializeField] private Inventory _invRef;
 
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
@@ -17,7 +17,9 @@ public class Gun : XRGrabInteractable
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
 
-    public UnityEvent OnReloaded;
+    public string gunEmptySound = "Play_Gun_Empty";
+    public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
+    public string Gun_ReloadSound = "Play_Reload";
 
     public int CurrAmmo
     {
@@ -79,6 +81,7 @@ public class Gun : XRGrabInteractable
                 currAmmo--;
                 GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
                 
+                AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
                 Destroy(projObj, 1f);
             }
             else
@@ -87,7 +90,8 @@ public class Gun : XRGrabInteractable
             }
         } else
         {
-            Reload();
+            // Gun is empty, put empty sound here
+            AkSoundEngine.PostEvent(gunEmptySound, gameObject);
         }
     }
 
@@ -112,8 +116,8 @@ public class Gun : XRGrabInteractable
                 _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo);
                 currAmmo = maxAmmo;
             }
-
-            OnReloaded.Invoke();
+            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
         }
+        
     }
 }
