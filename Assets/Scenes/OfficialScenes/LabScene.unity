@@ -12408,12 +12408,12 @@ PrefabInstance:
     - target: {fileID: 1475452737818484989, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2151587524647416782, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2972717527794638540, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
@@ -12428,7 +12428,7 @@ PrefabInstance:
     - target: {fileID: 4863715611202546461, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4875720355059934736, guid: 7a4242bb551bc444a82b13867390f5d4,
         type: 3}

@@ -101,6 +101,10 @@ public class Gun : XRGrabInteractable
         base.OnSelectEntered(args);
 
         _invRef = args.interactorObject.transform.gameObject.GetComponent<PlayerRayInteractor>().Inv;
+        if(!_invRef.Inv.ContainsKey(seedProjectileSO))
+        {
+            _invRef.AddToInventory(seedProjectileSO, startingAmmo);
+        }
     }
 
     public void Reload()
@@ -124,6 +128,10 @@ public class Gun : XRGrabInteractable
                 currAmmo = maxAmmo;
             }
             AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
+        }
+        else
+        {
+            AkSoundEngine.PostEvent(gunEmptySound, gameObject);
         }
 
     }
