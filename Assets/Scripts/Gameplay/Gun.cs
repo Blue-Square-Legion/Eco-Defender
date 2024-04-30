@@ -16,7 +16,11 @@ public class Gun : XRGrabInteractable
     [SerializeField] private ItemSO seedProjectileSO;
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
-    [SerializeField] private int startingAmmo = 10;
+    [SerializeField] private int startingAmmo = 2;
+    [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")] 
+    private int countMultipler = 5;
+
+    private int MaxAmmoMultiplyAware => maxAmmo/countMultipler;
 
     public string gunEmptySound = "Play_Gun_Empty";
     public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
@@ -117,14 +121,14 @@ public class Gun : XRGrabInteractable
                 AkSoundEngine.PostEvent(gunEmptySound, gameObject);
                 return;
             }
-            else if (_invRef.Inv[seedProjectileSO] < maxAmmo)
+            else if (_invRef.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
             {
-                currAmmo = _invRef.Inv[seedProjectileSO];
-                _invRef.RemoveFromInventory(seedProjectileSO, currAmmo);
+                currAmmo = _invRef.Inv[seedProjectileSO] * countMultipler;
+                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
             }
             else
             {
-                _invRef.RemoveFromInventory(seedProjectileSO, maxAmmo);
+                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
                 currAmmo = maxAmmo;
             }
             AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
