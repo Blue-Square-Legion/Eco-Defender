@@ -26,6 +26,8 @@ public class Gun : XRGrabInteractable
     public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
     public string Gun_ReloadSound = "Play_Reload";
 
+    private bool _hasGottenStarterAmmo = false;
+
     public int CurrAmmo
     {
         get { return currAmmo; }
@@ -105,9 +107,10 @@ public class Gun : XRGrabInteractable
         base.OnSelectEntered(args);
 
         _invRef = args.interactorObject.transform.gameObject.GetComponent<PlayerRayInteractor>().Inv;
-        if(!_invRef.Inv.ContainsKey(seedProjectileSO))
+        if(!_hasGottenStarterAmmo)
         {
             _invRef.AddToInventory(seedProjectileSO, startingAmmo);
+            _hasGottenStarterAmmo = true;
         }
     }
 
