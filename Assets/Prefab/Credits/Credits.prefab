@@ -66,14 +66,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Team Lead: \r\nLight with Blocks\r\n\r\nArt: \r\nAlina K\r\nHandsome_Wolf_Benny\r\nSynuk\r\nzoe.jarvi\r\n\r\nGame
+  m_text: "Team Lead: \r\nLight with Blocks\r\n\r\nArt: \r\nAlina K\r\nSynuk\r\nzoe.jarvis\n\rHandsome_Wolf_Benny\r\n\nGame
     Design: \r\nOfficialQueenDay\r\n\r\nProgramming: \r\nBJeon\r\nBone\r\nJyama\r\nRobert
     Chaney \r\nSamuel Ayeni \r\n\r\nSound Design:\r\nJasmina\r\n\r\nUI/UX: \r\nFabio
     Avila\nChlo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd8cfade56d8607489cc4b2f23449e88, type: 2}
-  m_sharedMaterial: {fileID: -3789956323282943556, guid: bd8cfade56d8607489cc4b2f23449e88,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -97,11 +96,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.4
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 16
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -400,7 +399,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5808392782067321172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +542,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5808392782473700585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
