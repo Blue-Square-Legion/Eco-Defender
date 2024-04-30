@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 8419409450615439651}
   - component: {fileID: 2766350166845457062}
   - component: {fileID: 1739182207147832260}
+  - component: {fileID: 3683359314610986311}
   m_Layer: 0
   m_Name: Shelf 1 Body
   m_TagString: Untagged
@@ -455,3 +456,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3683359314610986311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482457602998331080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0049424027, y: 0.004021206, z: 0.1866691}
+  m_Center: {x: -0.0000016613615, y: -2.3103572e-10, z: 0.0011489725}

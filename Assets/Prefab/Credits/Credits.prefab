@@ -66,14 +66,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Team Lead: \r\nLight with Blocks\r\n\r\nArt: \r\nAlina K\r\nHandsome_Wolf_Benny\r\nSynuk\r\nzoe.jarvi\r\n\r\nGame
-    Design: \r\nOfficialQueenDay\r\n\r\nProgramming: \r\nBJeon\r\nBone\r\nHermit
-    the crab \r\nJyama\r\nRobert Chaney \r\nSamuel Ayeni \r\n\r\nSound Design:\r\nJasmina\r\n\r\nUI/UX:
-    \r\nFabio Avila"
+  m_text: "Team Lead: \r\nLight with Blocks\r\n\r\nArt: \r\nAlina K\r\nSynuk\r\nzoe.jarvis\n\rHandsome_Wolf_Benny\r\n\nGame
+    Design: \r\nOfficialQueenDay\r\n\r\nProgramming: \r\nBJeon\r\nBone\r\nJyama\r\nRobert
+    Chaney \r\nSamuel Ayeni \r\n\r\nSound Design:\r\nJasmina\r\n\r\nUI/UX: \r\nFabio
+    Avila\nChlo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd8cfade56d8607489cc4b2f23449e88, type: 2}
-  m_sharedMaterial: {fileID: -3789956323282943556, guid: bd8cfade56d8607489cc4b2f23449e88,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -97,11 +96,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 18.4
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 16
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -206,9 +205,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1\xA1YOU DID IT!!\n\nyou cleared up all pollution\n\n\xA1You're now
-    a \nEco Defender!\n\nThanks for playing <3\n\nIf you enjoy it, don't be shy and
-    share it to your parners"
+  m_text: 'YOU DID IT!
+
+
+    You cleared up all pollution
+
+
+    You''re now an
+
+    Eco
+    Defender!
+
+
+    Thanks for playing <3
+
+
+    If you enjoy it, don''t be shy and
+    share it with your friends.
+
+
+    CREDITS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd8cfade56d8607489cc4b2f23449e88, type: 2}
   m_sharedMaterial: {fileID: -3789956323282943556, guid: bd8cfade56d8607489cc4b2f23449e88,
@@ -236,7 +252,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.4
+  m_fontSize: 21.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -383,7 +399,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5808392782067321172
 MonoBehaviour:
   m_ObjectHideFlags: 0

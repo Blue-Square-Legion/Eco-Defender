@@ -6,6 +6,7 @@ using UnityEngine;
 public class SeedCollision : MonoBehaviour
 {
     public GameObject flowerCube;
+    [SerializeField] GameObject[] plantList;
     [SerializeField, Tooltip("Layer Item will Spawn")] private LayerMask _hitMask;
 
     private void OnCollisionEnter(Collision collision)
@@ -19,6 +20,10 @@ public class SeedCollision : MonoBehaviour
             SpawnFlower(point);
             Destroy(this.gameObject);
         }       
+        if (plantList == null) 
+        {
+            plantList = new GameObject[0];
+        }
     }
 
     /// <summary>
@@ -27,6 +32,16 @@ public class SeedCollision : MonoBehaviour
     /// <param name="position">Position of where the flower should be, i.e., contact point</param>
     private void SpawnFlower(Vector3 position)
     {
-        Instantiate(flowerCube, position, Quaternion.identity);
+        // Use random plant from list if there are any
+        if(plantList.Length > 0)
+        {
+            int randIndex = Random.Range(0,plantList.Length);
+            Instantiate(plantList[randIndex], position, Quaternion.identity);
+        }
+        // Otherwise, use default flower cube
+        else 
+        {
+            Instantiate(flowerCube, position, Quaternion.identity);
+        }
     }
 }
