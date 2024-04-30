@@ -35,8 +35,9 @@ public class Inventory : MonoBehaviour
 		}
 		else
 		{
-			_inv.Add(item, 1);
+			_inv.Add(item, amount);
 		}
+		print($"{_inv.ContainsKey(item)} {_inv[item]}");
 	}
 
 	public void RemoveFromInventory(ItemSO item, int amount = 1)

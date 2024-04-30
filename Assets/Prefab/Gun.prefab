@@ -586,15 +586,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+  _invRef: {fileID: 3311293461065445289, guid: 7a4242bb551bc444a82b13867390f5d4, type: 3}
   ammoCountUI: {fileID: 4178358056231734710}
   spawnPoint: {fileID: 8831905963079483865}
   seedProjectileSO: {fileID: 11400000, guid: 8f85e9e4e1711e847a44b73143592572, type: 2}
   spawnedProjectile: {fileID: 4742469898609196209, guid: 850cfb6c4fdf35947af8ec41aa8827de,
     type: 3}
   maxAmmo: 10
-  OnReloaded:
-    m_PersistentCalls:
-      m_Calls: []
+  gunEmptySound: Play_Gun_Empty
+  Gun_PlantBombSingleShoot: Play_PlantBombOneShot
+  Gun_ReloadSound: Play_Reload
 --- !u!114 &3012231070318297501
 MonoBehaviour:
   m_ObjectHideFlags: 0
