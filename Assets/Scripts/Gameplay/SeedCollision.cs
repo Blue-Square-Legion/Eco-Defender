@@ -11,16 +11,24 @@ public class SeedCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.BroadcastMessage("Damage", 1);
+            Destroy(this.gameObject);
+            return;
+        }
+
+
         //Layer comparison using bitwise comparion
-        if((_hitMask & (1 << collision.gameObject.layer)) != 0)
+        if ((_hitMask & (1 << collision.gameObject.layer)) != 0)
         {
             //Debug.Log("Wow");
             // Assumes first contact is where to place item
             var point = collision.GetContact(0).point;
             SpawnFlower(point);
             Destroy(this.gameObject);
-        }       
-        if (plantList == null) 
+        }
+        if (plantList == null)
         {
             plantList = new GameObject[0];
         }
@@ -33,13 +41,13 @@ public class SeedCollision : MonoBehaviour
     private void SpawnFlower(Vector3 position)
     {
         // Use random plant from list if there are any
-        if(plantList.Length > 0)
+        if (plantList.Length > 0)
         {
-            int randIndex = Random.Range(0,plantList.Length);
+            int randIndex = Random.Range(0, plantList.Length);
             Instantiate(plantList[randIndex], position, Quaternion.identity);
         }
         // Otherwise, use default flower cube
-        else 
+        else
         {
             Instantiate(flowerCube, position, Quaternion.identity);
         }
