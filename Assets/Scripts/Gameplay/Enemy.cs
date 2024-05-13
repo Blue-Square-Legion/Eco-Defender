@@ -21,6 +21,10 @@ public class Enemy : MonoBehaviour, IDamagable
         _health = _maxHealth;
 
         target = Camera.main.transform;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        agent.Move(GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 
     public void Damage(float damage = 1)
@@ -51,11 +55,9 @@ public class Enemy : MonoBehaviour, IDamagable
 
     IEnumerator UpdateDestination()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(time);
-            agent.SetDestination(target.position);
-        }
+        agent.SetDestination(target.position);
+        yield return new WaitForSeconds(time);
+        StartCoroutine(UpdateDestination());
     }
 
 }
