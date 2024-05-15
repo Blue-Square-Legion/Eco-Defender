@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     private NavMeshAgent agent;
 
-    [SerializeField] private Transform target;
     [SerializeField] private float time = 0.5f;
 
     [SerializeField] private float _maxHealth = 2;
@@ -17,13 +16,9 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         agent = GetComponent<NavMeshAgent>();
 
-        StartCoroutine(UpdateDestination());
         _health = _maxHealth;
 
-        target = Camera.main.transform;
-
-        agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        StartCoroutine(UpdateDestination());
         agent.Move(GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 
@@ -55,7 +50,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     IEnumerator UpdateDestination()
     {
-        agent.SetDestination(target.position);
+        agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
         yield return new WaitForSeconds(time);
         StartCoroutine(UpdateDestination());
     }
