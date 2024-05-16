@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour, IDamagable
     private Transform _target;
     private Vector3 _spawnPoint;
 
-    private bool _returnToSpawn = true;
+    private bool _returnToSpawn = false;
 
     private void Awake()
     {
