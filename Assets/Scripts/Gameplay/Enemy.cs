@@ -12,14 +12,24 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private float _maxHealth = 2;
     private float _health;
 
+    private Transform _target;
+    private Vector3 _spawnPoint;
+
+    private bool _returnToSpawn = true;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
 
         _health = _maxHealth;
 
+        _target = Camera.main?.transform;
+        _spawnPoint = transform.position;
+    }
+
+    private void OnEnable()
+    {
         StartCoroutine(UpdateDestination());
-        agent.Move(GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 
     public void Damage(float damage = 1)
@@ -29,6 +39,17 @@ public class Enemy : MonoBehaviour, IDamagable
         if (_health <= 0) { Destroy(gameObject); }
     }
 
+
+    public void ReturnToSpawn()
+    {
+        _returnToSpawn = true;
+    }
+
+    public void TargetPlayer()
+    {
+        _returnToSpawn = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         print(other.name);
@@ -36,6 +57,7 @@ public class Enemy : MonoBehaviour, IDamagable
         if (other.tag == "DamageCollider")
         {
             other.gameObject.SendMessage("Damage", 1);
+            Destroy(gameObject, 1f);
         }
     }
 
@@ -50,7 +72,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     IEnumerator UpdateDestination()
     {
-        agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
         yield return new WaitForSeconds(time);
         StartCoroutine(UpdateDestination());
     }
