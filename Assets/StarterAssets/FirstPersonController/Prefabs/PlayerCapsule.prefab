@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 3992365665547396474}
   - component: {fileID: 4824363684203129797}
   - component: {fileID: 4174029779547952378}
+  - component: {fileID: 3679198606115605089}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -521,6 +522,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &3679198606115605089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac28ac1f4a462d243968e2a7e26c452d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  invulnTime: 0.5
+  canRegen: 1
+  regenAmount: 0.5
+  regenTime: 1
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHPChangePercent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8572941851270861236}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+        m_MethodName: set_value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  isDamagable: 1
 --- !u!1001 &8614268263089675434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -674,3 +714,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8614268263089675434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8572941851270861236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 105045594752797982, guid: 4b40eae88c88a7a4b9af16ce3a43fa34,
+    type: 3}
+  m_PrefabInstance: {fileID: 8614268263089675434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

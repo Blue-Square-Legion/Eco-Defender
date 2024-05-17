@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private float time = 0.5f;
 
     [SerializeField] private float _maxHealth = 2;
+
+    [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
+
     private float _health;
 
     private Transform _target;
@@ -54,7 +57,7 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         print(other.name);
 
-        if (other.tag == "DamageCollider")
+        if (playerTag.Contains(other.tag))
         {
             other.gameObject.SendMessage("Damage", 1);
             Destroy(gameObject, 1f);
@@ -63,7 +66,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "DamageCollider")
+        if (playerTag.Contains(other.tag))
         {
             other.gameObject.SendMessage("Damage", 1);
         }
