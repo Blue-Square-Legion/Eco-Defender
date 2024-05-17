@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4105243390733911298}
   - component: {fileID: 1309380297113288411}
   - component: {fileID: 6459228568717387826}
+  - component: {fileID: 2912729316297627444}
   m_Layer: 0
   m_Name: Seed Bomb
   m_TagString: Untagged
@@ -317,9 +318,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerCube: {fileID: 308388407984943563, guid: a6e739ea7c8d44eb681936b9d2ae78c1,
     type: 3}
+  plantList:
+  - {fileID: 8982355172018065996, guid: 0dd4301975f214c149dcc8795795adf1, type: 3}
+  - {fileID: 5882530752092918909, guid: 61d3cd873b3604bea9027deda87c18e7, type: 3}
+  - {fileID: 5242463975776401472, guid: 95af4706f610a478f958c8606da9c98c, type: 3}
+  - {fileID: 308388407984943563, guid: a6e739ea7c8d44eb681936b9d2ae78c1, type: 3}
+  - {fileID: 1262849663850864914, guid: 3b2af5d34de6f484da19c332b5b1133d, type: 3}
   _hitMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &2912729316297627444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5242463975776401472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4ac767820c62c46b8149e8c48aa9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: {fileID: 11400000, guid: 8f85e9e4e1711e847a44b73143592572, type: 2}
 --- !u!1 &6207247113888187030
 GameObject:
   m_ObjectHideFlags: 0

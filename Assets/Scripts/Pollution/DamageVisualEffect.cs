@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 /// Uses Locomotion Provider to Connect to Tunneling Vignette.
 /// Configure Visuals on Tunneling Vigneete.
 /// </summary>
-public class DamageVisualEffect : LocomotionProvider, IParticleTrigger
+public class DamageVisualEffect : LocomotionProvider, IParticleTrigger, IDamagable
 {
     [SerializeField] private float _debounceTime = 0.5f;
     public UnityEvent OnDamageStart, OnDamageEnd;
@@ -34,6 +34,11 @@ public class DamageVisualEffect : LocomotionProvider, IParticleTrigger
     }
 
     public void OnParticleEnter()
+    {
+        _debounce.Start();
+    }
+
+    public void Damage(float damage)
     {
         _debounce.Start();
     }

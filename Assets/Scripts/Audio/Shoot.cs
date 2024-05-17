@@ -14,7 +14,7 @@ namespace AudioScript
             if (!string.IsNullOrEmpty(Gun_PlantBombSingleShoot))
             {
                 // Trigger the Wwise event
-                AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
+             //   AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
             }
             else
             {
@@ -29,7 +29,7 @@ namespace AudioScript
             if (!string.IsNullOrEmpty(Gun_Empty))
             {
                 // Trigger the Wwise event
-                AkSoundEngine.PostEvent(Gun_Empty, gameObject);
+              //  AkSoundEngine.PostEvent(Gun_Empty, gameObject);
             }
             else
             {

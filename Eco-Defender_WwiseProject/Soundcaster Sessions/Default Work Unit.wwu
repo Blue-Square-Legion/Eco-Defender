@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E837E35A-9863-4852-9264-9557BB1A6747}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{E837E35A-9863-4852-9264-9557BB1A6747}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E837E35A-9863-4852-9264-9557BB1A6747}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{5AD5386E-4677-4CE7-9327-868FD8A0903E}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Music" ID="{D414310F-AB88-4F0A-A537-C46A682A8601}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience" ID="{92C2C1D4-14DC-4A37-9FC3-7C36094BE6B0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="OutsideClean" ID="{ED22D6B4-58D0-4BD5-BE30-5B357E94700E}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

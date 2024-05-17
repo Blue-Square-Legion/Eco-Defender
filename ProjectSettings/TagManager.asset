@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Plant
   - DamageCollider
   - Grabbed
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Player
   - ForceField
   - 
-  - 
+  - Enemy
   - 
   - 
   - 

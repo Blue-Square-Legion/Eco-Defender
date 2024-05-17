@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Gun : XRGrabInteractable
@@ -12,8 +13,20 @@ public class Gun : XRGrabInteractable
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
     [SerializeField] private GameObject spawnPoint;
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private ItemSO seedProjectileSO;
+    [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
+    [SerializeField] private int startingAmmo = 2;
+    [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")] 
+    private int countMultipler = 5;
+
+    private int MaxAmmoMultiplyAware => maxAmmo/countMultipler;
+
+    public string gunEmptySound = "Play_Gun_Empty";
+    public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
+    public string Gun_ReloadSound = "Play_Reload";
+
+    private bool _hasGottenStarterAmmo = false;
 
     public int CurrAmmo
     {
@@ -32,16 +45,31 @@ public class Gun : XRGrabInteractable
         set { _invRef = value; }
     }
 
+    public ItemSO SeedProjectile
+    {
+        get { return seedProjectileSO; }
+        set { seedProjectileSO = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ammoCountUI.SetText($"{ currAmmo } / { maxAmmo }");
+        if(_invRef)
+        {
+            if (_invRef.Inv.ContainsKey(seedProjectileSO))
+            {
+                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
+            } else
+            {
+                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: 0");
+            }
+        }
     }
 
     protected override void OnActivated(ActivateEventArgs args)
@@ -55,10 +83,12 @@ public class Gun : XRGrabInteractable
     {
         if (currAmmo > 0)
         {
-            if (projectile)
+            if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
-                GameObject projObj = Instantiate(projectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                
+                AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
                 Destroy(projObj, 1f);
             }
             else
@@ -67,7 +97,8 @@ public class Gun : XRGrabInteractable
             }
         } else
         {
-            // Gun is empty, put empty sound here
+            // Auto reload gun on empty
+            Reload();
         }
     }
 
@@ -75,23 +106,40 @@ public class Gun : XRGrabInteractable
     {
         base.OnSelectEntered(args);
 
-        _invRef = args.interactorObject.transform.gameObject.GetComponent<CollectorComponent>().InvRef;
+        _invRef = args.interactorObject.transform.gameObject.GetComponent<PlayerRayInteractor>().Inv;
+        if(!_hasGottenStarterAmmo)
+        {
+            _invRef.AddToInventory(seedProjectileSO, startingAmmo);
+            _hasGottenStarterAmmo = true;
+        }
     }
 
     public void Reload()
     {
-        if (_invRef.SeedCount > 0)
+        if (_invRef.Inv.ContainsKey(seedProjectileSO))
         {
-            if (_invRef.SeedCount < maxAmmo)
+            if (_invRef.Inv[seedProjectileSO] <= 0)
             {
-                currAmmo = _invRef.SeedCount;
-                _invRef.SeedCount = 0;
+                // No ammo, so play empty gun
+                AkSoundEngine.PostEvent(gunEmptySound, gameObject);
+                return;
+            }
+            else if (_invRef.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
+            {
+                currAmmo = _invRef.Inv[seedProjectileSO] * countMultipler;
+                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
             }
             else
             {
-                _invRef.SeedCount -= maxAmmo;
+                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
                 currAmmo = maxAmmo;
             }
+            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
         }
+        else
+        {
+            AkSoundEngine.PostEvent(gunEmptySound, gameObject);
+        }
+
     }
 }
