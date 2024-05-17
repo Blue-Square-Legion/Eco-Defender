@@ -630,6 +630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invSize: 5
+  OnInventoryChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5339595567713106032
 GameObject:
   m_ObjectHideFlags: 0
