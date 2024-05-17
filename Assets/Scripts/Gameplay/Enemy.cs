@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,11 +8,12 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     private NavMeshAgent agent;
 
-    [SerializeField] private float time = 0.5f;
+    [SerializeField] private float navTickTime = 0.5f;
 
     [SerializeField] private float _maxHealth = 2;
 
     [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
+    [SerializeField] private float damage = 2;
 
     private float _health;
 
@@ -55,12 +57,10 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private void OnTriggerEnter(Collider other)
     {
-
-
         if (playerTag.Contains(other.tag))
         {
             print($"Enemy Trigger: {other.name}");
-            other.gameObject.SendMessage("Damage", 1);
+            NotifyDamage(other);
             Destroy(gameObject, 1f);
         }
     }
@@ -70,7 +70,16 @@ public class Enemy : MonoBehaviour, IDamagable
         if (playerTag.Contains(other.tag))
         {
             print($"Enemy Trigger Stay: {other.name}");
-            other.gameObject.SendMessage("Damage", 1);
+
+            NotifyDamage(other);
+        }
+    }
+
+    private void NotifyDamage(Collider other)
+    {
+        if (other.TryGetComponent<IDamagable>(out IDamagable damagable))
+        {
+            damagable.Damage(damage);
         }
     }
 
@@ -78,7 +87,7 @@ public class Enemy : MonoBehaviour, IDamagable
     IEnumerator UpdateDestination()
     {
         agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(navTickTime);
         StartCoroutine(UpdateDestination());
     }
 

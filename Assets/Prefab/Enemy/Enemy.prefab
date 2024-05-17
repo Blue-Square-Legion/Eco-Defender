@@ -141,6 +141,7 @@ MonoBehaviour:
   playerTag:
   - Player
   - DamageCollider
+  damage: 2
 --- !u!54 &-5128905580684944413
 Rigidbody:
   m_ObjectHideFlags: 0

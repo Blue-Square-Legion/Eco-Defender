@@ -75,12 +75,17 @@ public class ParticleTriggerManager : MonoBehaviour
             if (enterData.GetColliderCount(i) > 0)
             {
                 //Paritcle = _enter[i]
-                try
+
+                Component data = enterData.GetCollider(i, 0);
+                if (data.TryGetComponent<IDamagable>(out IDamagable damagable))
                 {
-                    enterData.GetCollider(i, 0).SendMessage("Damage", damage);
-                    enterData.GetCollider(i, 0).SendMessage("OnParticleEnter");
+                    damagable.Damage(damage);
                 }
-                catch { }
+
+                if (data.TryGetComponent<IParticleTrigger>(out IParticleTrigger trigger))
+                {
+                    trigger.OnParticleEnter();
+                }
             }
         }
     }
