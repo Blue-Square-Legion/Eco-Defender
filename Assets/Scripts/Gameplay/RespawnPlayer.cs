@@ -1,14 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class RespawnPlayer : MonoBehaviour
 {
     [SerializeField] GameObject player;
 
+    [SerializeField] private Damagable damagable;
+
     private void Awake()
     {
         if (!player) player = GameObject.FindGameObjectWithTag("Player");
+
+        damagable = player.GetComponent<Damagable>();
+
+        if (damagable == null)
+        {
+            damagable = player.GetComponentInChildren<Damagable>();
+        }
+
+        if (damagable == null)
+        {
+            Debug.LogError("Could Not Find Damage on Player");
+        }
 
         Respawn();
     }
@@ -19,10 +34,7 @@ public class RespawnPlayer : MonoBehaviour
         player.transform.position = transform.position;
         player.transform.rotation = transform.rotation;
 
-        if (player.TryGetComponent<Damagable>(out Damagable damage))
-        {
-            damage.Reset();
-        }
+        damagable?.Reset();
     }
 
 

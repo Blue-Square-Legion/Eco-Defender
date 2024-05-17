@@ -57,7 +57,7 @@ public class Damagable : MonoBehaviour, IDamagable
         OnHPChangePercent.Invoke(HP / maxHP);
         StartCoroutine(InvulnTimer());
 
-        if (HP < 0)
+        if (HP <= 0)
         {
             OnDeath.Invoke();
             isDead = true;
@@ -86,5 +86,6 @@ public class Damagable : MonoBehaviour, IDamagable
         isDamagable = true;
         isDead = false;
         enabled = true;
+        OnHPChangePercent.Invoke(HP / maxHP);
     }
 }
