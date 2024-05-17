@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Damagable : MonoBehaviour, IDamagable
+public class Damageable : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHP = 10;
 

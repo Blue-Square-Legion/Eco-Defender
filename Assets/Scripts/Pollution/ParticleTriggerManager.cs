@@ -77,7 +77,7 @@ public class ParticleTriggerManager : MonoBehaviour
                 //Paritcle = _enter[i]
 
                 Component data = enterData.GetCollider(i, 0);
-                if (data.TryGetComponent<IDamagable>(out IDamagable damagable))
+                if (data.TryGetComponent<IDamageable>(out IDamageable damagable))
                 {
                     damagable.Damage(damage);
                 }

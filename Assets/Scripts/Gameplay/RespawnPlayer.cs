@@ -7,17 +7,17 @@ public class RespawnPlayer : MonoBehaviour
 {
     [SerializeField] GameObject player;
 
-    [SerializeField] private Damagable damagable;
+    [SerializeField] private Damageable damagable;
 
     private void Awake()
     {
         if (!player) player = GameObject.FindGameObjectWithTag("Player");
 
-        damagable = player.GetComponent<Damagable>();
+        damagable = player.GetComponent<Damageable>();
 
         if (damagable == null)
         {
-            damagable = player.GetComponentInChildren<Damagable>();
+            damagable = player.GetComponentInChildren<Damageable>();
         }
 
         if (damagable == null)

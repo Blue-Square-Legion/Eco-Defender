@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, IDamagable
+public class Enemy : MonoBehaviour, IDamageable
 {
     private NavMeshAgent agent;
 
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private void NotifyDamage(Collider other)
     {
-        if (other.TryGetComponent<IDamagable>(out IDamagable damagable))
+        if (other.TryGetComponent<IDamageable>(out IDamageable damagable))
         {
             damagable.Damage(damage);
         }
