@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,11 +20,6 @@ public class InventorySlot : MonoBehaviour
     void Start()
     {
         itemNameText.SetText(itemData.Key.name);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         itemAmountText.SetText(Inventory.Instance.Inv[itemData.Key].ToString());
     }
 
@@ -49,7 +45,7 @@ public class InventorySlot : MonoBehaviour
 
         if (!Inventory.Instance.Inv.ContainsKey(itemData.Key))
         {
-            if(Inventory.Instance.Inv.Count == 0)
+            if (Inventory.Instance.Inv.Count == 0)
             {
                 InventoryUI.Instance.noItemsText.enabled = true;
             }

@@ -15,9 +15,9 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     [SerializeField] private ItemSO seedProjectileSO;
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
-    [SerializeField] private int startingAmmo = 2;
+    [SerializeField] private int startingAmmo = 10;
     [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")]
-    private int countMultipler = 5;
+    private int countMultipler = 10;
 
     private int MaxAmmoMultiplyAware => maxAmmo / countMultipler;
 
@@ -54,6 +54,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     // Start is called before the first frame update
     void Start()
     {
+        currAmmo = startingAmmo;
     }
 
     // Update is called once per frame
@@ -111,13 +112,13 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
 
     private void SetupAmmo()
     {
-        print($"Setup Ammo:{_hasGottenStarterAmmo}");
-        if (!_hasGottenStarterAmmo)
-        {
-            Inventory.Instance.AddToInventory(seedProjectileSO, startingAmmo);
-            Reload();
-            _hasGottenStarterAmmo = true;
-        }
+        /*        print($"Setup Ammo:{_hasGottenStarterAmmo}");
+                if (!_hasGottenStarterAmmo)
+                {
+                    Inventory.Instance.AddToInventory(seedProjectileSO, startingAmmo);
+                    Reload();
+                    _hasGottenStarterAmmo = true;
+                }*/
     }
 
     public void Reload()

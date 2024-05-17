@@ -60,5 +60,10 @@ public class Inventory : MonoBehaviour
             OnInventoryChange.Invoke(item);
         }
     }
+
+    public bool HasItem(ItemSO item)
+    {
+        return _inv.ContainsKey(item) && _inv[item] > 0;
+    }
 }
 

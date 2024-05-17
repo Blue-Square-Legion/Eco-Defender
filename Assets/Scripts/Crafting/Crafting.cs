@@ -20,6 +20,8 @@ public class Crafting : MonoBehaviour
     public string CraftEmpty = "Play_CraftEmpty";
     public string CraftSuccess = "Play_CraftSuccess";
 
+    public List<RecipeSO> Recipes => _recipes;
+
     public void Craft()
     {
         _items = _recipeSocket.ConvertAll<ItemSO>(item =>
@@ -27,7 +29,7 @@ public class Crafting : MonoBehaviour
                 .transform.GetComponent<ItemTag>()?.Tag
         );
 
-        if(_items.TrueForAll(item => item == null))
+        if (_items.TrueForAll(item => item == null))
         {
             OnCraftEmpty.Invoke();
             AkSoundEngine.PostEvent(CraftEmpty, gameObject);

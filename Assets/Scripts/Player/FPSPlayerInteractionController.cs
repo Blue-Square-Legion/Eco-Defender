@@ -92,7 +92,8 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
 
     public void OnUse()
     {
-        usable?.Use();
+        if (enabled) { usable?.Use(); }
+
     }
 
     public void OnAltUse()

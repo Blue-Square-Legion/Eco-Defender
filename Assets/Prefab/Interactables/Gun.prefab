@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6996193060583453434}
   - component: {fileID: 4655973987347122538}
   - component: {fileID: 4178358056231734710}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5137131458360775136}
   - component: {fileID: 3944593712216075873}
   - component: {fileID: 579773010588529737}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gun Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 5077017154408912617}
   - component: {fileID: 6773949138284231093}
   - component: {fileID: 2253812829221166627}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831905963079483870}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shoot Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 8831905963338036777}
   - component: {fileID: 8831905963338036779}
   - component: {fileID: 3012231070318297501}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  _invRef: {fileID: 3311293461065445289, guid: 7a4242bb551bc444a82b13867390f5d4, type: 3}
   ammoCountUI: {fileID: 4178358056231734710}
   spawnPoint: {fileID: 8831905963079483870}
   seedProjectileSO: {fileID: 11400000, guid: 8f85e9e4e1711e847a44b73143592572, type: 2}
@@ -621,7 +620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831905964172486036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grab Point
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
@@ -655,7 +654,7 @@ GameObject:
   - component: {fileID: 8831905964860894771}
   - component: {fileID: 8831905964860894770}
   - component: {fileID: 8831905964860894768}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +752,7 @@ GameObject:
   - component: {fileID: 8831905964907499964}
   - component: {fileID: 8831905964907499967}
   - component: {fileID: 8831905964907499965}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,6 +919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gun Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e271f9cfdeb9142a08732882f0b3b58a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e271f9cfdeb9142a08732882f0b3b58a, type: 3}

@@ -55,10 +55,11 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other.name);
+
 
         if (playerTag.Contains(other.tag))
         {
+            print($"Enemy Trigger: {other.name}");
             other.gameObject.SendMessage("Damage", 1);
             Destroy(gameObject, 1f);
         }
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         if (playerTag.Contains(other.tag))
         {
+            print($"Enemy Trigger Stay: {other.name}");
             other.gameObject.SendMessage("Damage", 1);
         }
     }
