@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1615512833311340692}
   - component: {fileID: 7612091471833697761}
   - component: {fileID: 5164529611642252026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5591459432798107023}
   - component: {fileID: 7472600487374115853}
   - component: {fileID: 3827519230474978071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,8 @@ GameObject:
   - component: {fileID: 3978922423818938486}
   - component: {fileID: 8460189526848599038}
   - component: {fileID: 4515301378113299425}
-  m_Layer: 0
+  - component: {fileID: -2207081892705684981}
+  m_Layer: 8
   m_Name: Fertilizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,6 +454,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2207081892705684981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802101084306878966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1261e2c26ec83f043b76613782add7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemSO: {fileID: 11400000, guid: 50e26a889a6fa934e9ba876cc355e4b1, type: 2}
+  Quantity: 1
 --- !u!1 &3308894582078021948
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +479,7 @@ GameObject:
   - component: {fileID: 5916892195002481280}
   - component: {fileID: 4651604397403629793}
   - component: {fileID: 7238561071618674053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +562,7 @@ GameObject:
   - component: {fileID: 8845922315906715390}
   - component: {fileID: 1315627318536222919}
   - component: {fileID: 17059122991026217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +645,7 @@ GameObject:
   - component: {fileID: 5003525248974707706}
   - component: {fileID: 1631228924935270573}
   - component: {fileID: 5698069398463878142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +728,7 @@ GameObject:
   - component: {fileID: 1095041621953145577}
   - component: {fileID: 2308179942440770940}
   - component: {fileID: 4001158671537324839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FertilizerModel (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

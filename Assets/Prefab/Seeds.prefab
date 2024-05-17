@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6877193298900902129}
   - component: {fileID: 6349844533648166432}
   - component: {fileID: 6409695813333029367}
-  m_Layer: 0
+  - component: {fileID: -1274678289575160774}
+  m_Layer: 8
   m_Name: Seeds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,6 +236,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.61653125, y: 0.1648595, z: 0.56941223}
   m_Center: {x: -0.055244148, y: 0.07713492, z: -0.0074062347}
+--- !u!114 &-1274678289575160774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61062558813809069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1261e2c26ec83f043b76613782add7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemSO: {fileID: 11400000, guid: 6affda9041f0a39479d8410ec64b5a45, type: 2}
+  Quantity: 1
 --- !u!1 &69442988245372313
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +261,7 @@ GameObject:
   - component: {fileID: 1866016628639678063}
   - component: {fileID: 1907465287611843977}
   - component: {fileID: 4284090460062750021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +344,7 @@ GameObject:
   - component: {fileID: 8125246718884510679}
   - component: {fileID: 1451605099194808101}
   - component: {fileID: 4705039237380262362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +427,7 @@ GameObject:
   - component: {fileID: 240266462886676921}
   - component: {fileID: 8642114738673990156}
   - component: {fileID: 2949367398271695315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +510,7 @@ GameObject:
   - component: {fileID: 6273408914259426452}
   - component: {fileID: 7804201601699642186}
   - component: {fileID: 7572894712765217410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +593,7 @@ GameObject:
   - component: {fileID: 1632133493709868885}
   - component: {fileID: 5043016111736996612}
   - component: {fileID: 7395321498962480131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +676,7 @@ GameObject:
   - component: {fileID: 1762298470915713653}
   - component: {fileID: 7644688590382607854}
   - component: {fileID: 8318572274388789021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
