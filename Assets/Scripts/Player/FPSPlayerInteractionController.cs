@@ -90,7 +90,7 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         }
     }
 
-    public void OnShoot()
+    public void OnUse()
     {
         usable?.Use();
     }
@@ -143,7 +143,6 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
 
         foreach (RaycastResult res in results)
         {
-            print(res);
             if (res.gameObject.TryGetComponent<IPointerClickHandler>(out IPointerClickHandler handler))
             {
                 pointerData.button = PointerEventData.InputButton.Left;
@@ -163,7 +162,7 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         print($"Equip: {obj}");
         if (PrimaryObject) UnEquip(PrimaryObject);
 
-        obj.GetComponent<IEquip>().Equip(true);
+        obj.GetComponent<IEquip>()?.Equip(true);
 
         obj.transform.position = handSlot.position;
         obj.transform.rotation = handSlot.rotation;
@@ -175,7 +174,7 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
     public void UnEquip(GameObject obj)
     {
         print($"UnEquip: {obj}");
-        obj.GetComponent<IEquip>().UnEquip();
+        obj.GetComponent<IEquip>()?.UnEquip();
         obj.transform.SetParent(null, true);
 
         SetObject(null);
