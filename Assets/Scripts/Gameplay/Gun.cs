@@ -5,22 +5,21 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Gun : XRGrabInteractable
+public class Gun : XRGrabInteractable, IUsable, IEquip
 {
     private int currAmmo;
-    [SerializeField] private Inventory _invRef;
 
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
-    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private Transform spawnPoint;
     [SerializeField] private ItemSO seedProjectileSO;
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
-    [SerializeField] private int startingAmmo = 2;
-    [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")] 
-    private int countMultipler = 5;
+    [SerializeField] private int startingAmmo = 10;
+    [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")]
+    private int countMultipler = 10;
 
-    private int MaxAmmoMultiplyAware => maxAmmo/countMultipler;
+    private int MaxAmmoMultiplyAware => maxAmmo / countMultipler;
 
     public string gunEmptySound = "Play_Gun_Empty";
     public string Gun_PlantBombSingleShoot = "Play_PlantBombOneShot";
@@ -40,9 +39,10 @@ public class Gun : XRGrabInteractable
         set { maxAmmo = value; }
     }
 
-    public Inventory InvRef { 
-        get { return _invRef; }
-        set { _invRef = value; }
+    public Inventory InvRef
+    {
+        get { return Inventory.Instance; }
+        set { Inventory.Instance = value; }
     }
 
     public ItemSO SeedProjectile
@@ -54,20 +54,21 @@ public class Gun : XRGrabInteractable
     // Start is called before the first frame update
     void Start()
     {
-
+        currAmmo = startingAmmo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_invRef)
+        if (Inventory.Instance)
         {
-            if (_invRef.Inv.ContainsKey(seedProjectileSO))
+            if (Inventory.Instance.Inv.ContainsKey(seedProjectileSO))
             {
-                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: { _invRef.Inv[seedProjectileSO] }");
-            } else
+                ammoCountUI.SetText($"{currAmmo} / {maxAmmo} \n Seeds in Inventory: {Inventory.Instance.Inv[seedProjectileSO]}");
+            }
+            else
             {
-                ammoCountUI.SetText($"{ currAmmo } / { maxAmmo } \n Seeds in Inventory: 0");
+                ammoCountUI.SetText($"{currAmmo} / {maxAmmo} \n Seeds in Inventory: 0");
             }
         }
     }
@@ -86,8 +87,8 @@ public class Gun : XRGrabInteractable
             if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
-                GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation);
-                
+                GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
+
                 AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
                 Destroy(projObj, 1f);
             }
@@ -95,7 +96,8 @@ public class Gun : XRGrabInteractable
             {
                 Debug.DrawLine(spawnPoint.transform.position, spawnPoint.transform.position + (spawnPoint.transform.forward * 50f), Color.black, 20f);
             }
-        } else
+        }
+        else
         {
             // Auto reload gun on empty
             Reload();
@@ -105,41 +107,77 @@ public class Gun : XRGrabInteractable
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
+        SetupAmmo();
+    }
 
-        _invRef = args.interactorObject.transform.gameObject.GetComponent<PlayerRayInteractor>().Inv;
-        if(!_hasGottenStarterAmmo)
-        {
-            _invRef.AddToInventory(seedProjectileSO, startingAmmo);
-            _hasGottenStarterAmmo = true;
-        }
+    private void SetupAmmo()
+    {
+        /*        print($"Setup Ammo:{_hasGottenStarterAmmo}");
+                if (!_hasGottenStarterAmmo)
+                {
+                    Inventory.Instance.AddToInventory(seedProjectileSO, startingAmmo);
+                    Reload();
+                    _hasGottenStarterAmmo = true;
+                }*/
     }
 
     public void Reload()
     {
-        if (_invRef.Inv.ContainsKey(seedProjectileSO))
+        if (Inventory.Instance.Inv.ContainsKey(seedProjectileSO))
         {
-            if (_invRef.Inv[seedProjectileSO] <= 0)
+            if (Inventory.Instance.Inv[seedProjectileSO] <= 0)
             {
                 // No ammo, so play empty gun
                 AkSoundEngine.PostEvent(gunEmptySound, gameObject);
                 return;
             }
-            else if (_invRef.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
+            else if (Inventory.Instance.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
             {
-                currAmmo = _invRef.Inv[seedProjectileSO] * countMultipler;
-                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
+                currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;
+                Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
             }
             else
             {
-                _invRef.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
+                Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
                 currAmmo = maxAmmo;
             }
-            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject); 
+            AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject);
         }
         else
         {
             AkSoundEngine.PostEvent(gunEmptySound, gameObject);
         }
 
+    }
+
+
+    public void Equip(bool isFPS = true)
+    {
+        if (isFPS) { spawnPoint = Camera.main.transform; }
+
+        SetupAmmo();
+        TogglePhysics(false);
+    }
+
+    public void UnEquip()
+    {
+        TogglePhysics(true);
+    }
+
+    public void Use()
+    {
+        ShootGun();
+    }
+
+    public void AltUse()
+    {
+        Reload();
+    }
+
+    public void TogglePhysics(bool isEnabled)
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.isKinematic = !isEnabled;
+        rb.detectCollisions = isEnabled;
     }
 }
