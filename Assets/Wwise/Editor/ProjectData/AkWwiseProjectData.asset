@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e6701d0643b93e4a80f84de3c21fd71, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9ed24b9f533a424681045f077e90190e
     GuidInternal: 
-    m_lastTime: -8584873054377396462
+    m_lastTime: -8584871638668093573
     List:
     - name: LabReverb
       guid: 77cfac86b00cb74abc02bb59e6b94a9d
@@ -134,7 +134,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f9c117837134f440a81e5a381644bd2b
     GuidInternal: 
-    m_lastTime: -8584872918966622654
+    m_lastTime: -8584871638660012599
     List:
     - name: Music_SoundBank
       guid: 99f6826fec234d4aa58bb55b326e57a2
@@ -176,7 +176,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 42a04e71b71ee443af0c1656b6b3ae6b
     GuidInternal: 
-    m_lastTime: -8584872919620399066
+    m_lastTime: -8584871638680909519
     List:
     - name: Play_Ambience
       guid: d4c1c292dc14374a9fc37c36094be6b0
@@ -550,7 +550,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f526d83be32e2345b3a5a5ad68f06653
     GuidInternal: 
-    m_lastTime: -8584873364140762028
+    m_lastTime: -8584871638659999417
     List:
     - name: MusicStates
       guid: 9a27db95a76a344ea426d6ccdd861ef5
@@ -679,7 +679,7 @@ MonoBehaviour:
     m_lastTime: -8584877679087410856
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000030000000400000005000000060000000e00000015000000160000001700000018000000190000001a0000001b0000001c000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
