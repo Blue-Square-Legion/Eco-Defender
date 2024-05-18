@@ -433,10 +433,10 @@ MonoBehaviour:
   handSlot: {fileID: 7379592491597969359}
   BlockMask:
     serializedVersion: 2
-    m_Bits: 5024
+    m_Bits: 7072
   UsableMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2048
   radius: 0.2
   distance: 10
 --- !u!114 &4824363684203129797
@@ -561,6 +561,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDamagable: 1
+  isDead: 0
 --- !u!1001 &8614268263089675434
 PrefabInstance:
   m_ObjectHideFlags: 0
