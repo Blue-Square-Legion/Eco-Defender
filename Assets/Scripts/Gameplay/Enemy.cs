@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.Events;
 public class Enemy : MonoBehaviour, IDamageable
 {
     private NavMeshAgent agent;
@@ -14,13 +14,14 @@ public class Enemy : MonoBehaviour, IDamageable
 
     [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
     [SerializeField] private float damage = 2;
-
+    public UnityEvent OnMoveStart, OnMoveEnd, OnDamaged, OnDeath;
     private float _health;
 
     private Transform _target;
     private Vector3 _spawnPoint;
 
     private bool _returnToSpawn = false;
+    private bool _wasMoving = false;
 
     private void Awake()
     {
@@ -39,9 +40,10 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Damage(float damage = 1)
     {
+        
         _health -= damage;
 
-        if (_health <= 0) { Destroy(gameObject); }
+        if (_health <= 0) { OnDeath.Invoke(); Destroy(gameObject); } else { OnDamaged.Invoke(); }
     }
 
 
@@ -86,9 +88,26 @@ public class Enemy : MonoBehaviour, IDamageable
 
     IEnumerator UpdateDestination()
     {
-        agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
+        bool isMoving=! HasReachedDestination();
+
+        if (_wasMoving!= isMoving)
+        {
+            _wasMoving = isMoving;
+            if (isMoving)
+                OnMoveStart.Invoke();
+            else
+                OnMoveEnd.Invoke();
+
+        }
+            agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
         yield return new WaitForSeconds(navTickTime);
         StartCoroutine(UpdateDestination());
     }
 
+    bool HasReachedDestination()
+    {
+        return !agent.pathPending
+            && (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+            && agent.remainingDistance <= agent.stoppingDistance;
+    }
 }

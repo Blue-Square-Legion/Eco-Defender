@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 3542068965233326867}
   - component: {fileID: -5128905580684944413}
   - component: {fileID: 1743677165274129900}
+  - component: {fileID: 2505448284215993781}
   m_Layer: 12
   m_Name: Enemy
   m_TagString: Enemy
@@ -169,11 +170,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navTickTime: 0.5
-  _maxHealth: 1
+  _maxHealth: 2
   playerTag:
   - Player
   - DamageCollider
   damage: 2
+  OnMoveStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2505448284215993781}
+        m_TargetAssemblyTypeName: EnemyAudio, Scripts
+        m_MethodName: OnMoveStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnMoveEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2505448284215993781}
+        m_TargetAssemblyTypeName: EnemyAudio, Scripts
+        m_MethodName: OnMoveEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2505448284215993781}
+        m_TargetAssemblyTypeName: EnemyAudio, Scripts
+        m_MethodName: OnDamaged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2505448284215993781}
+        m_TargetAssemblyTypeName: EnemyAudio, Scripts
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &-5128905580684944413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -204,3 +265,15 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2505448284215993781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542068965233326868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8c7fdf96b23414186be8ab0ab76801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
