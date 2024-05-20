@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 4824363684203129797}
   - component: {fileID: 4174029779547952378}
   - component: {fileID: 3679198606115605089}
+  - component: {fileID: 3254639441830376338}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -557,11 +558,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3254639441830376338}
+        m_TargetAssemblyTypeName: PlayerAudio, Scripts
+        m_MethodName: OnPlayerHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
   isDamagable: 1
   isDead: 0
+--- !u!114 &3254639441830376338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3e897c389399849be22fe7402a3f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8614268263089675434
 PrefabInstance:
   m_ObjectHideFlags: 0

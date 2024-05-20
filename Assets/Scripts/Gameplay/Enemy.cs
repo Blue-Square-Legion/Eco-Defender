@@ -14,7 +14,10 @@ public class Enemy : MonoBehaviour, IDamageable
 
     [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
     [SerializeField] private float damage = 2;
-    public UnityEvent OnMoveStart, OnMoveEnd, OnDamaged, OnDeath;
+
+    public UnityEvent OnMoveStart, OnMoveEnd, OnDeath;
+    public UnityEvent<float> OnDamaged;
+
     private float _health;
 
     private Transform _target;
@@ -40,10 +43,18 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Damage(float damage = 1)
     {
-        
+
         _health -= damage;
 
-        if (_health <= 0) { OnDeath.Invoke(); Destroy(gameObject); } else { OnDamaged.Invoke(); }
+        if (_health <= 0)
+        {
+            OnDeath.Invoke();
+            Destroy(gameObject);
+        }
+        else
+        {
+            OnDamaged.Invoke(_health / _maxHealth);
+        }
     }
 
 
@@ -88,9 +99,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     IEnumerator UpdateDestination()
     {
-        bool isMoving=! HasReachedDestination();
+        bool isMoving = !HasReachedDestination();
 
-        if (_wasMoving!= isMoving)
+        if (_wasMoving != isMoving)
         {
             _wasMoving = isMoving;
             if (isMoving)
@@ -99,7 +110,7 @@ public class Enemy : MonoBehaviour, IDamageable
                 OnMoveEnd.Invoke();
 
         }
-            agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
+        agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
         yield return new WaitForSeconds(navTickTime);
         StartCoroutine(UpdateDestination());
     }
