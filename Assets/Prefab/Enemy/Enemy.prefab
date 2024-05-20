@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navTickTime: 0.5
-  _maxHealth: 1
+  _maxHealth: 2
   playerTag:
   - Player
   - DamageCollider
