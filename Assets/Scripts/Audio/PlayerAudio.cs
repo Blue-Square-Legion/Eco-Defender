@@ -8,4 +8,16 @@ public class PlayerAudio : MonoBehaviour
     {
         print($"Player Health Changed: {health}");
     }
+
+    public void OnHoverEnter()
+    {
+    }
+
+    public void OnHoverExit()
+    {
+    }
+
+    public void OnPickupItem()
+    {
+    }
 }

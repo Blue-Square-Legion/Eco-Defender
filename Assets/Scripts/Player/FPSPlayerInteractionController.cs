@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
 {
     public UnityEvent<GameObject> OnHoverEnterUsable, OnHoverExitUsable;
+    public UnityEvent OnItemPickup;
 
     public GameObject PrimaryObject;
     [SerializeField] private Transform handSlot;
@@ -115,15 +116,18 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         if (hoverObject.TryGetComponent<IEquip>(out IEquip equip))
         {
             Equip(hoverObject);
+            OnItemPickup.Invoke();
         }
         else if (hoverObject.transform.parent && hoverObject.transform.parent.TryGetComponent<IEquip>(out equip))
         {
             //Gun collider on child i/o parent?
             Equip(hoverObject.transform.parent.gameObject);
+            OnItemPickup.Invoke();
         }
         else if (hoverObject.TryGetComponent<IUsable>(out IUsable usable))
         {
             usable?.Use();
+            OnItemPickup.Invoke();
         }
         else
         {

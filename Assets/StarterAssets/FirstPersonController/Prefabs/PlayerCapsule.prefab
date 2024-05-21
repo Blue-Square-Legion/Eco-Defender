@@ -415,12 +415,52 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3254639441830376338}
+        m_TargetAssemblyTypeName: PlayerAudio, Scripts
+        m_MethodName: OnHoverEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: ceccab26080354140af21950c6d338d5,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHoverExitUsable:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6304075267828583308}
         m_TargetAssemblyTypeName: HUDCrosshairController, Scripts
         m_MethodName: ResetSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3254639441830376338}
+        m_TargetAssemblyTypeName: PlayerAudio, Scripts
+        m_MethodName: OnHoverExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnItemPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3254639441830376338}
+        m_TargetAssemblyTypeName: PlayerAudio, Scripts
+        m_MethodName: OnPickupItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
