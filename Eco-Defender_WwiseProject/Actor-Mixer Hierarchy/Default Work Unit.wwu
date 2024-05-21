@@ -56,6 +56,11 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -229,6 +234,11 @@
 							</ModifierList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -274,7 +284,7 @@
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>12</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -352,6 +362,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -382,6 +397,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -418,7 +438,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -465,7 +485,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -518,6 +538,11 @@
 							</ModifierList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -563,7 +588,7 @@
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -609,11 +634,6 @@
 							</ModifierList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -634,10 +654,17 @@
 								<MediaID ID="746457429"/>
 							</MediaIDList>
 						</AudioFileSource>
+						<AudioFileSource Name="EcoDef_PortalBig" ID="{D2BA8BDE-4C7F-4516-9785-06B5734C56A3}">
+							<Language>SFX</Language>
+							<AudioFile>EcoDef_PortalBig.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="175438874"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="EcoDef_PortalOpen" ID="{7E9F4389-725F-41D5-9C8C-6996FFD519C8}" Platform="Linked"/>
+						<ActiveSource Name="EcoDef_PortalBig" ID="{D2BA8BDE-4C7F-4516-9785-06B5734C56A3}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Folder Name="Ambience" ID="{172AECE4-860B-482F-BF17-51F7520FEEBF}" ShortID="179475470">
@@ -645,6 +672,11 @@
 						<Sound Name="LabAmbience" ID="{A4C3DDBE-E1C5-4A51-92AD-B6B9E978E49D}" ShortID="448827657">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -671,6 +703,11 @@
 						<Sound Name="CleanAmbience" ID="{FA742082-71CE-4EE0-B2DE-D3F33A1AE959}" ShortID="381494018">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -697,6 +734,11 @@
 						<Sound Name="PollutedAmbience" ID="{17B1DEA4-BCC1-4AB3-A5E3-C301ED99C02A}" ShortID="460891083">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
