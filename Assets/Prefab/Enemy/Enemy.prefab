@@ -205,12 +205,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDamaged:
+  OnDeath:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2505448284215993781}
         m_TargetAssemblyTypeName: EnemyAudio, Scripts
-        m_MethodName: OnDamaged
+        m_MethodName: OnDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -220,13 +220,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDeath:
+  OnDamaged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2505448284215993781}
         m_TargetAssemblyTypeName: EnemyAudio, Scripts
-        m_MethodName: OnDeath
-        m_Mode: 1
+        m_MethodName: OnDamaged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
