@@ -6,14 +6,20 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 public class Enemy : MonoBehaviour, IDamageable
 {
-    private NavMeshAgent agent;
+    public enum AIStates
+    {
+        Passive,
+        Aggressive
+    }
 
     [SerializeField] private float navTickTime = 0.5f;
 
     [SerializeField] private float _maxHealth = 2;
+    [SerializeField] private float damage = 2;
 
     [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
-    [SerializeField] private float damage = 2;
+
+    [SerializeField] private AIStates currState = AIStates.Aggressive;
 
     public UnityEvent OnMoveStart, OnMoveEnd, OnDeath;
     public UnityEvent<float> OnDamaged;
@@ -22,8 +28,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private Transform _target;
     private Vector3 _spawnPoint;
+    private NavMeshAgent agent;
 
-    private bool _returnToSpawn = false;
     private bool _wasMoving = false;
 
     private void Awake()
@@ -49,7 +55,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (_health <= 0)
         {
             OnDeath.Invoke();
-            Destroy(gameObject);
+            ChangeState(AIStates.Passive);
         }
         else
         {
@@ -60,12 +66,12 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void ReturnToSpawn()
     {
-        _returnToSpawn = true;
+        ChangeState(AIStates.Passive);
     }
 
     public void TargetPlayer()
     {
-        _returnToSpawn = false;
+        ChangeState(AIStates.Aggressive);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -99,6 +105,19 @@ public class Enemy : MonoBehaviour, IDamageable
 
     IEnumerator UpdateDestination()
     {
+        switch (currState)
+        {
+            case AIStates.Passive:
+                // Add wander code here
+                agent.SetDestination(_spawnPoint);
+                break;
+            case AIStates.Aggressive:
+                agent.SetDestination(_target.position);
+                break;
+            default:
+                break;
+        }
+
         bool isMoving = !HasReachedDestination();
 
         if (_wasMoving != isMoving)
@@ -108,9 +127,8 @@ public class Enemy : MonoBehaviour, IDamageable
                 OnMoveStart.Invoke();
             else
                 OnMoveEnd.Invoke();
-
         }
-        agent.SetDestination(_returnToSpawn ? _spawnPoint : _target.position);
+        
         yield return new WaitForSeconds(navTickTime);
         StartCoroutine(UpdateDestination());
     }
@@ -120,5 +138,10 @@ public class Enemy : MonoBehaviour, IDamageable
         return !agent.pathPending
             && (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
             && agent.remainingDistance <= agent.stoppingDistance;
+    }
+
+    public void ChangeState(AIStates newState)
+    {
+        currState = newState;
     }
 }
