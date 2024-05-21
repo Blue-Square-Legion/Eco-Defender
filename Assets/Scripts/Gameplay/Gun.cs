@@ -7,8 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Gun : XRGrabInteractable, IUsable, IEquip
 {
-    private int currAmmo;
-
     [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
     [SerializeField] private Transform spawnPoint;
@@ -17,8 +15,10 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     [SerializeField] private int maxAmmo = 10;
     [SerializeField] private int startingAmmo = 10;
     [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")]
-    private int countMultipler = 10;
 
+    private int countMultipler = 10;
+    
+    private int currAmmo;
     private int MaxAmmoMultiplyAware => maxAmmo / countMultipler;
 
     public string gunEmptySound = "Play_Gun_Empty";
@@ -62,7 +62,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     {
         if (Inventory.Instance)
         {
-            if (Inventory.Instance.Inv.ContainsKey(seedProjectileSO))
+            if (Inventory.Instance.Inv.ContainsKey(seedProjectileSO) && ammoCountUI.enabled)
             {
                 ammoCountUI.SetText($"{currAmmo} / {maxAmmo} \n Seeds in Inventory: {Inventory.Instance.Inv[seedProjectileSO]}");
             }
