@@ -361,6 +361,13 @@
 						<Sound Name="EcoDef_CraftSuccess" ID="{B925B430-28EC-4EE8-851C-E4162BB7A23A}" ShortID="738384902">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{252B2FE8-00DD-48C2-A6F6-14E467741A39}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -762,6 +769,515 @@
 								<ActiveSource Name="EcoDef_PollutedAmbience" ID="{A3D5F701-0477-47D7-ACBA-1E9FE20E402A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Slime" ID="{3F783E54-6532-41AB-8355-0223466ADC6D}" ShortID="222796948">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Slime_BodyHit" ID="{C53BD775-9727-4539-906F-D795EE35429C}" ShortID="758064737">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1FFC7443-ACAC-459E-915C-D8CD1863537D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EcoDef_Slime_BodyHit_1" ID="{726FE848-DC6A-4721-B0B4-EDA657BA321E}" ShortID="278592046">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_BodyHit_1" ID="{AD625774-582E-497C-9ED1-80DC580F4D05}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_BodyHit_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="971681617"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_BodyHit_1" ID="{AD625774-582E-497C-9ED1-80DC580F4D05}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_BodyHit_2" ID="{BF2B2434-EE14-4D64-87BA-DA7C135D38E1}" ShortID="167422759">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_BodyHit_2" ID="{4D5152DF-6044-4C22-8CC5-21675493FB42}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_BodyHit_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="52372324"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_BodyHit_2" ID="{4D5152DF-6044-4C22-8CC5-21675493FB42}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_BodyHit_3" ID="{B535987D-747C-4FC9-BFB0-81BB225BE5A1}" ShortID="884586553">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_BodyHit_3" ID="{2A182896-6A7E-47CB-BBF4-860FC9A61516}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_BodyHit_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="562785245"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_BodyHit_3" ID="{2A182896-6A7E-47CB-BBF4-860FC9A61516}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Slime_DeadVoice" ID="{CF7FD768-AFF9-4679-B704-18D0FCE4840B}" ShortID="566832105">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9D6CAF8B-04E8-48FC-8E10-4EF18467D74D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EcoDef_Slime_DeadVoice_1" ID="{4A5FCD96-497E-41F0-9205-5FAE85241CF7}" ShortID="917238247">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_DeadVoice_1" ID="{93E13E6D-F362-47A9-834E-5D63187AE121}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_DeadVoice_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="483553442"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_DeadVoice_1" ID="{93E13E6D-F362-47A9-834E-5D63187AE121}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_DeadVoice_2" ID="{8BFFDC37-354C-44E0-9046-34A6D2B2F0C2}" ShortID="856508913">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_DeadVoice_2" ID="{C195C752-1E4E-4894-803A-BDB2C4C8EE65}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_DeadVoice_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="913650380"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_DeadVoice_2" ID="{C195C752-1E4E-4894-803A-BDB2C4C8EE65}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_DeadVoice_3" ID="{2EF5BC6C-0A86-4492-90DA-BCEF3B5F791B}" ShortID="183648487">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_DeadVoice_3" ID="{77C4E2D7-1CDD-4DFA-93B2-5FB1B6463C3E}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_DeadVoice_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="361113472"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_DeadVoice_3" ID="{77C4E2D7-1CDD-4DFA-93B2-5FB1B6463C3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Slime_Disappear" ID="{CB10A987-CC56-4080-9A79-0EFEEF25A8C7}" ShortID="485659835">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4EB9CFE6-1545-42A1-BEB1-BE90378D8D15}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EcoDef_Slime_Disappear" ID="{1FE9A15F-E45A-4466-B8D1-4D17603EF184}" ShortID="110515979">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_Disappear" ID="{4FCEAF88-9464-4096-854E-4D2891004217}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_Disappear.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1061098264"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_Disappear" ID="{4FCEAF88-9464-4096-854E-4D2891004217}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Slime_Footstep_Loop" ID="{998098AE-13D1-408C-9DDA-B13F56B192E9}" ShortID="145335662">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4B9F62EB-F2C4-4112-80F6-79E9B77AA658}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EcoDef_Slime_Footstep_Loop_1" ID="{DB763C41-E764-40BA-A2CB-5517FACBAD09}" ShortID="953096932">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_Footstep_Loop_1" ID="{36B1730C-8FA5-4F29-9037-C8F5E0AF6FF5}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_Footstep_Loop_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="407432695"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_Footstep_Loop_1" ID="{36B1730C-8FA5-4F29-9037-C8F5E0AF6FF5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_Footstep_Loop_2" ID="{1B54CDDC-AC0A-48AE-8BC2-AA2725DF9B7C}" ShortID="384610607">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_Footstep_Loop_2" ID="{14E0F32C-4D3C-48A3-92D2-4C11634F0414}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_Footstep_Loop_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804976835"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_Footstep_Loop_2" ID="{14E0F32C-4D3C-48A3-92D2-4C11634F0414}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_Footstep_Loop_3" ID="{CB26784F-5B82-491A-B3B8-E1FEDB780AB1}" ShortID="966384347">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_Footstep_Loop_3" ID="{18AE3EAB-DFE2-44B7-8012-8DE7EE5F9D2A}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_Footstep_Loop_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="168593165"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_Footstep_Loop_3" ID="{18AE3EAB-DFE2-44B7-8012-8DE7EE5F9D2A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Slime_VoiceHit" ID="{6A2C5C96-6C56-4477-BBFA-A583ADB8AC52}" ShortID="518586101">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AA6B388F-E0F6-44F9-A705-B7E3314A30C7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="EcoDef_Slime_VoiceHit_1" ID="{CF790745-B04E-4D97-B894-CAF0707A3844}" ShortID="1048041867">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_VoiceHit_1" ID="{D8646300-D958-4F4E-AD82-3D3E8ED4CDDE}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_VoiceHit_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="550638141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_VoiceHit_1" ID="{D8646300-D958-4F4E-AD82-3D3E8ED4CDDE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_VoiceHit_2" ID="{9AF36394-4B81-493C-85D5-F97DDB02F5BE}" ShortID="1014185021">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_VoiceHit_2" ID="{8966D18C-E8AA-4FD6-914C-DFD0AB1670B5}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_VoiceHit_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="815132688"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_VoiceHit_2" ID="{8966D18C-E8AA-4FD6-914C-DFD0AB1670B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_VoiceHit_3" ID="{353FC815-42B2-4522-A2BC-C2C6F37FBE2F}" ShortID="957046196">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_VoiceHit_3" ID="{69393EE4-FD35-4103-A34A-4A9EE9F5A0C5}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_VoiceHit_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="746463304"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_VoiceHit_3" ID="{69393EE4-FD35-4103-A34A-4A9EE9F5A0C5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EcoDef_Slime_VoiceHit_4" ID="{60CA0C8D-EE55-4A9D-B516-AAB957DC5C7C}" ShortID="873210011">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E7F25893-4044-494A-8EF4-A52C396B7920}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9F4BD29E-3A53-4642-8104-5F077E90190E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EcoDef_Slime_VoiceHit_4" ID="{A3D545CD-8775-421C-B9D5-18366528C497}">
+											<Language>SFX</Language>
+											<AudioFile>EcoDef_Slime_VoiceHit_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1072201190"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EcoDef_Slime_VoiceHit_4" ID="{A3D545CD-8775-421C-B9D5-18366528C497}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
