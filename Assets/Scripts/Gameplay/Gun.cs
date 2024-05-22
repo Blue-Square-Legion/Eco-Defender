@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
 
 public class Gun : XRGrabInteractable, IUsable, IEquip
 {
@@ -14,6 +15,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
     [SerializeField] private int startingAmmo = 10;
+    [SerializeField] private TextMeshProUGUI ammoTxt;
     [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")]
 
     private int countMultipler = 10;
@@ -55,6 +57,8 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     void Start()
     {
         currAmmo = startingAmmo;
+        ammoTxt.enabled = true;
+        ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
     }
 
     // Update is called once per frame
@@ -87,6 +91,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
             if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
+                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
                 GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
 
                 AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
@@ -134,11 +139,13 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
             else if (Inventory.Instance.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
             {
                 currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;
+                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
             }
             else
             {
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
+                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
                 currAmmo = maxAmmo;
             }
             AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject);
