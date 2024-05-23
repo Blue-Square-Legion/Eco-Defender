@@ -169,9 +169,11 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
 
         obj.GetComponent<IEquip>()?.Equip(true);
 
-        obj.transform.position = handSlot.position;
-        obj.transform.rotation = handSlot.rotation;
-        obj.transform.SetParent(handSlot, true);
+        //obj.transform.position = handSlot.position;
+        //obj.transform.rotation = handSlot.rotation;
+        obj.transform.SetParent(handSlot);
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.localRotation = Quaternion.identity;
 
         SetObject(obj);
     }
