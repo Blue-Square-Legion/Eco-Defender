@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (_health <= 0)
         {
             OnDeath.Invoke();
-            Debug.Log("Dead");
+            agent.ResetPath();
             ChangeState(AIStates.Passive);
         }
         else
