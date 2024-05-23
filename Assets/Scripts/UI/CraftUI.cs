@@ -16,16 +16,13 @@ public class CraftUI : MonoBehaviour
             _craftingRef = GameObject.FindAnyObjectByType<Crafting>();
         }
 
-
         _craftingRef.Recipes.ForEach(recipe =>
         {
             GameObject go = Instantiate(_craftButtonPrefab, transform);
 
-            _craftButtonPrefab.GetComponentInChildren<TMP_Text>().SetText(recipe.result.name);
-
+            go.GetComponentInChildren<TMP_Text>().SetText(recipe.result.name);
             go.GetComponent<Button>().onClick.AddListener(() => Craft(recipe));
         });
-
     }
 
     private void Craft(RecipeSO recipe)
