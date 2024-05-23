@@ -242,6 +242,78 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Slime_BodyHit" ID="{92931D9E-79D5-46FD-922A-149605343A66}">
+					<ChildrenList>
+						<Action Name="" ID="{C7F1654F-6C64-4A4E-BAAE-6A7914EFAA39}" ShortID="330630919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_BodyHit" ID="{C53BD775-9727-4539-906F-D795EE35429C}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6B10DE48-3E88-44D1-965C-BBF6CD7A53F2}" ShortID="65210435">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_VoiceHit" ID="{6A2C5C96-6C56-4477-BBFA-A583ADB8AC52}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slime_Dead" ID="{7529F65A-ECC9-47E1-A896-E47C4C36D089}">
+					<ChildrenList>
+						<Action Name="" ID="{AF848A0D-5DBE-4030-A6AD-38FD59B7022D}" ShortID="340571254">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_Disappear" ID="{CB10A987-CC56-4080-9A79-0EFEEF25A8C7}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{469A95D1-51B5-4E0F-8ACA-8E6D6F1FB072}" ShortID="427608237">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_DeadVoice" ID="{CF7FD768-AFF9-4679-B704-18D0FCE4840B}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slime_Footstep_Loop" ID="{DD928446-2D16-4C86-872E-678C8396CFD8}">
+					<ChildrenList>
+						<Action Name="" ID="{163D4D0C-3114-4DAD-9AF3-27CC9FD2FFB5}" ShortID="328603769">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_Footstep_Loop" ID="{998098AE-13D1-408C-9DDA-B13F56B192E9}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slime_VoiceHit" ID="{EA2B9365-848A-423C-B673-3AAE37C06314}">
+					<ChildrenList>
+						<Action Name="" ID="{E53900AD-FEE5-4BE8-84AC-79037196C3D7}" ShortID="651225096">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_VoiceHit" ID="{6A2C5C96-6C56-4477-BBFA-A583ADB8AC52}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Slime_Footstep_Loop" ID="{CA4F3C7E-EA3D-4D35-A795-B60984779A3D}">
+					<ChildrenList>
+						<Action Name="" ID="{E6F8C2F9-C57E-4425-916B-C88FA902249D}" ShortID="153005689">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slime_Footstep_Loop" ID="{998098AE-13D1-408C-9DDA-B13F56B192E9}" WorkUnitID="{5C782FDB-31C6-49AC-9649-72D8BACD9F51}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

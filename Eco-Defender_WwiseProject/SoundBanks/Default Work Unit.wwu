@@ -8,15 +8,20 @@
 						<ObjectRef Name="Play_CraftEmpty" ID="{5F8EA2A8-CA76-418C-99D4-2BFCE35468FF}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LabAmbience" ID="{9C18BD12-A36C-419A-B753-C67C00DCF3CA}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EcoDef_Button_Click" ID="{B3D98477-E814-41F0-A80F-838432151B10}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slime_VoiceHit" ID="{EA2B9365-848A-423C-B673-3AAE37C06314}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CleanAmbience" ID="{BE948A87-A075-46F9-BC14-107386C52C1B}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slime_BodyHit" ID="{92931D9E-79D5-46FD-922A-149605343A66}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlantGrowth" ID="{88CD3857-B832-4735-A159-8987E88F887C}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlantBombOneShot" ID="{CAE1F9E3-4821-4760-B7D2-2D3D007E5E86}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slime_Dead" ID="{7529F65A-ECC9-47E1-A896-E47C4C36D089}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CraftSuccess" ID="{F36739A2-7F74-4815-A004-67CF95E4EC7E}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PollutedAmbience" ID="{8708CBF5-11D3-4858-8A12-AE0F0DCF15AD}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Grab_Plastic" ID="{796DDA8C-DB37-49D3-A8A2-4076E06A94F0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{92C2C1D4-14DC-4A37-9FC3-7C36094BE6B0}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WhiteNoiseTest" ID="{9AE6D86F-0F42-4AEE-B546-F68554EAF461}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Gun_Empty" ID="{C28A10DD-EE46-4C67-A560-58209EBADC23}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slime_Footstep_Loop" ID="{DD928446-2D16-4C86-872E-678C8396CFD8}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Slime_Footstep_Loop" ID="{CA4F3C7E-EA3D-4D35-A795-B60984779A3D}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PortalOpen" ID="{2B677D01-0DF8-4DA3-86A4-380320F8566A}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_LabAmbience" ID="{4A7D517C-11F2-4DB5-96BD-C420AABAA24C}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Reload" ID="{EE689A97-EE6B-4E07-8ECC-62D267A3B0E8}" WorkUnitID="{714EA042-1EB7-43E4-AF0C-1656B6B3AE6B}" Origin="Manual" Filter="7"/>
