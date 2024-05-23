@@ -9,7 +9,7 @@ public class CraftUI : MonoBehaviour
     [SerializeField] Crafting _craftingRef;
     [SerializeField] GameObject _craftButtonPrefab;
 
-    private void Awake()
+    private void Start()
     {
         if (_craftingRef != null)
         {
@@ -21,7 +21,7 @@ public class CraftUI : MonoBehaviour
         {
             GameObject go = Instantiate(_craftButtonPrefab, transform);
 
-            _craftButtonPrefab.GetComponentInChildren<TMP_Text>().text = recipe.result.name;
+            _craftButtonPrefab.GetComponentInChildren<TMP_Text>().SetText(recipe.result.name);
 
             go.GetComponent<Button>().onClick.AddListener(() => Craft(recipe));
         });

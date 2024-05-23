@@ -131,7 +131,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 1.5
   m_Height: 2.31
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -171,10 +171,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navTickTime: 0.5
   _maxHealth: 2
+  damage: 2
   playerTag:
   - Player
   - DamageCollider
-  damage: 2
+  currState: 1
   OnMoveStart:
     m_PersistentCalls:
       m_Calls:
@@ -277,3 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8c7fdf96b23414186be8ab0ab76801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnMoveStartEvent: Play_Slime_Footstep_Loop
+  OnMoveEndEvent: Stop_Slime_Footstep_Loop
+  OnDamagedEvent: Play_Slime_BodyHit
+  OnDeathEvent: Play_Slime_Dead
