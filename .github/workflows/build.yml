@@ -1,4 +1,4 @@
-name: Deploy Game
+name: Build Game
 
 on:
   # TODO: Use pull_request
@@ -14,9 +14,9 @@ jobs:
     strategy:
       matrix:
         build:
-          - os: windows-latest
+          - os: ubuntu-latest
             platform: StandaloneWindows64
-          - os: macos-latest
+          - os: ubuntu-latest
             platform: StandaloneOSX
 
     steps:
@@ -40,6 +40,7 @@ jobs:
       # Build
       # Details: https://game.ci/docs/github/getting-started/
       - name: Build project
+        id: myBuildStep
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -47,6 +48,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.build.platform }}
+
+      - run: echo 'Finished Project Version for ${{ matrix.build.platform }}: ${{ steps.myBuildStep.outputs.buildVersion }}'
 
       # Output
       # Details: https://github.com/actions/upload-artifact
