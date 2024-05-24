@@ -1,0 +1,26 @@
+name: Deploy Game
+
+on:
+  push:
+    branches: [deploy]
+
+jobs:
+  build:
+    name: Publish for ${{ matrix.platform }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Build for both Windows and Android
+        platform: [StandaloneWindows64, StandaloneOSX]
+
+      # TODO: Get artifact
+
+      # Publish
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: ${{ matrix.platform == 'Windows' && 'win' || 'android' }}
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: build/${{ matrix.platform }}
