@@ -1,4 +1,4 @@
-name: Deploy Game
+name: Publish Game
 
 on:
   push:
@@ -11,16 +11,23 @@ jobs:
 
     strategy:
       matrix:
-        # Build for both Windows and Android
+        # Build for both Windows and MacOS
         platform: [StandaloneWindows64, StandaloneOSX]
 
-      # TODO: Get artifact
+    steps:
+      # Get Artifact
+      - name: Download artifact
+        if: ${{ matrix.platform == 'StandaloneWindows64' || matrix.platform == 'StandaloneOSX' }}
+        uses: actions/download-artifact@v2
+        with:
+          name: Build-${{ matrix.platform }}
+          path: ./build
 
       # Publish
       - uses: manleydev/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
-          CHANNEL: ${{ matrix.platform == 'Windows' && 'win' || 'android' }}
+          CHANNEL: ${{ matrix.platform == 'StandaloneWindows64' && 'win' || matrix.platform == 'StandaloneOSX' && 'mac' || 'other'}}
           ITCH_GAME: ${{ env.ITCH_GAME }}
           ITCH_USER: ${{ env.ITCH_USER }}
           PACKAGE: build/${{ matrix.platform }}
