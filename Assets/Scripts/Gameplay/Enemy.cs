@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private Transform _target;
     private Vector3 _spawnPoint;
     private NavMeshAgent agent;
+    private Vector3 destination;
 
     private bool _wasMoving = false;
 
@@ -55,6 +57,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (_health <= 0)
         {
             OnDeath.Invoke();
+            agent.ResetPath();
             ChangeState(AIStates.Passive);
         }
         else
@@ -71,7 +74,10 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void TargetPlayer()
     {
-        ChangeState(AIStates.Aggressive);
+        if(_health > 0)
+        {
+            ChangeState(AIStates.Aggressive);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -109,10 +115,22 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             case AIStates.Passive:
                 // Add wander code here
-                agent.SetDestination(_spawnPoint);
+                if (HasReachedDestination())
+                {
+                    var randomDirection = UnityEngine.Random.insideUnitSphere * 10;
+                    randomDirection += _spawnPoint;
+
+                    NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, 10, 1);
+                    var finalPosition = hit.position;
+
+                    //agent.SetDestination(finalPosition);
+                    destination = finalPosition;
+                }
+                agent.SetDestination(destination);
                 break;
             case AIStates.Aggressive:
-                agent.SetDestination(_target.position);
+                destination = _target.position;
+                agent.SetDestination(destination);
                 break;
             default:
                 break;
