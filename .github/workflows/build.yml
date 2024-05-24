@@ -52,5 +52,5 @@ jobs:
       # Details: https://github.com/actions/upload-artifact
       - uses: actions/upload-artifact@v3
         with:
-          name: Build
+          name: Build-${{ matrix.build.platform }}
           path: build/${{ matrix.build.platform }}
