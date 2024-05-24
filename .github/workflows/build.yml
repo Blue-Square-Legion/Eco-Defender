@@ -8,13 +8,16 @@ on:
 
 jobs:
   build:
-    name: Build for ${{ matrix.platform }}
-    runs-on: ${{ matrix.os }}
+    name: Build for ${{ matrix.build.platform }} on ${{matrix.build.os}}
+    runs-on: ${{ matrix.build.os }}
 
     strategy:
       matrix:
-        os: [windows-latest, macos-latest]
-        platform: [StandaloneWindows64, StandaloneOSX]
+        build:
+          - os: windows-latest
+            platform: StandaloneWindows64
+          - os: macos-latest
+            platform: StandaloneOSX
 
     steps:
       # Checkout
@@ -43,11 +46,11 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: ${{ matrix.platform }}
+          targetPlatform: ${{ matrix.build.platform }}
 
       # Output
       # Details: https://github.com/actions/upload-artifact
       - uses: actions/upload-artifact@v3
         with:
           name: Build
-          path: build/${{ matrix.platform }}
+          path: build/${{ matrix.build.platform }}
