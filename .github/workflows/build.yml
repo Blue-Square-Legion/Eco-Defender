@@ -49,8 +49,6 @@ jobs:
         with:
           targetPlatform: ${{ matrix.build.platform }}
 
-      - run: echo 'Finished Project Version for ${{ matrix.build.platform }}: ${{ steps.myBuildStep.outputs.buildVersion }}'
-
       # Output
       # Details: https://github.com/actions/upload-artifact
       - uses: actions/upload-artifact@v3
