@@ -14,9 +14,9 @@ jobs:
     strategy:
       matrix:
         build:
-          - os: ubuntu-latest
+          - os: windows-latest
             platform: StandaloneWindows64
-          - os: ubuntu-latest
+          - os: macos-latest
             platform: StandaloneOSX
 
     steps:
