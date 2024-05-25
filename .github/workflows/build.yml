@@ -25,7 +25,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: "deploy"
+          # TODO: Use develop
+          ref: "Light-new-CI-building"
           lfs: true
 
       # Cache
