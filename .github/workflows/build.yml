@@ -55,4 +55,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Build-${{ matrix.build.platform }}
-          path: build/${{ matrix.build.platform }}
+          path: build
