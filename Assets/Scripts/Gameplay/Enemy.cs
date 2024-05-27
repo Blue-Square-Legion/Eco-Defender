@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             print($"Enemy Trigger: {other.name}");
             NotifyDamage(other);
-            Destroy(gameObject, 1f);
+            //Destroy(gameObject, 1f);  //Originally destroyed self on contact to prevent pinning player.
         }
     }
 
@@ -128,7 +128,7 @@ public class Enemy : MonoBehaviour, IDamageable
             else
                 OnMoveEnd.Invoke();
         }
-        
+
         yield return new WaitForSeconds(navTickTime);
         StartCoroutine(UpdateDestination());
     }
