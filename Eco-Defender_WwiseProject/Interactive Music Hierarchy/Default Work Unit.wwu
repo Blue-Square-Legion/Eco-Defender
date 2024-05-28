@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-4</Value>
+								<Value>-96</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2552,7 +2552,7 @@
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="EcoDef_Transition" ID="{69864C23-E879-4DE2-AD6C-0C5791477E5D}">
+																				<MusicClip Name="EcoDef_Transition_01" ID="{69864C23-E879-4DE2-AD6C-0C5791477E5D}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="4000.00000000001"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
