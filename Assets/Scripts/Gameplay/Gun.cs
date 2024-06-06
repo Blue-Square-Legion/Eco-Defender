@@ -57,8 +57,6 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     void Start()
     {
         currAmmo = startingAmmo;
-        ammoTxt.enabled = true;
-        ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
     }
 
     // Update is called once per frame
@@ -80,7 +78,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
     protected override void OnActivated(ActivateEventArgs args)
     {
         base.OnActivated(args);
-
+         
         ShootGun();
     }
 
@@ -91,7 +89,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
             if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
-                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
+                AmmoDisplay.AD.GunFired(currAmmo);
                 GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
 
                 AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
@@ -138,15 +136,15 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
             }
             else if (Inventory.Instance.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
             {
-                currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;
-                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
+                currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;                
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
+                AmmoDisplay.AD.AmmoReloaded(currAmmo);
             }
             else
             {
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
-                ammoTxt.SetText($"{currAmmo} / {maxAmmo}");
                 currAmmo = maxAmmo;
+                AmmoDisplay.AD.AmmoReloaded(currAmmo);
             }
             AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject);
         }
@@ -163,7 +161,10 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
         if (isFPS) { spawnPoint = Camera.main.transform; }
 
         SetupAmmo();
+        AmmoDisplay.AD.EnableAmmoDisplay(true);
+        AmmoDisplay.AD.SetMaxAmmo(maxAmmo);
         TogglePhysics(false);
+        Debug.Log("Gun was picked up");
     }
 
     public void UnEquip()
