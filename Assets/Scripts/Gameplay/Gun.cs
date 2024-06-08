@@ -162,7 +162,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
 
         SetupAmmo();
         AmmoDisplay.AD.EnableAmmoDisplay(true);
-        AmmoDisplay.AD.SetMaxAmmo(maxAmmo);
+        AmmoDisplay.AD.SetMaxAmmo(CurrAmmo,maxAmmo);
         TogglePhysics(false);
         Debug.Log("Gun was picked up");
     }

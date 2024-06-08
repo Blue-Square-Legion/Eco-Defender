@@ -56,6 +56,13 @@ public class AmmoDisplay : MonoBehaviour
         ammoTxt.SetText($"{ammoCount} / {maxAmmo}");
     }
 
+    public void SetMaxAmmo(int currAmmo, int gunsMaxAmmo) 
+    {
+        maxAmmo = gunsMaxAmmo;
+        ammoCount = currAmmo;
+        ammoTxt.SetText($"{ammoCount} / {maxAmmo}");
+    }
+
     public void AmmoReloaded(int ammoAdded) {
         ammoCount = ammoAdded;
         ammoTxt.SetText($"{ammoCount} / {maxAmmo}");
