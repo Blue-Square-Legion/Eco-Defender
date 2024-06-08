@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 4174029779547952378}
   - component: {fileID: 3679198606115605089}
   - component: {fileID: 3254639441830376338}
+  - component: {fileID: 3849612225822526242}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -629,6 +630,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickHoverEvent: Play_EcoDef_Hover
   grabEvent: Play_Grab_Plastic
+--- !u!114 &3849612225822526242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659a4821a76d61d4aa1762bb53fcdb7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPS: {fileID: 8616685848737228371}
+  playerController: {fileID: 8616685848737228382}
+  OnMoveStartEvent: Play_Slime_Footstep_Loop
+  OnMoveEndEvent: Stop_Slime_Footstep_Loop
+  PlayFootsteps:
+    m_PersistentCalls:
+      m_Calls: []
+  StopPlayingFootsteps:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &8614268263089675434
 PrefabInstance:
   m_ObjectHideFlags: 0
