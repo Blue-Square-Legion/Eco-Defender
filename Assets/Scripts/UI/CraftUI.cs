@@ -9,23 +9,20 @@ public class CraftUI : MonoBehaviour
     [SerializeField] Crafting _craftingRef;
     [SerializeField] GameObject _craftButtonPrefab;
 
-    private void Awake()
+    private void Start()
     {
         if (_craftingRef != null)
         {
             _craftingRef = GameObject.FindAnyObjectByType<Crafting>();
         }
 
-
         _craftingRef.Recipes.ForEach(recipe =>
         {
             GameObject go = Instantiate(_craftButtonPrefab, transform);
 
-            _craftButtonPrefab.GetComponentInChildren<TMP_Text>().text = recipe.result.name;
-
+            go.GetComponentInChildren<TMP_Text>().SetText(recipe.result.name);
             go.GetComponent<Button>().onClick.AddListener(() => Craft(recipe));
         });
-
     }
 
     private void Craft(RecipeSO recipe)
