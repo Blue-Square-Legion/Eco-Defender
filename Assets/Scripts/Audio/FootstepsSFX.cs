@@ -18,6 +18,8 @@ public class FootstepsSFX : MonoBehaviour
     public UnityEvent PlayFootsteps;
     public UnityEvent StopPlayingFootsteps;
 
+    RaycastHit floorMatCheck;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,8 @@ public class FootstepsSFX : MonoBehaviour
             playerWasMoving = isCurMoving;
             if (isCurMoving)
             {
-                OnPlayerStart();
+                //OnPlayerStart();
+                CheckFloorMaterial();
             }
             else
             {
@@ -54,6 +57,16 @@ public class FootstepsSFX : MonoBehaviour
     private bool isPlayerMoving()
     {
         return FPS.Grounded && playerController.velocity != Vector3.zero;
+    }
+
+    private void CheckFloorMaterial() 
+    {
+        Physics.Raycast(gameObject.transform.position, Vector3.down, out floorMatCheck, 1.0f, FPS.GroundLayers);
+        Debug.Log(floorMatCheck.collider.gameObject.name);
+        if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Metal Floor")))
+            Debug.Log("You're on metal");
+        else
+            OnPlayerStart();
     }
 
     private void OnPlayerStart() 
