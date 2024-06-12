@@ -7,14 +7,14 @@ using UnityEngine;
 public class OnOff : MonoBehaviour    
 {
    
-    public GameObject Cube;
-    public GameObject Sphere;
+    public GameObject Off;
+    public GameObject On;
     // Start is called before the first frame update
     void Start()
     {
         
-        Cube.SetActive(true);
-        Sphere.SetActive(false);
+       Off.SetActive(true);
+        On.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class OnOff : MonoBehaviour
     {
 
      
-        Cube.SetActive(false);
-        Sphere.SetActive(true);
+        Off.SetActive(false);
+        On.SetActive(true);
     }
 }
