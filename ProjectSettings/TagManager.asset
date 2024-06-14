@@ -23,9 +23,9 @@ TagManager:
   - ForceField
   - Interactable
   - Enemy
-  - Metal Floor
-  - 
-  - 
+  - Floor - Concrete
+  - Floor - Dirt
+  - Floor - Metal
   - 
   - 
   - 

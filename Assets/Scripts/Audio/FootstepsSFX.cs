@@ -32,19 +32,22 @@ public class FootstepsSFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerFootSteps();
+        
     }
 
+    private void FixedUpdate()
+    {
+        PlayerFootSteps();
+    }
     private void PlayerFootSteps() 
     {
-        bool isCurMoving = isPlayerMoving();
+        bool isCurMoving = IsPlayerMoving();
        
         if (playerWasMoving != isCurMoving)
         {
             playerWasMoving = isCurMoving;
             if (isCurMoving)
             {
-                //OnPlayerStart();
                 CheckFloorMaterial();
             }
             else
@@ -54,17 +57,21 @@ public class FootstepsSFX : MonoBehaviour
         }
     }
 
-    private bool isPlayerMoving()
+    private bool IsPlayerMoving()
     {
         return FPS.Grounded && playerController.velocity != Vector3.zero;
     }
 
     private void CheckFloorMaterial() 
     {
-        Physics.Raycast(gameObject.transform.position, Vector3.down, out floorMatCheck, 1.0f, FPS.GroundLayers);
-        Debug.Log(floorMatCheck.collider.gameObject.name);
-        if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Metal Floor")))
+        Physics.Raycast(gameObject.transform.position, Vector3.down, out floorMatCheck, Mathf.Infinity, FPS.GroundLayers);
+
+        if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Metal")))
             Debug.Log("You're on metal");
+        else if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Dirt")))
+            Debug.Log("You're on dirt");
+        else if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Concrete")))
+            Debug.Log("You're on concrete");
         else
             OnPlayerStart();
     }
