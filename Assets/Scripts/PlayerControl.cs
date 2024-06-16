@@ -40,8 +40,8 @@ public class PlayerControl : MonoBehaviour
             {
              
                     agent.SetDestination(transform.position);
-
-                agent.SetDestination(hit.point); ;
+                //!!!!!!!!!!!!!!!!!!!! may need to change to hit.point to go to mouse click point
+                agent.SetDestination(transform.position); 
             }
 
         }
