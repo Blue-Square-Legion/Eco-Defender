@@ -6,9 +6,8 @@ using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 
-public class Gun : XRGrabInteractable, IUsable, IEquip
+public class Gun : MonoBehaviour, IUsable, IEquip
 {
-    [Header("Custom Variables")]
     [SerializeField] private TextMeshProUGUI ammoCountUI;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private ItemSO seedProjectileSO;
@@ -75,13 +74,14 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
         }
     }
 
+
     protected override void OnActivated(ActivateEventArgs args)
     {
         base.OnActivated(args);
          
         ShootGun();
     }
-
+    
     public void ShootGun()
     {
         if (currAmmo > 0)
@@ -107,13 +107,7 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
         }
     }
 
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
-    {
-        base.OnSelectEntered(args);
-        SetupAmmo();
-    }
-
-    private void SetupAmmo()
+    public void SetupAmmo()
     {
         /*        print($"Setup Ammo:{_hasGottenStarterAmmo}");
                 if (!_hasGottenStarterAmmo)
