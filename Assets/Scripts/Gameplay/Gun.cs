@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour, IUsable, IEquip
 {
@@ -13,6 +14,7 @@ public class Gun : MonoBehaviour, IUsable, IEquip
     [SerializeField] private GameObject spawnedProjectile;
     [SerializeField] private int maxAmmo = 10;
     [SerializeField] private int startingAmmo = 10;
+    [SerializeField] private TextMeshProUGUI ammoTxt;
     [SerializeField, Range(1, 10), Tooltip("How much to multiply seed pod count when reloading")]
 
     private int countMultipler = 10;
@@ -72,6 +74,14 @@ public class Gun : MonoBehaviour, IUsable, IEquip
         }
     }
 
+
+    protected override void OnActivated(ActivateEventArgs args)
+    {
+        base.OnActivated(args);
+         
+        ShootGun();
+    }
+    
     public void ShootGun()
     {
         if (currAmmo > 0)
@@ -79,6 +89,7 @@ public class Gun : MonoBehaviour, IUsable, IEquip
             if (seedProjectileSO.Prefab)
             {
                 currAmmo--;
+                AmmoDisplay.AD.GunFired(currAmmo);
                 GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
 
                 AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
@@ -119,13 +130,15 @@ public class Gun : MonoBehaviour, IUsable, IEquip
             }
             else if (Inventory.Instance.Inv[seedProjectileSO] < MaxAmmoMultiplyAware)
             {
-                currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;
+                currAmmo = Inventory.Instance.Inv[seedProjectileSO] * countMultipler;                
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
+                AmmoDisplay.AD.AmmoReloaded(currAmmo);
             }
             else
             {
                 Inventory.Instance.RemoveFromInventory(seedProjectileSO, MaxAmmoMultiplyAware);
                 currAmmo = maxAmmo;
+                AmmoDisplay.AD.AmmoReloaded(currAmmo);
             }
             AkSoundEngine.PostEvent(Gun_ReloadSound, gameObject);
         }
@@ -142,7 +155,10 @@ public class Gun : MonoBehaviour, IUsable, IEquip
         if (isFPS) { spawnPoint = Camera.main.transform; }
 
         SetupAmmo();
+        AmmoDisplay.AD.EnableAmmoDisplay(true);
+        AmmoDisplay.AD.SetMaxAmmo(CurrAmmo,maxAmmo);
         TogglePhysics(false);
+        Debug.Log("Gun was picked up");
     }
 
     public void UnEquip()
