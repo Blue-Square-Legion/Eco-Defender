@@ -46,22 +46,23 @@ public class ClearedTwo : MonoBehaviour
        // public void OnCollisionEnter(Collision collision)
     {if (other.gameObject.CompareTag("hand"))
         {
-            _check1 = true;
+            
         Text1.SetActive(true);
             canvas.SetActive(true);
             // spotlight.intensity = 100;
             newCubeColor = new Color(1f, 1f, 1f, 1f);
             cubeRenderer.material.color = material1.color;
+            _check1 = true;
         }
-        //newPosition = Player.transform.position;
+       newPosition = hand.transform.position;
 
-     /*  if (FiveSec > 0)
+      if (FiveSec > 0 && _check1)
         {
             PauseGame();
             FiveSec -= 1 * Time.deltaTime;
-
+            hand.transform.position = newPosition;  
         }
-     */
+     
     }
     public void PauseGame()
     {
