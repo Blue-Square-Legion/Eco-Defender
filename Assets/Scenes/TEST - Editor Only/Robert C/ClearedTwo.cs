@@ -24,6 +24,7 @@ public class ClearedTwo : MonoBehaviour
     public Material material1, material2;
     public float FiveSec = 5;
     Vector3 newPosition;
+   
     private ActivateEvent activated;
     // Start is called before the first frame updateD
 
@@ -36,7 +37,8 @@ public class ClearedTwo : MonoBehaviour
         hand = GameObject.FindGameObjectWithTag("hand");
         Text = GetComponent<TextMeshProUGUI>();
         canvas.SetActive(false);
-
+      //  canvas.SetActive(true);
+        //Text1.SetActive(true);
         Text1.SetActive(false);
     }
 
