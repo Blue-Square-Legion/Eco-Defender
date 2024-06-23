@@ -1,30 +1,31 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour
 {
-    public Transform targetObject;//cube
-    public GameObject view;
-    //bool lookAt=false;
-    private float smoothFactor = .5f;
-    Vector3 cameraOffset;
+    public Transform followPlayer;
+    private Transform cameraTransform;
+
+    public Vector3 playerOffset;
+
+    public float MoveSpeed = 400f;
+
     void Start()
     {
-        cameraOffset = view.transform.position - targetObject.transform.position;
+        cameraTransform = transform;
+
     }
-
-
+    public void SetTarget(Transform newTransformTarget)
+    {
+        followPlayer = newTransformTarget;
+    }
     void LateUpdate()
     {
-        Vector3 newPosition = targetObject.transform.position + cameraOffset;
-        transform.position = Vector3.Lerp(transform.position, newPosition, smoothFactor);
-
-        //if(lookAt)
-        view.transform.LookAt(targetObject);
-
-
+        if (followPlayer != null)
+            cameraTransform.position = Vector3.Lerp(cameraTransform.position, followPlayer.position + playerOffset, MoveSpeed * Time.deltaTime);
     }
-    //player target camera follows
-
 }
+

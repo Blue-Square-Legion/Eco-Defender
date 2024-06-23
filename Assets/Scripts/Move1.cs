@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 using TMPro;
 
 
@@ -14,11 +13,18 @@ public class Move1 : MonoBehaviour
     //public GameObject tad;
     /// </summary
     public float speed = 1.5f;
-   
+    public float Limit = 75f;
+    public bool restart = false;
     private float random = .5f;
     public float moveSpeed = 1;
+    public Rigidbody m_Rb;
     //  public GameObject Player;
     public GameObject Cube;
+    void Awake()
+    {
+        m_Rb = GetComponent<Rigidbody>();
+
+    }
     private void Start()
     {
         random = Random.Range(0f, 1f);
@@ -26,7 +32,8 @@ public class Move1 : MonoBehaviour
         Cube = GameObject.FindGameObjectWithTag("Cube");
         Cube.transform.position = new Vector3(direction.x, direction.z, 0);
     }
-    void Update()
+  /*
+   void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -49,5 +56,32 @@ public class Move1 : MonoBehaviour
         // float angle = Limit * Mathf.Sin(Time.deltaTime * random * speed);
         //  Cube.transform.localRotation = Quaternion.Euler( 0, 0,angle);
         //  Cube.transform.localRotation = Quaternion.Euler(0,angle2, 0);
+    }
+*/
+    void FixedUpdate()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 movementDirection = new Vector3(horizontalInput, verticalInput);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        Vector3 playerPos= m_Rb.position;
+        Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
+        if (movementDirection != Vector3.zero)
+        {
+
+
+            Quaternion targetRotation = Quaternion.LookRotation(movement);
+
+         //   targetRotation = Quaternion.RotateTowards(targetRotation, 360 *Time.deltaTime);
+
+
+            m_Rb.MoveRotation(targetRotation);
+            m_Rb.MovePosition(playerPos + movement * moveSpeed * speed * Time.fixedDeltaTime);
+        }
+
     }
 }
