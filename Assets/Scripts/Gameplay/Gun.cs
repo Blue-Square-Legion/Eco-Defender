@@ -75,12 +75,12 @@ public class Gun : MonoBehaviour, IUsable, IEquip
     }
 
 
-    protected override void OnActivated(ActivateEventArgs args)
+    /*protected override void OnActivated(ActivateEventArgs args)
     {
         base.OnActivated(args);
          
         ShootGun();
-    }
+    }*/
     
     public void ShootGun()
     {
@@ -179,7 +179,14 @@ public class Gun : MonoBehaviour, IUsable, IEquip
     public void TogglePhysics(bool isEnabled)
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        //rb.useGravity = isEnabled;//recommend using these settings so that the gun will stay following the player's pozition/rotation once picked up.
+        //rb.isKinematic = isEnabled;
         rb.isKinematic = !isEnabled;
         rb.detectCollisions = isEnabled;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log($"I am colliding with {collision.gameObject.name}");
     }
 }
