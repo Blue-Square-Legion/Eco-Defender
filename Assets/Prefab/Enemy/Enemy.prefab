@@ -175,7 +175,7 @@ MonoBehaviour:
   playerTag:
   - Player
   - DamageCollider
-  currState: 1
+  currState: 0
   OnMoveStart:
     m_PersistentCalls:
       m_Calls:
