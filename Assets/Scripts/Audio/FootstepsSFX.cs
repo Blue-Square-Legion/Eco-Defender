@@ -7,12 +7,15 @@ using UnityEngine.Events;
 public class FootstepsSFX : MonoBehaviour
 {
 
-    [SerializeField]private FirstPersonController FPS;
-    [SerializeField]private CharacterController playerController;
+    [SerializeField] private FirstPersonController FPS;
+    [SerializeField] private CharacterController playerController;
+    [SerializeField] private string curFloorMat;
 
-    public string OnMoveStartEvent = "Play_Slime_Footstep_Loop";
-    public string OnMoveEndEvent = "Stop_Slime_Footstep_Loop";
+    public string OnMoveStartEvent;
+    public string OnMoveEndEvent;
     
+
+
     private bool playerWasMoving = false;
 
     public UnityEvent PlayFootsteps;
@@ -49,6 +52,7 @@ public class FootstepsSFX : MonoBehaviour
             if (isCurMoving)
             {
                 CheckFloorMaterial();
+                OnPlayerStart();
             }
             else
             {
@@ -64,29 +68,51 @@ public class FootstepsSFX : MonoBehaviour
 
     private void CheckFloorMaterial() 
     {
-        Physics.Raycast(gameObject.transform.position, Vector3.down, out floorMatCheck, Mathf.Infinity, FPS.GroundLayers);
+        Physics.Raycast(gameObject.transform.position, Vector3.down, out floorMatCheck, Mathf.Infinity, FPS.GroundLayers);///I was thinking the sounds could be named something like "Play_Player_Footsteps_[InsertFloorMatHere]_Loop" 
+        //string newFloorMat;
 
         if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Metal")))
+        {
             Debug.Log("You're on metal");
+            //newFloorMat = "Metal";
+        }
         else if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Dirt")))
+        {
             Debug.Log("You're on dirt");
+            //newFloorMat = "Dirt";
+        }
         else if (floorMatCheck.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Floor - Concrete")))
+        {
             Debug.Log("You're on concrete");
+            //newFloorMat = "Concrete";
+        }
         else
-            OnPlayerStart();
+        {
+            Debug.Log("You're on other floor");
+            //newFloorMat = "Default"
+        }
+
+        ///if(newFloorMat!=curFloorMat)
+        ///{
+        ///     OnPlayerStop();//stops current footstep loop
+        ///     OnMoveStartEvent = $"Play_Player_Footsteps_[newFloorMat]_Loop";
+        ///     OnMoveEndEvent = $"Stop_Player_Footsteps_[newFloorMat]_Loop";
+        ///     curFloorMat = newFloorMat;
+        ///}     
+
     }
 
     private void OnPlayerStart() 
     {
         AkSoundEngine.PostEvent(OnMoveStartEvent, gameObject);
-        print("PlayerMoveStar");
+        print("PlayerMoveStart");
         PlayFootsteps?.Invoke();
     }
 
     private void OnPlayerStop() 
     {
         AkSoundEngine.PostEvent(OnMoveEndEvent, gameObject);
-        print("PlayerMoEnd");
+        print("PlayerMoveEnd");
         StopPlayingFootsteps?.Invoke();
     }
 }
