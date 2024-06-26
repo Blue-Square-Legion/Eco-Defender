@@ -8,7 +8,7 @@ TagManager:
   - DamageCollider
   - Grabbed
   - Enemy
-  - hand
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
