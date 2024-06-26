@@ -9,11 +9,13 @@ public class DoorAnimatorController : MonoBehaviour
     [SerializeField] private string _openName = "Open";
     [SerializeField] private string _closeName = "Close";
 
+    [SerializeField] private Collider _collider;
+
     public float ClipLength { get { return _animator.GetCurrentAnimatorStateInfo(0).length; } }
 
     private void Awake()
     {
-        if(_animator == null)
+        if (_animator == null)
         {
             _animator = GetComponent<Animator>();
         }
@@ -23,11 +25,15 @@ public class DoorAnimatorController : MonoBehaviour
     {
         print("Open");
         _animator.Play(_openName, 0);
+
+        _collider.enabled = false;
     }
 
     public void Close()
     {
         print("Close");
         _animator.Play(_closeName, 0);
+
+        _collider.enabled = false;
     }
 }

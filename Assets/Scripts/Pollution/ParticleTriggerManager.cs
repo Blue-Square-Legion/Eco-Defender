@@ -14,11 +14,13 @@ public class ParticleTriggerManager : MonoBehaviour
     [SerializeField, Tooltip("Time Threshold to Stop Particle"), Min(0)] private float _endTimeThreshold = 1;
     [SerializeField, Tooltip("Count Threshold to Stop Particle"), Min(0)] private int _particleCountThreshold = 0;
 
-    [SerializeField] private string _tag = "DamageCollider";
+    [SerializeField] private List<string> playerTag = new() { "Player", "DamageCollider" };
+
+    [SerializeField] private float damage = 1;
 
     public UnityEvent OnParticleEnd;
 
-    private readonly List<ParticleSystem.Particle> _enter = new List<ParticleSystem.Particle>();
+    private readonly List<ParticleSystem.Particle> _enter = new();
     private float _time = 0;
 
     public float MaxParticleCount { get; private set; }
@@ -29,8 +31,10 @@ public class ParticleTriggerManager : MonoBehaviour
         if (!_system)
             _system = GetComponent<ParticleSystem>();
 
+        List<GameObject> list = new();
+
         //Grabs colliders by tag
-        GameObject[] list = GameObject.FindGameObjectsWithTag(_tag);
+        playerTag.ForEach(tag => list.AddRange(GameObject.FindGameObjectsWithTag(tag)));
 
         foreach (GameObject go in list)
         {
@@ -69,7 +73,17 @@ public class ParticleTriggerManager : MonoBehaviour
             if (enterData.GetColliderCount(i) > 0)
             {
                 //Paritcle = _enter[i]
-                enterData.GetCollider(i, 0).SendMessage("OnParticleEnter");
+
+                Component data = enterData.GetCollider(i, 0);
+                if (data.TryGetComponent<IDamageable>(out IDamageable damagable))
+                {
+                    damagable.Damage(damage);
+                }
+
+                if (data.TryGetComponent<IParticleTrigger>(out IParticleTrigger trigger))
+                {
+                    trigger.OnParticleEnter();
+                }
             }
         }
     }

@@ -437,8 +437,8 @@ MonoBehaviour:
         guid: 017d672bf80da34d86a4380320f8566a
       Path: Events\Default Work Unit\Play_PortalOpen
       maxAttenuation: 1000
-      maxDuration: 2.032584
-      minDuration: 1.810826
+      maxDuration: 1.048869
+      minDuration: 0.934435
     - name: Play_Reload
       guid: 979a68ee6bee074e8ecc62d267a3b0e8
       id: 1910506537
@@ -456,6 +456,74 @@ MonoBehaviour:
       maxAttenuation: 1000
       maxDuration: 0.474284
       minDuration: 0.422539
+    - name: Play_Slime_BodyHit
+      guid: 9e1d9392d579fd46922a149605343a66
+      id: 2748327084
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Slime_BodyHit
+        ObjectType: 3
+        guid: 9e1d9392d579fd46922a149605343a66
+      Path: Events\Default Work Unit\Play_Slime_BodyHit
+      maxAttenuation: 0
+      maxDuration: 0.721036
+      minDuration: 0.471937
+    - name: Play_Slime_Dead
+      guid: 5af62975c9ece147a896e47c4c36d089
+      id: 2487036943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Slime_Dead
+        ObjectType: 3
+        guid: 5af62975c9ece147a896e47c4c36d089
+      Path: Events\Default Work Unit\Play_Slime_Dead
+      maxAttenuation: 0
+      maxDuration: 1.239884
+      minDuration: 0.943874
+    - name: Play_Slime_Footstep_Loop
+      guid: 468492dd162d864c872e678c8396cfd8
+      id: 3452158200
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Slime_Footstep_Loop
+        ObjectType: 3
+        guid: 468492dd162d864c872e678c8396cfd8
+      Path: Events\Default Work Unit\Play_Slime_Footstep_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Slime_VoiceHit
+      guid: 65932bea8a843c42b6733aae37c06314
+      id: 2752626080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Play_Slime_VoiceHit
+        ObjectType: 3
+        guid: 65932bea8a843c42b6733aae37c06314
+      Path: Events\Default Work Unit\Play_Slime_VoiceHit
+      maxAttenuation: 0
+      maxDuration: 0.721036
+      minDuration: 0.471937
     - name: Play_WhiteNoiseTest
       guid: 6fd8e69a420fee4ab546f68554eaf461
       id: 2997592729
@@ -504,6 +572,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: f7ef9e8357f8884eb177ca0c281ea69e
       Path: Events\Default Work Unit\Stop_PollutedAmbience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Slime_Footstep_Loop
+      guid: 7e3c4fca3dea354da795b60984779a3d
+      id: 1072336902
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 42a04e71b71ee443af0c1656b6b3ae6b
+      - ElementName: Stop_Slime_Footstep_Loop
+        ObjectType: 3
+        guid: 7e3c4fca3dea354da795b60984779a3d
+      Path: Events\Default Work Unit\Stop_Slime_Footstep_Loop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
