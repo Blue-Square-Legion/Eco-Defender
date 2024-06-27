@@ -96,6 +96,7 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         }
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
+            Debug.Log("primary object has been unequipped");
             UnEquip(PrimaryObject);
         }
     }
@@ -263,6 +264,9 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         //set gun as active
     {
         obj.SetActive (true);
+        obj.transform.SetParent(handSlot);
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.localRotation = Quaternion.identity;
         holsterBool = false;
         //set a boolean to say that the holster is "empty"
     }
