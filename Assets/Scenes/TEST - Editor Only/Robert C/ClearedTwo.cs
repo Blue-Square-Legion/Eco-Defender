@@ -15,7 +15,7 @@ public class ClearedTwo : MonoBehaviour
     bool _check1 = false;
     public Renderer cubeRenderer;
     bool isPaused;
-    public GameObject hand;
+    public GameObject Player;
     public TextMeshProUGUI Text;
     public GameObject Text1;
     public GameObject canvas;
@@ -34,7 +34,7 @@ public class ClearedTwo : MonoBehaviour
     {
         cubeRenderer = cube.GetComponent<Renderer>();
         // spotlight = GetComponent<Light>();
-        hand = GameObject.FindGameObjectWithTag("hand");
+        Player = GameObject.FindGameObjectWithTag("Player");
         Text = GetComponent<TextMeshProUGUI>();
         canvas.SetActive(false);
       //  canvas.SetActive(true);
@@ -46,7 +46,7 @@ public class ClearedTwo : MonoBehaviour
 
    public void OnTriggerEnter(Collider other)
        // public void OnCollisionEnter(Collision collision)
-    {if (other.gameObject.CompareTag("hand"))
+    {if (other.gameObject.CompareTag("Player"))
         {
             
         Text1.SetActive(true);
@@ -56,13 +56,13 @@ public class ClearedTwo : MonoBehaviour
             cubeRenderer.material.color = material1.color;
             _check1 = true;
         }
-       newPosition = hand.transform.position;
+      // newPosition = Player.transform.position;
 
       if (FiveSec > 0 && _check1)
         {
             PauseGame();
             FiveSec -= 1 * Time.deltaTime;
-            hand.transform.position = newPosition;  
+            Player.transform.position = newPosition;  
         }
      
     }
