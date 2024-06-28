@@ -82,26 +82,26 @@ public class Gun : XRGrabInteractable, IUsable, IEquip
 
     public void ShootGun()
     {
-        if (currAmmo > 0)
-        {
-            if (seedProjectileSO.Prefab)
+         if (currAmmo > 0)
             {
-                currAmmo--;
-                GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
+                if (seedProjectileSO.Prefab)
+                {
+                    currAmmo--;
+                    GameObject projObj = Instantiate(spawnedProjectile, spawnPoint.transform.position + spawnPoint.transform.forward, spawnPoint.transform.rotation);
 
-                AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
-                Destroy(projObj, 1f);
+                    AkSoundEngine.PostEvent(Gun_PlantBombSingleShoot, gameObject);
+                    Destroy(projObj, 1f);
+                }
+                else
+                {
+                    Debug.DrawLine(spawnPoint.transform.position, spawnPoint.transform.position + (spawnPoint.transform.forward * 50f), Color.black, 20f);
+                }
             }
             else
             {
-                Debug.DrawLine(spawnPoint.transform.position, spawnPoint.transform.position + (spawnPoint.transform.forward * 50f), Color.black, 20f);
+                // Auto reload gun on empty
+                Reload();
             }
-        }
-        else
-        {
-            // Auto reload gun on empty
-            Reload();
-        }
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
