@@ -54,7 +54,7 @@ public class ClearedTwo : MonoBehaviour
             // spotlight.intensity = 100;
             newCubeColor = new Color(1f, 1f, 1f, 1f);
             cubeRenderer.material.color = material1.color;
-            _check1 = true;
+            _check1 = false;
         }
       // newPosition = Player.transform.position;
 
@@ -62,7 +62,7 @@ public class ClearedTwo : MonoBehaviour
         {
             PauseGame();
             FiveSec -= 1 * Time.deltaTime;
-            Player.transform.position = newPosition;  
+         //   Player.transform.position = newPosition;  
         }
      
     }
