@@ -1,4 +1,4 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +11,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private int Max = 3;
 
-    // Start is called before the first frame update1
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(Spawn());
     }
@@ -23,11 +22,16 @@ public class Spawner : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
     private IEnumerator Spawn()
     {
         while (true)
         {
-            if (transform.hierarchyCount <= Max)
+            if (transform.childCount < Max)
             {
                 Instantiate(prefab, transform.position, Quaternion.identity, transform);
             }
