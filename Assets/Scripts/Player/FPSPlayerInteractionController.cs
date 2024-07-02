@@ -141,6 +141,7 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
     {
         //code from seribeengton
         //if (enabled) { usable?.Use(); }
+        //Issue with swapping gun and firing. If only the usable?.Use() remains, the guns will share ammunation.
         if (PrimaryObject != null)
         {
             Debug.Log("primary object is detected for firing");
@@ -148,6 +149,10 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
             {
                 Debug.Log("Gun has fired");
                 usable?.Use();
+            }
+            else
+            {
+                Debug.Log("The Primary object is detected as active, but will not fire");
             }
         }
         else
