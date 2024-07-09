@@ -66,28 +66,23 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
             if (PrimaryObject != null && holsteredObject == null)
             {
                 Debug.Log("primary object was detected");
-                holsteredObject = PrimaryObject;
+                Holster(PrimaryObject);
                 PrimaryObject = null;
                 Debug.Log("primary gun is now holstered");
-                Holster(holsteredObject);
             }
             else if (holsteredObject != null && PrimaryObject == null)
             {
                 Debug.Log("primary object was not detected");
                 unHolster(holsteredObject);
-                PrimaryObject = holsteredObject;
                 holsteredObject = null;
                 Debug.Log("primary gun is now unholstered");
             }
             else if(PrimaryObject != null && holsteredObject != null)
             {
                 Debug.Log("Both object slots are full");
-                transferObject = PrimaryObject;
-                PrimaryObject = null;
-                PrimaryObject = holsteredObject;
-                holsteredObject = transferObject;
-                transferObject = null;
+                print($"primary is: {PrimaryObject} and holstered object is {holsteredObject}");
                 swapGun(PrimaryObject, holsteredObject);
+                print($"primary is now: {PrimaryObject} and holstered object is now {holsteredObject}");
             }
             else
             {
@@ -96,8 +91,13 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         }
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
+            //uses Unequip code, but due to changes in Unequip, it messes with the holster boolean value causing duplication.
             Debug.Log("primary object has been unequipped");
-            UnEquip(PrimaryObject);
+            print($"UnEquip: {PrimaryObject}");
+            PrimaryObject.GetComponent<IEquip>()?.UnEquip();
+            PrimaryObject.transform.SetParent(null, true);
+
+            SetObject(null);
         }
     }
 
@@ -141,7 +141,6 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
     {
         //code from seribeengton
         //if (enabled) { usable?.Use(); }
-        //Issue with swapping gun and firing. If only the usable?.Use() remains, the guns will share ammunation.
         if (PrimaryObject != null)
         {
             Debug.Log("primary object is detected for firing");
@@ -244,11 +243,18 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
 
     public void UnEquip(GameObject obj)
     {
-        print($"UnEquip: {obj}");
-        obj.GetComponent<IEquip>()?.UnEquip();
-        obj.transform.SetParent(null, true);
+        if (holsterBool == true)
+        {
+            print($"UnEquip: {obj}");
+            obj.GetComponent<IEquip>()?.UnEquip();
+            obj.transform.SetParent(null, true);
 
-        SetObject(null);
+            SetObject(null);
+        }
+        else
+        {
+            Holster(obj);
+        }
     }
 
     /* <summary>
@@ -261,8 +267,10 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
     public void Holster(GameObject obj)
         //set gun as inactive
     {
-        obj.SetActive (false);
         holsterBool = true;
+        holsteredObject = obj;
+        obj.SetActive(false);
+       // SetObject(null);
         //set a boolean to say that the holster is "full"
     }
     public void unHolster(GameObject obj)
@@ -273,6 +281,8 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
         holsterBool = false;
+        PrimaryObject = obj;
+        SetObject(obj);
         //set a boolean to say that the holster is "empty"
     }
     public void swapGun(GameObject obj1, GameObject obj2)
@@ -281,8 +291,11 @@ public class FPSPlayerInteractionController : MonoBehaviour, IPlayerEquip
         print($"Swap: {obj1} with {obj2}");
         if (holsterBool == true)
         {
-            Holster(obj1);
+            print($"transfering: {PrimaryObject} is {obj1} and {transferObject}. holstered object is {holsteredObject} which should be {obj2}");
             unHolster(obj2);
+            print($"update: {PrimaryObject} is now the primary object = {obj1} and {obj2}. {transferObject} should not be different from {holsteredObject} {obj2}");
+            Holster(obj1);
+            print($"update: {obj1} should be {holsteredObject} and {obj2} should be {PrimaryObject}");
             holsterBool = true;
             print($"Weapon: {obj1} is holstered and {obj2} is unholstered");
         }

@@ -168,6 +168,7 @@ public class Gun : MonoBehaviour, IUsable, IEquip
 
     public void Use()
     {
+        Debug.Log($"{gameObject.name} is being fired");
         ShootGun();
     }
 
